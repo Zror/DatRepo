@@ -10,7 +10,7 @@ public class HealthMonitor : MonoBehaviour {
     public float Flame = 5f; // Fuel; Represents burntime in seconds?
     public float MaxFlame = 8f;
 
-    public Collision2D Collison;
+    public Collider2D Collison;
     public Rigidbody2D RBody;
     
 
@@ -19,11 +19,11 @@ public class HealthMonitor : MonoBehaviour {
 
         // If the starting HP is not set, set as total
         // So people dont die RIGHT at start
-        this.HP = this.MaxHp;
+        this.HP = this.MaxHP;
 
         if (Collison == null)
         {
-            Collison = GetComponent<Collision2D>();
+            Collison = GetComponent<Collider2D>();
         }
         if (RBody == null)
         {
@@ -106,7 +106,7 @@ public class HealthMonitor : MonoBehaviour {
 
 
         // Check to make sure we didnt just die lol
-        if (this.IsAlive())
+        if (this.IsAlive)
         {
             // DEAD
             // @@@Death Hook?
