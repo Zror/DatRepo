@@ -3,10 +3,12 @@ using System.Collections;
 
 public class HealthMonitor : MonoBehaviour {
 
-    public int HP;
+    public int HP = 1;
     public int MaxHP = 100;
-    public int Stamina;
+    public int Stamina = 100;
     public int MaxStamina = 100;
+    public float Flame = 5f; // Fuel; Represents burntime in seconds?
+    public float MaxFlame = 8f;
 
     public Collision2D Collison;
     public Rigidbody2D RBody;
@@ -14,22 +16,25 @@ public class HealthMonitor : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        if (HP == null)
-        {
-            // If the starting HP is not set, set as total
-            // So people dont die RIGHT at start
-            HP = MaxHp;
 
-        }
+        // If the starting HP is not set, set as total
+        // So people dont die RIGHT at start
+        this.HP = this.MaxHp;
+
         if (Collison == null)
         {
-            Collison = GetComponent<Rigidbody2D>();
+            Collison = GetComponent<Collision2D>();
+        }
+        if (RBody == null)
+        {
+            RBody = GetComponent<Rigidbody2D>();
         }
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        
+
+
 	}
 
     void FixedUpdate()
@@ -45,7 +50,7 @@ public class HealthMonitor : MonoBehaviour {
         }
     }
 
-    public void StatInput(int HP_add, int Stam_add)
+    public void StatInput(int HP_add, int Stam_add, float Flame_add)
     {
         /* StatInput
          * This function simply adds the numbers
@@ -58,19 +63,36 @@ public class HealthMonitor : MonoBehaviour {
 
         this.ChangeHP(HP_add);
         this.ChangeStamina(Stam_add);
+        this.ChangeFlame(Flame_add);
 
 
     }
 
     public bool IsAlive
     { // Attribute
-        get { return HP > 0; }
+        get { return this.HP > 0; }
+    }
+    public bool HasStamina
+    {
+        get { return this.Stamina > 0; }
+    }
+    public bool HasFlame
+    {
+        get { return this.Flame > 0; }
     }
 
-    private void ChangeStamina(int add)
+    public void ChangeFlame(float add)
+    {
+        // A main function to deal with Flame (Fire breathe fuel) change
+        this.Flame = Mathf.Clamp(this.Flame + add, 0f, this.MaxFlame);
+    }
+
+    public void ChangeStamina(int add)
     {
         // A main function to deal with stamina change
         this.Stamina = Mathf.Clamp(this.Stamina + add, 0, this.MaxStamina);
+
+        // Stamina is monitored by the wings itself, so no need for code here
 
     }
 
@@ -115,12 +137,21 @@ public class HealthMonitor : MonoBehaviour {
     void OnCollisionEnter2D(Collision2D coll)
     {
         int dmg = 0; // coll.gameObject.getDamage
-        bool flag1 = false; // coll.gameObject
+        bool IsEnemy = coll.gameObject.tag == "Enemy";
+        bool IsItem = coll.gameObject.tag == "Item";
+        
+        // coll.gameObject
         // @@@Need flag based on what we hit...
 
-        if (flag1)
+        if (IsEnemy)
         {
-            this.ChangeHP( -dmg, 0 );
+            // Its an enemy, so we'll take damage.
+            // Damage is NEGATED for simplicity here!!!
+            this.ChangeHP( -dmg );
+        }
+        else if (IsItem)
+        {
+            // @@@
         }
     }
 
