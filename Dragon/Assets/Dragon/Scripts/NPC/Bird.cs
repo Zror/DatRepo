@@ -3,10 +3,10 @@ using System.Collections;
 
 public class Bird : MonoBehaviour {
 
+    // Bird needs 0 gravity
     public float Fly_Height;
     private Transform trans;
     public float Rate = 10; // Units/Second
-    public string tag = "Item";
     public int direction;
 
     public int give_HP = 5;
@@ -37,6 +37,7 @@ public class Bird : MonoBehaviour {
             float diff = Fly_Height - getHeight();
             // use the difference to assess direction to go
             adjsustHeight(diff);
+            // @@@ Forward Motion
         }
     }
 
