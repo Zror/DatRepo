@@ -10,12 +10,8 @@ public class BackButton : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetButton("Back"))
-        {
-            Application.LoadLevel("Shop-avenue.unity");
-        }
     }
-    void onClick(){
-         Application.LoadLevel("Shop-avenue.unity");
+    public void onClick(){
+         Application.LoadLevel(0);
     }
 }
