@@ -8,6 +8,7 @@ public class TutorButtons : MonoBehaviour {
     public int gold;
     bool flight;
     bool fire;
+  //  public int stats[][]=int[2][12];
 	void Start () {
         gold = 0;
         fire = false;
