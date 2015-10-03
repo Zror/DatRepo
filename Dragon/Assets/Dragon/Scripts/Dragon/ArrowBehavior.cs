@@ -3,9 +3,9 @@ using System.Collections;
 
 public class ArrowBehavior : MonoBehaviour {
     public ImageBehavior image;
-	// Use this for initialization
+    private int max_size;
 	void Start () {
-	
+        max_size = image.images.Length-1;
 	}
 	
 	// Update is called once per frame
@@ -23,7 +23,7 @@ public class ArrowBehavior : MonoBehaviour {
         }
         else if (arg.Equals(">"))
         {
-            if (image.index != 9)
+            if (image.index != max_size)
             {
                 image.index++;
             }
