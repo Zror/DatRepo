@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class GoldBehavior : MonoBehaviour {
+    public Text t;
     private int gold;
 	// Use this for initialization
 	void Start () {
@@ -10,7 +12,7 @@ public class GoldBehavior : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+        t.text = "Current Gold: " + gold;
 	}
     public int get()
     {

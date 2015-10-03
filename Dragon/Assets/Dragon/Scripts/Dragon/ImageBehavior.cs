@@ -7,7 +7,7 @@ public class ImageBehavior : MonoBehaviour {
     public int selected = 0;
     private Image[] images=new Image[10];
     public Button butt;
-    private int gold;
+    public GoldBehavior gold;
     bool notEnough=false;
 	// Use this for initialization
 	void Start () {
@@ -17,8 +17,7 @@ public class ImageBehavior : MonoBehaviour {
             images[i] = new Image("Image " + i, 20 * (i+1), "Dragon " + i);
         }
         images[0].buy();
-        //same for the gold
-        gold = 100;
+        //same for the gol
 	}
 	
 	// Update is called once per frame
@@ -49,10 +48,10 @@ public class ImageBehavior : MonoBehaviour {
     }
     public void onClick()
     {
-        if(canBuy(gold, images[index].getCost())&&!images[index].isOwned())
+        if(canBuy(gold.get(), images[index].getCost())&&!images[index].isOwned())
         {
             images[index].buy();
-            gold -= images[index].getCost();
+            gold.change(-images[index].getCost());
             selected = index;
             //Save the states of the variables back to where ever it saves
         }
