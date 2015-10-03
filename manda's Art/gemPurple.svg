@@ -1,0 +1,1277 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="gemPink.svg">
+  <defs
+     id="defs4">
+    <filter
+       inkscape:label="Tritone"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Create a tritone palette with hue selectable by flood"
+       x="0"
+       y="0"
+       height="1"
+       width="1"
+       color-interpolation-filters="sRGB"
+       id="filter3978">
+      <feColorMatrix
+         in="SourceGraphic"
+         result="r"
+         type="matrix"
+         values="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 "
+         id="feColorMatrix3980" />
+      <feColorMatrix
+         in="SourceGraphic"
+         result="g"
+         type="matrix"
+         values="0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 "
+         id="feColorMatrix3982" />
+      <feColorMatrix
+         in="SourceGraphic"
+         result="b"
+         type="matrix"
+         values="0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 "
+         id="feColorMatrix3984" />
+      <feBlend
+         mode="darken"
+         in="r"
+         in2="g"
+         result="minrg"
+         id="feBlend3986" />
+      <feBlend
+         mode="darken"
+         in="minrg"
+         in2="b"
+         result="p"
+         id="feBlend3988" />
+      <feBlend
+         mode="lighten"
+         in="r"
+         in2="g"
+         result="maxrg"
+         id="feBlend3990" />
+      <feBlend
+         mode="lighten"
+         in="maxrg"
+         in2="b"
+         result="q"
+         id="feBlend3992" />
+      <feComponentTransfer
+         in="q"
+         result="q2"
+         id="feComponentTransfer3994">
+        <feFuncR
+           type="linear"
+           slope="0"
+           id="feFuncR3996" />
+      </feComponentTransfer>
+      <feBlend
+         mode="lighten"
+         in="p"
+         in2="q2"
+         result="pq"
+         id="feBlend3998" />
+      <feColorMatrix
+         in="pq"
+         result="qminp"
+         type="matrix"
+         values="-1 1 0 0 0 -1 1 0 0 0 -1 1 0 0 0 0 0 0 0 1 "
+         id="feColorMatrix4000" />
+      <feComponentTransfer
+         in="qminp"
+         result="coefsq"
+         id="feComponentTransfer4002">
+        <feFuncR
+           type="table"
+           tableValues="1 1 0 0 0 1 1"
+           id="feFuncR4004" />
+        <feFuncG
+           type="table"
+           tableValues="0 1 1 1 0 0 0"
+           id="feFuncG4006" />
+        <feFuncB
+           type="table"
+           tableValues="0 0 0 1 1 1 0"
+           id="feFuncB4008" />
+      </feComponentTransfer>
+      <feFlood
+         flood-color="rgb(203,0,254)"
+         result="result1"
+         id="feFlood4010" />
+      <feComposite
+         in="qminp"
+         in2="result1"
+         result="qminpc"
+         operator="arithmetic"
+         k1="1"
+         id="feComposite4012" />
+      <feComposite
+         in="p"
+         in2="qminpc"
+         result="color"
+         operator="arithmetic"
+         k2="1"
+         k3="1"
+         id="feComposite4014" />
+      <feComposite
+         in="color"
+         in2="SourceGraphic"
+         operator="in"
+         k1="1"
+         id="feComposite4016" />
+    </filter>
+    <filter
+       inkscape:label="Tritone"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Create a tritone palette with hue selectable by flood"
+       x="0"
+       y="0"
+       height="1"
+       width="1"
+       color-interpolation-filters="sRGB"
+       id="filter4018">
+      <feColorMatrix
+         in="SourceGraphic"
+         result="r"
+         type="matrix"
+         values="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 "
+         id="feColorMatrix4020" />
+      <feColorMatrix
+         in="SourceGraphic"
+         result="g"
+         type="matrix"
+         values="0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 "
+         id="feColorMatrix4022" />
+      <feColorMatrix
+         in="SourceGraphic"
+         result="b"
+         type="matrix"
+         values="0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 "
+         id="feColorMatrix4024" />
+      <feBlend
+         mode="darken"
+         in="r"
+         in2="g"
+         result="minrg"
+         id="feBlend4026" />
+      <feBlend
+         mode="darken"
+         in="minrg"
+         in2="b"
+         result="p"
+         id="feBlend4028" />
+      <feBlend
+         mode="lighten"
+         in="r"
+         in2="g"
+         result="maxrg"
+         id="feBlend4030" />
+      <feBlend
+         mode="lighten"
+         in="maxrg"
+         in2="b"
+         result="q"
+         id="feBlend4032" />
+      <feComponentTransfer
+         in="q"
+         result="q2"
+         id="feComponentTransfer4034">
+        <feFuncR
+           type="linear"
+           slope="0"
+           id="feFuncR4036" />
+      </feComponentTransfer>
+      <feBlend
+         mode="lighten"
+         in="p"
+         in2="q2"
+         result="pq"
+         id="feBlend4038" />
+      <feColorMatrix
+         in="pq"
+         result="qminp"
+         type="matrix"
+         values="-1 1 0 0 0 -1 1 0 0 0 -1 1 0 0 0 0 0 0 0 1 "
+         id="feColorMatrix4040" />
+      <feComponentTransfer
+         in="qminp"
+         result="coefsq"
+         id="feComponentTransfer4042">
+        <feFuncR
+           type="table"
+           tableValues="1 1 0 0 0 1 1"
+           id="feFuncR4044" />
+        <feFuncG
+           type="table"
+           tableValues="0 1 1 1 0 0 0"
+           id="feFuncG4046" />
+        <feFuncB
+           type="table"
+           tableValues="0 0 0 1 1 1 0"
+           id="feFuncB4048" />
+      </feComponentTransfer>
+      <feFlood
+         flood-color="rgb(203,0,254)"
+         result="result1"
+         id="feFlood4050" />
+      <feComposite
+         in="qminp"
+         in2="result1"
+         result="qminpc"
+         operator="arithmetic"
+         k1="1"
+         id="feComposite4052" />
+      <feComposite
+         in="p"
+         in2="qminpc"
+         result="color"
+         operator="arithmetic"
+         k2="1"
+         k3="1"
+         id="feComposite4054" />
+      <feComposite
+         in="color"
+         in2="SourceGraphic"
+         operator="in"
+         k1="1"
+         id="feComposite4056" />
+    </filter>
+    <filter
+       inkscape:label="Tritone"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Create a tritone palette with hue selectable by flood"
+       x="0"
+       y="0"
+       height="1"
+       width="1"
+       color-interpolation-filters="sRGB"
+       id="filter4058">
+      <feColorMatrix
+         in="SourceGraphic"
+         result="r"
+         type="matrix"
+         values="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 "
+         id="feColorMatrix4060" />
+      <feColorMatrix
+         in="SourceGraphic"
+         result="g"
+         type="matrix"
+         values="0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 "
+         id="feColorMatrix4062" />
+      <feColorMatrix
+         in="SourceGraphic"
+         result="b"
+         type="matrix"
+         values="0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 "
+         id="feColorMatrix4064" />
+      <feBlend
+         mode="darken"
+         in="r"
+         in2="g"
+         result="minrg"
+         id="feBlend4066" />
+      <feBlend
+         mode="darken"
+         in="minrg"
+         in2="b"
+         result="p"
+         id="feBlend4068" />
+      <feBlend
+         mode="lighten"
+         in="r"
+         in2="g"
+         result="maxrg"
+         id="feBlend4070" />
+      <feBlend
+         mode="lighten"
+         in="maxrg"
+         in2="b"
+         result="q"
+         id="feBlend4072" />
+      <feComponentTransfer
+         in="q"
+         result="q2"
+         id="feComponentTransfer4074">
+        <feFuncR
+           type="linear"
+           slope="0"
+           id="feFuncR4076" />
+      </feComponentTransfer>
+      <feBlend
+         mode="lighten"
+         in="p"
+         in2="q2"
+         result="pq"
+         id="feBlend4078" />
+      <feColorMatrix
+         in="pq"
+         result="qminp"
+         type="matrix"
+         values="-1 1 0 0 0 -1 1 0 0 0 -1 1 0 0 0 0 0 0 0 1 "
+         id="feColorMatrix4080" />
+      <feComponentTransfer
+         in="qminp"
+         result="coefsq"
+         id="feComponentTransfer4082">
+        <feFuncR
+           type="table"
+           tableValues="1 1 0 0 0 1 1"
+           id="feFuncR4084" />
+        <feFuncG
+           type="table"
+           tableValues="0 1 1 1 0 0 0"
+           id="feFuncG4086" />
+        <feFuncB
+           type="table"
+           tableValues="0 0 0 1 1 1 0"
+           id="feFuncB4088" />
+      </feComponentTransfer>
+      <feFlood
+         flood-color="rgb(203,0,254)"
+         result="result1"
+         id="feFlood4090" />
+      <feComposite
+         in="qminp"
+         in2="result1"
+         result="qminpc"
+         operator="arithmetic"
+         k1="1"
+         id="feComposite4092" />
+      <feComposite
+         in="p"
+         in2="qminpc"
+         result="color"
+         operator="arithmetic"
+         k2="1"
+         k3="1"
+         id="feComposite4094" />
+      <feComposite
+         in="color"
+         in2="SourceGraphic"
+         operator="in"
+         k1="1"
+         id="feComposite4096" />
+    </filter>
+    <filter
+       inkscape:label="Tritone"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Create a tritone palette with hue selectable by flood"
+       x="0"
+       y="0"
+       height="1"
+       width="1"
+       color-interpolation-filters="sRGB"
+       id="filter4098">
+      <feColorMatrix
+         in="SourceGraphic"
+         result="r"
+         type="matrix"
+         values="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 "
+         id="feColorMatrix4100" />
+      <feColorMatrix
+         in="SourceGraphic"
+         result="g"
+         type="matrix"
+         values="0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 "
+         id="feColorMatrix4102" />
+      <feColorMatrix
+         in="SourceGraphic"
+         result="b"
+         type="matrix"
+         values="0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 "
+         id="feColorMatrix4104" />
+      <feBlend
+         mode="darken"
+         in="r"
+         in2="g"
+         result="minrg"
+         id="feBlend4106" />
+      <feBlend
+         mode="darken"
+         in="minrg"
+         in2="b"
+         result="p"
+         id="feBlend4108" />
+      <feBlend
+         mode="lighten"
+         in="r"
+         in2="g"
+         result="maxrg"
+         id="feBlend4110" />
+      <feBlend
+         mode="lighten"
+         in="maxrg"
+         in2="b"
+         result="q"
+         id="feBlend4112" />
+      <feComponentTransfer
+         in="q"
+         result="q2"
+         id="feComponentTransfer4114">
+        <feFuncR
+           type="linear"
+           slope="0"
+           id="feFuncR4116" />
+      </feComponentTransfer>
+      <feBlend
+         mode="lighten"
+         in="p"
+         in2="q2"
+         result="pq"
+         id="feBlend4118" />
+      <feColorMatrix
+         in="pq"
+         result="qminp"
+         type="matrix"
+         values="-1 1 0 0 0 -1 1 0 0 0 -1 1 0 0 0 0 0 0 0 1 "
+         id="feColorMatrix4120" />
+      <feComponentTransfer
+         in="qminp"
+         result="coefsq"
+         id="feComponentTransfer4122">
+        <feFuncR
+           type="table"
+           tableValues="1 1 0 0 0 1 1"
+           id="feFuncR4124" />
+        <feFuncG
+           type="table"
+           tableValues="0 1 1 1 0 0 0"
+           id="feFuncG4126" />
+        <feFuncB
+           type="table"
+           tableValues="0 0 0 1 1 1 0"
+           id="feFuncB4128" />
+      </feComponentTransfer>
+      <feFlood
+         flood-color="rgb(203,0,254)"
+         result="result1"
+         id="feFlood4130" />
+      <feComposite
+         in="qminp"
+         in2="result1"
+         result="qminpc"
+         operator="arithmetic"
+         k1="1"
+         id="feComposite4132" />
+      <feComposite
+         in="p"
+         in2="qminpc"
+         result="color"
+         operator="arithmetic"
+         k2="1"
+         k3="1"
+         id="feComposite4134" />
+      <feComposite
+         in="color"
+         in2="SourceGraphic"
+         operator="in"
+         k1="1"
+         id="feComposite4136" />
+    </filter>
+    <filter
+       inkscape:label="Tritone"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Create a tritone palette with hue selectable by flood"
+       x="0"
+       y="0"
+       height="1"
+       width="1"
+       color-interpolation-filters="sRGB"
+       id="filter4138">
+      <feColorMatrix
+         in="SourceGraphic"
+         result="r"
+         type="matrix"
+         values="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 "
+         id="feColorMatrix4140" />
+      <feColorMatrix
+         in="SourceGraphic"
+         result="g"
+         type="matrix"
+         values="0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 "
+         id="feColorMatrix4142" />
+      <feColorMatrix
+         in="SourceGraphic"
+         result="b"
+         type="matrix"
+         values="0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 "
+         id="feColorMatrix4144" />
+      <feBlend
+         mode="darken"
+         in="r"
+         in2="g"
+         result="minrg"
+         id="feBlend4146" />
+      <feBlend
+         mode="darken"
+         in="minrg"
+         in2="b"
+         result="p"
+         id="feBlend4148" />
+      <feBlend
+         mode="lighten"
+         in="r"
+         in2="g"
+         result="maxrg"
+         id="feBlend4150" />
+      <feBlend
+         mode="lighten"
+         in="maxrg"
+         in2="b"
+         result="q"
+         id="feBlend4152" />
+      <feComponentTransfer
+         in="q"
+         result="q2"
+         id="feComponentTransfer4154">
+        <feFuncR
+           type="linear"
+           slope="0"
+           id="feFuncR4156" />
+      </feComponentTransfer>
+      <feBlend
+         mode="lighten"
+         in="p"
+         in2="q2"
+         result="pq"
+         id="feBlend4158" />
+      <feColorMatrix
+         in="pq"
+         result="qminp"
+         type="matrix"
+         values="-1 1 0 0 0 -1 1 0 0 0 -1 1 0 0 0 0 0 0 0 1 "
+         id="feColorMatrix4160" />
+      <feComponentTransfer
+         in="qminp"
+         result="coefsq"
+         id="feComponentTransfer4162">
+        <feFuncR
+           type="table"
+           tableValues="1 1 0 0 0 1 1"
+           id="feFuncR4164" />
+        <feFuncG
+           type="table"
+           tableValues="0 1 1 1 0 0 0"
+           id="feFuncG4166" />
+        <feFuncB
+           type="table"
+           tableValues="0 0 0 1 1 1 0"
+           id="feFuncB4168" />
+      </feComponentTransfer>
+      <feFlood
+         flood-color="rgb(203,0,254)"
+         result="result1"
+         id="feFlood4170" />
+      <feComposite
+         in="qminp"
+         in2="result1"
+         result="qminpc"
+         operator="arithmetic"
+         k1="1"
+         id="feComposite4172" />
+      <feComposite
+         in="p"
+         in2="qminpc"
+         result="color"
+         operator="arithmetic"
+         k2="1"
+         k3="1"
+         id="feComposite4174" />
+      <feComposite
+         in="color"
+         in2="SourceGraphic"
+         operator="in"
+         k1="1"
+         id="feComposite4176" />
+    </filter>
+    <filter
+       inkscape:label="Tritone"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Create a tritone palette with hue selectable by flood"
+       x="0"
+       y="0"
+       height="1"
+       width="1"
+       color-interpolation-filters="sRGB"
+       id="filter4178">
+      <feColorMatrix
+         in="SourceGraphic"
+         result="r"
+         type="matrix"
+         values="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 "
+         id="feColorMatrix4180" />
+      <feColorMatrix
+         in="SourceGraphic"
+         result="g"
+         type="matrix"
+         values="0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 "
+         id="feColorMatrix4182" />
+      <feColorMatrix
+         in="SourceGraphic"
+         result="b"
+         type="matrix"
+         values="0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 "
+         id="feColorMatrix4184" />
+      <feBlend
+         mode="darken"
+         in="r"
+         in2="g"
+         result="minrg"
+         id="feBlend4186" />
+      <feBlend
+         mode="darken"
+         in="minrg"
+         in2="b"
+         result="p"
+         id="feBlend4188" />
+      <feBlend
+         mode="lighten"
+         in="r"
+         in2="g"
+         result="maxrg"
+         id="feBlend4190" />
+      <feBlend
+         mode="lighten"
+         in="maxrg"
+         in2="b"
+         result="q"
+         id="feBlend4192" />
+      <feComponentTransfer
+         in="q"
+         result="q2"
+         id="feComponentTransfer4194">
+        <feFuncR
+           type="linear"
+           slope="0"
+           id="feFuncR4196" />
+      </feComponentTransfer>
+      <feBlend
+         mode="lighten"
+         in="p"
+         in2="q2"
+         result="pq"
+         id="feBlend4198" />
+      <feColorMatrix
+         in="pq"
+         result="qminp"
+         type="matrix"
+         values="-1 1 0 0 0 -1 1 0 0 0 -1 1 0 0 0 0 0 0 0 1 "
+         id="feColorMatrix4200" />
+      <feComponentTransfer
+         in="qminp"
+         result="coefsq"
+         id="feComponentTransfer4202">
+        <feFuncR
+           type="table"
+           tableValues="1 1 0 0 0 1 1"
+           id="feFuncR4204" />
+        <feFuncG
+           type="table"
+           tableValues="0 1 1 1 0 0 0"
+           id="feFuncG4206" />
+        <feFuncB
+           type="table"
+           tableValues="0 0 0 1 1 1 0"
+           id="feFuncB4208" />
+      </feComponentTransfer>
+      <feFlood
+         flood-color="rgb(203,0,254)"
+         result="result1"
+         id="feFlood4210" />
+      <feComposite
+         in="qminp"
+         in2="result1"
+         result="qminpc"
+         operator="arithmetic"
+         k1="1"
+         id="feComposite4212" />
+      <feComposite
+         in="p"
+         in2="qminpc"
+         result="color"
+         operator="arithmetic"
+         k2="1"
+         k3="1"
+         id="feComposite4214" />
+      <feComposite
+         in="color"
+         in2="SourceGraphic"
+         operator="in"
+         k1="1"
+         id="feComposite4216" />
+    </filter>
+    <filter
+       inkscape:label="Tritone"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Create a tritone palette with hue selectable by flood"
+       x="0"
+       y="0"
+       height="1"
+       width="1"
+       color-interpolation-filters="sRGB"
+       id="filter4218">
+      <feColorMatrix
+         in="SourceGraphic"
+         result="r"
+         type="matrix"
+         values="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 "
+         id="feColorMatrix4220" />
+      <feColorMatrix
+         in="SourceGraphic"
+         result="g"
+         type="matrix"
+         values="0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 "
+         id="feColorMatrix4222" />
+      <feColorMatrix
+         in="SourceGraphic"
+         result="b"
+         type="matrix"
+         values="0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 "
+         id="feColorMatrix4224" />
+      <feBlend
+         mode="darken"
+         in="r"
+         in2="g"
+         result="minrg"
+         id="feBlend4226" />
+      <feBlend
+         mode="darken"
+         in="minrg"
+         in2="b"
+         result="p"
+         id="feBlend4228" />
+      <feBlend
+         mode="lighten"
+         in="r"
+         in2="g"
+         result="maxrg"
+         id="feBlend4230" />
+      <feBlend
+         mode="lighten"
+         in="maxrg"
+         in2="b"
+         result="q"
+         id="feBlend4232" />
+      <feComponentTransfer
+         in="q"
+         result="q2"
+         id="feComponentTransfer4234">
+        <feFuncR
+           type="linear"
+           slope="0"
+           id="feFuncR4236" />
+      </feComponentTransfer>
+      <feBlend
+         mode="lighten"
+         in="p"
+         in2="q2"
+         result="pq"
+         id="feBlend4238" />
+      <feColorMatrix
+         in="pq"
+         result="qminp"
+         type="matrix"
+         values="-1 1 0 0 0 -1 1 0 0 0 -1 1 0 0 0 0 0 0 0 1 "
+         id="feColorMatrix4240" />
+      <feComponentTransfer
+         in="qminp"
+         result="coefsq"
+         id="feComponentTransfer4242">
+        <feFuncR
+           type="table"
+           tableValues="1 1 0 0 0 1 1"
+           id="feFuncR4244" />
+        <feFuncG
+           type="table"
+           tableValues="0 1 1 1 0 0 0"
+           id="feFuncG4246" />
+        <feFuncB
+           type="table"
+           tableValues="0 0 0 1 1 1 0"
+           id="feFuncB4248" />
+      </feComponentTransfer>
+      <feFlood
+         flood-color="rgb(203,0,254)"
+         result="result1"
+         id="feFlood4250" />
+      <feComposite
+         in="qminp"
+         in2="result1"
+         result="qminpc"
+         operator="arithmetic"
+         k1="1"
+         id="feComposite4252" />
+      <feComposite
+         in="p"
+         in2="qminpc"
+         result="color"
+         operator="arithmetic"
+         k2="1"
+         k3="1"
+         id="feComposite4254" />
+      <feComposite
+         in="color"
+         in2="SourceGraphic"
+         operator="in"
+         k1="1"
+         id="feComposite4256" />
+    </filter>
+    <filter
+       inkscape:label="Tritone"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Create a tritone palette with hue selectable by flood"
+       x="0"
+       y="0"
+       height="1"
+       width="1"
+       color-interpolation-filters="sRGB"
+       id="filter4258">
+      <feColorMatrix
+         in="SourceGraphic"
+         result="r"
+         type="matrix"
+         values="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 "
+         id="feColorMatrix4260" />
+      <feColorMatrix
+         in="SourceGraphic"
+         result="g"
+         type="matrix"
+         values="0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 "
+         id="feColorMatrix4262" />
+      <feColorMatrix
+         in="SourceGraphic"
+         result="b"
+         type="matrix"
+         values="0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 "
+         id="feColorMatrix4264" />
+      <feBlend
+         mode="darken"
+         in="r"
+         in2="g"
+         result="minrg"
+         id="feBlend4266" />
+      <feBlend
+         mode="darken"
+         in="minrg"
+         in2="b"
+         result="p"
+         id="feBlend4268" />
+      <feBlend
+         mode="lighten"
+         in="r"
+         in2="g"
+         result="maxrg"
+         id="feBlend4270" />
+      <feBlend
+         mode="lighten"
+         in="maxrg"
+         in2="b"
+         result="q"
+         id="feBlend4272" />
+      <feComponentTransfer
+         in="q"
+         result="q2"
+         id="feComponentTransfer4274">
+        <feFuncR
+           type="linear"
+           slope="0"
+           id="feFuncR4276" />
+      </feComponentTransfer>
+      <feBlend
+         mode="lighten"
+         in="p"
+         in2="q2"
+         result="pq"
+         id="feBlend4278" />
+      <feColorMatrix
+         in="pq"
+         result="qminp"
+         type="matrix"
+         values="-1 1 0 0 0 -1 1 0 0 0 -1 1 0 0 0 0 0 0 0 1 "
+         id="feColorMatrix4280" />
+      <feComponentTransfer
+         in="qminp"
+         result="coefsq"
+         id="feComponentTransfer4282">
+        <feFuncR
+           type="table"
+           tableValues="1 1 0 0 0 1 1"
+           id="feFuncR4284" />
+        <feFuncG
+           type="table"
+           tableValues="0 1 1 1 0 0 0"
+           id="feFuncG4286" />
+        <feFuncB
+           type="table"
+           tableValues="0 0 0 1 1 1 0"
+           id="feFuncB4288" />
+      </feComponentTransfer>
+      <feFlood
+         flood-color="rgb(203,0,254)"
+         result="result1"
+         id="feFlood4290" />
+      <feComposite
+         in="qminp"
+         in2="result1"
+         result="qminpc"
+         operator="arithmetic"
+         k1="1"
+         id="feComposite4292" />
+      <feComposite
+         in="p"
+         in2="qminpc"
+         result="color"
+         operator="arithmetic"
+         k2="1"
+         k3="1"
+         id="feComposite4294" />
+      <feComposite
+         in="color"
+         in2="SourceGraphic"
+         operator="in"
+         k1="1"
+         id="feComposite4296" />
+    </filter>
+    <filter
+       inkscape:label="Tritone"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Create a tritone palette with hue selectable by flood"
+       x="0"
+       y="0"
+       height="1"
+       width="1"
+       color-interpolation-filters="sRGB"
+       id="filter4298">
+      <feColorMatrix
+         in="SourceGraphic"
+         result="r"
+         type="matrix"
+         values="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 "
+         id="feColorMatrix4300" />
+      <feColorMatrix
+         in="SourceGraphic"
+         result="g"
+         type="matrix"
+         values="0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 "
+         id="feColorMatrix4302" />
+      <feColorMatrix
+         in="SourceGraphic"
+         result="b"
+         type="matrix"
+         values="0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 "
+         id="feColorMatrix4304" />
+      <feBlend
+         mode="darken"
+         in="r"
+         in2="g"
+         result="minrg"
+         id="feBlend4306" />
+      <feBlend
+         mode="darken"
+         in="minrg"
+         in2="b"
+         result="p"
+         id="feBlend4308" />
+      <feBlend
+         mode="lighten"
+         in="r"
+         in2="g"
+         result="maxrg"
+         id="feBlend4310" />
+      <feBlend
+         mode="lighten"
+         in="maxrg"
+         in2="b"
+         result="q"
+         id="feBlend4312" />
+      <feComponentTransfer
+         in="q"
+         result="q2"
+         id="feComponentTransfer4314">
+        <feFuncR
+           type="linear"
+           slope="0"
+           id="feFuncR4316" />
+      </feComponentTransfer>
+      <feBlend
+         mode="lighten"
+         in="p"
+         in2="q2"
+         result="pq"
+         id="feBlend4318" />
+      <feColorMatrix
+         in="pq"
+         result="qminp"
+         type="matrix"
+         values="-1 1 0 0 0 -1 1 0 0 0 -1 1 0 0 0 0 0 0 0 1 "
+         id="feColorMatrix4320" />
+      <feComponentTransfer
+         in="qminp"
+         result="coefsq"
+         id="feComponentTransfer4322">
+        <feFuncR
+           type="table"
+           tableValues="1 1 0 0 0 1 1"
+           id="feFuncR4324" />
+        <feFuncG
+           type="table"
+           tableValues="0 1 1 1 0 0 0"
+           id="feFuncG4326" />
+        <feFuncB
+           type="table"
+           tableValues="0 0 0 1 1 1 0"
+           id="feFuncB4328" />
+      </feComponentTransfer>
+      <feFlood
+         flood-color="rgb(203,0,254)"
+         result="result1"
+         id="feFlood4330" />
+      <feComposite
+         in="qminp"
+         in2="result1"
+         result="qminpc"
+         operator="arithmetic"
+         k1="1"
+         id="feComposite4332" />
+      <feComposite
+         in="p"
+         in2="qminpc"
+         result="color"
+         operator="arithmetic"
+         k2="1"
+         k3="1"
+         id="feComposite4334" />
+      <feComposite
+         in="color"
+         in2="SourceGraphic"
+         operator="in"
+         k1="1"
+         id="feComposite4336" />
+    </filter>
+    <filter
+       inkscape:label="Tritone"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Create a tritone palette with hue selectable by flood"
+       x="0"
+       y="0"
+       height="1"
+       width="1"
+       color-interpolation-filters="sRGB"
+       id="filter4338">
+      <feColorMatrix
+         in="SourceGraphic"
+         result="r"
+         type="matrix"
+         values="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 "
+         id="feColorMatrix4340" />
+      <feColorMatrix
+         in="SourceGraphic"
+         result="g"
+         type="matrix"
+         values="0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 "
+         id="feColorMatrix4342" />
+      <feColorMatrix
+         in="SourceGraphic"
+         result="b"
+         type="matrix"
+         values="0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 1 "
+         id="feColorMatrix4344" />
+      <feBlend
+         mode="darken"
+         in="r"
+         in2="g"
+         result="minrg"
+         id="feBlend4346" />
+      <feBlend
+         mode="darken"
+         in="minrg"
+         in2="b"
+         result="p"
+         id="feBlend4348" />
+      <feBlend
+         mode="lighten"
+         in="r"
+         in2="g"
+         result="maxrg"
+         id="feBlend4350" />
+      <feBlend
+         mode="lighten"
+         in="maxrg"
+         in2="b"
+         result="q"
+         id="feBlend4352" />
+      <feComponentTransfer
+         in="q"
+         result="q2"
+         id="feComponentTransfer4354">
+        <feFuncR
+           type="linear"
+           slope="0"
+           id="feFuncR4356" />
+      </feComponentTransfer>
+      <feBlend
+         mode="lighten"
+         in="p"
+         in2="q2"
+         result="pq"
+         id="feBlend4358" />
+      <feColorMatrix
+         in="pq"
+         result="qminp"
+         type="matrix"
+         values="-1 1 0 0 0 -1 1 0 0 0 -1 1 0 0 0 0 0 0 0 1 "
+         id="feColorMatrix4360" />
+      <feComponentTransfer
+         in="qminp"
+         result="coefsq"
+         id="feComponentTransfer4362">
+        <feFuncR
+           type="table"
+           tableValues="1 1 0 0 0 1 1"
+           id="feFuncR4364" />
+        <feFuncG
+           type="table"
+           tableValues="0 1 1 1 0 0 0"
+           id="feFuncG4366" />
+        <feFuncB
+           type="table"
+           tableValues="0 0 0 1 1 1 0"
+           id="feFuncB4368" />
+      </feComponentTransfer>
+      <feFlood
+         flood-color="rgb(203,0,254)"
+         result="result1"
+         id="feFlood4370" />
+      <feComposite
+         in="qminp"
+         in2="result1"
+         result="qminpc"
+         operator="arithmetic"
+         k1="1"
+         id="feComposite4372" />
+      <feComposite
+         in="p"
+         in2="qminpc"
+         result="color"
+         operator="arithmetic"
+         k2="1"
+         k3="1"
+         id="feComposite4374" />
+      <feComposite
+         in="color"
+         in2="SourceGraphic"
+         operator="in"
+         k1="1"
+         id="feComposite4376" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1"
+     inkscape:cx="298.94633"
+     inkscape:cy="681.42928"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:#008000;stroke:none;filter:url(#filter4338)"
+       d="M 267.91365,188.66878 486.11978,183.36218 533,249.16407 393.2117,408.36218 227,255.53199 z"
+       id="path2989"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccc" />
+    <path
+       style="fill:#005400;stroke:none;fill-opacity:1;filter:url(#filter4298)"
+       d="m 398.55055,399.40512 c 0.002,-0.53472 14.7763,-33.82222 32.83105,-73.97222 l 32.82683,-73 18.91895,-0.75448 c 10.40542,-0.41496 24.94803,-0.63996 32.3169,-0.5 l 13.39795,0.25448 -63.27517,72.5 c -69.60479,79.7524 -67.02247,76.84426 -67.01651,75.47222 z"
+       id="path3822"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#005400;fill-opacity:1;stroke:none;filter:url(#filter4258)"
+       d="m 451.80019,217.72352 c -6.69264,-17.16516 -12.00204,-31.37577 -11.79869,-31.57912 0.20336,-0.20336 10.69105,-0.62654 23.30599,-0.94042 l 22.93625,-0.57069 6.97738,9.89981 c 13.68087,19.41099 35.30885,51.19358 35.91884,52.7832 0.56356,1.46861 -2.39106,1.6166 -32.2755,1.6166 l -32.89586,0 -12.16841,-31.20938 z"
+       id="path3824"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#00b100;fill-opacity:1;stroke:none;filter:url(#filter4218)"
+       d="m 231.64148,249.24881 c 1.32267,-2.20735 10.04313,-16.42748 19.3788,-31.6003 l 16.97396,-27.58694 7.02604,-0.52957 c 14.40582,-1.08579 54.52605,-1.46991 54.52605,-0.52204 0,1.05155 -18.86941,62.12569 -19.33955,62.59583 -0.162,0.162 -18.44655,0.60095 -40.63234,0.97545 l -40.33781,0.68091 2.40485,-4.01334 z"
+       id="path3834"
+       inkscape:connector-curvature="0" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="detail">
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter4178)"
+       d="m 228,254.36218 c 105.33749,-0.33126 202.41667,-2.41667 303.75,-4.75 l -138.5,158.5 z"
+       id="path3760"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter4138)"
+       d="m 311,253.36218 c 28.22167,50.66667 57.57367,103.83333 82.25,154.5 l 70.5,-156.75 z"
+       id="path3792"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter4098)"
+       d="m 311,253.36218 20.5,-66.5 106,-2 26,65.75 z"
+       id="path3798"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter4058)"
+       d="m 227.5,253.86218 40.25,-65.25 63.75,-1.5 -20.5,66 z"
+       id="path3818"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter4018)"
+       d="m 438,184.86218 49,-1.25 45.25,65.75 -68.75,1 z"
+       id="path3820"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       style="fill:#00b100;fill-opacity:1;stroke:none;filter:url(#filter3978)"
+       d="m 310.50976,329.81203 c -42.60489,-39.61504 -78.12755,-72.67419 -78.93925,-73.46478 -1.28383,-1.25042 3.78971,-1.4034 38.99851,-1.17588 l 40.47435,0.26153 9.32357,17 c 5.12796,9.35 16.10676,29.375 24.39734,44.5 16.45292,30.01607 44.24297,83.87241 43.60673,84.50865 -0.2188,0.21881 -35.25637,-32.01448 -77.86125,-71.62952 l 0,0 z"
+       id="path3836"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>
