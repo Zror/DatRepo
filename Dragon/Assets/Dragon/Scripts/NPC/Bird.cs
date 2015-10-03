@@ -100,7 +100,7 @@ public class Bird : MonoBehaviour {
         HealthMonitor dragonSM = attacker.GetComponent<HealthMonitor>();
 
 
-        dragonSM.StatInput( this.give_HP,
+		dragonSM:StatInput( this.give_HP,
                             this.give_Stam,
                             this.give_Flame);
         // Maybe do a little animation?

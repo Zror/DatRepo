@@ -37,7 +37,7 @@ public class base_item : MonoBehaviour {
 			UseItem(dragon); // For non awarding actions
 
 			HealthMonitor dragonSM = dragon.GetComponent<HealthMonitor>();
-			dragonSM.StatInput( this.award_HP,
+			dragonSM:StatInput( this.award_HP,
 			                   	this.award_Stam,
 			                   	this.award_Flame);
 			// @@@ SESSION MONITOR
