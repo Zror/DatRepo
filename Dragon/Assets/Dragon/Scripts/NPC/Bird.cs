@@ -7,7 +7,7 @@ public class Bird : MonoBehaviour {
     public float Fly_Height;
     private Transform trans;
     public float Rate = 10; // Units/Second
-    public int direction;
+    public int direction; // Going negative or positive x distances?
 
     public int give_HP = 5;
     public int give_Stam = 10;
@@ -81,13 +81,13 @@ public class Bird : MonoBehaviour {
         return this.Rate/TicksPerSecond;
     }
     // Check for deaths
-    void OnCollisionEnter2D(Collision2D coll)
+    void OnTriggerEnter2D(Collider2D coll)
     {
-        if (coll.gameObject.tag == "Player")
+        if (coll.gameObject.tag == "Player") // @@@ENUM HERE!!!
         {
             GameObject dragon = coll.gameObject;
 
-            this.PreDeath(dragon);
+            this.PreDeath(dragon); // Use this for when birds hit walls
         }
         Destroy(this);
     }
