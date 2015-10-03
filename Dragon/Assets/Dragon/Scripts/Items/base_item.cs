@@ -3,13 +3,17 @@ using System.Collections;
 
 public class base_item : MonoBehaviour {
 
-	public int award_HP = 0;
-	public int award_Stam = 0;
+	public uint award_HP = 0;
+	public uint award_Stam = 0;
 	public float award_Flame = 0f;
+	public uint award_Coin_Value = 0;
 
 	// Use this for initialization
 	void Start () {
-		this.tag = Globals.TAGS.Item;
+		// Correct init logics
+		this.tag 				= Globals.TAGS.Item;
+		this.award_Flame 		= Mathf.Max (award_Flame, 0f);
+
 	}
 	
 	// Update is called once per frame
@@ -36,6 +40,8 @@ public class base_item : MonoBehaviour {
 			dragonSM.StatInput( this.award_HP,
 			                   	this.award_Stam,
 			                   	this.award_Flame);
+			// @@@ SESSION MONITOR
+			// dragon.awardCoins( this. award_Coin_Value )
 
 		}
 

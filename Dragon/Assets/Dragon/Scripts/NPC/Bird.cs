@@ -9,8 +9,8 @@ public class Bird : MonoBehaviour {
     public float Rate = 10; // Units/Second
     public int direction; // Going negative or positive x distances?
 
-    public int give_HP = 5;
-    public int give_Stam = 10;
+    public uint give_HP = 5;
+    public uint give_Stam = 10;
     public float give_Flame = 3f;
 
 	// Use this for initialization
@@ -23,6 +23,7 @@ public class Bird : MonoBehaviour {
             this.Fly_Height = getHeight();
             this.direction = getDirection();
         }
+		this.give_Flame = Mathf.Max (give_Flame, 0f);
 	}
 	
 	// Update is called once per frame
