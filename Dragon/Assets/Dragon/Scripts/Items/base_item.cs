@@ -39,7 +39,7 @@ public class base_item : MonoBehaviour {
 
 		}
 
-		Destroy(this); // Goodbye
+		Destroy(this.gameObject); // Goodbye
 	}
 
 	// What we need to do to use this item

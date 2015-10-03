@@ -89,7 +89,7 @@ public class Bird : MonoBehaviour {
 
             this.PreDeath(dragon); // Use this for when birds hit walls
         }
-        Destroy(this);
+        Destroy(this.gameObject);
     }
 
     void PreDeath(GameObject attacker)
