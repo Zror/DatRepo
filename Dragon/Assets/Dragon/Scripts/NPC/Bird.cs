@@ -83,7 +83,7 @@ public class Bird : MonoBehaviour {
     // Check for deaths
     void OnTriggerEnter2D(Collider2D coll)
     {
-        if (coll.gameObject.tag == "Player") // @@@ENUM HERE!!!
+        if (coll.gameObject.tag == Globals.TAGS.Player)
         {
             GameObject dragon = coll.gameObject;
 
