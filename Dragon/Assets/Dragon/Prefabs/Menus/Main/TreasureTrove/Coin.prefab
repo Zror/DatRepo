@@ -32,7 +32,6 @@ Transform:
   m_RootOrder: 0
 --- !u!50 &5089832
 Rigidbody2D:
-  serializedVersion: 2
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -41,11 +40,11 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1
+  m_FixedAngle: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!61 &6130728
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -58,7 +57,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: .200000003, y: .200000003}
+  m_Size: {x: .0500000007, y: .0500000007}
 --- !u!212 &21225128
 SpriteRenderer:
   m_ObjectHideFlags: 1

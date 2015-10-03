@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEditor;
 
+/*
 [CustomPropertyDrawer(typeof(WeightedTreasure))]
 class WeightedTreasureEditor : PropertyDrawer
 {
@@ -12,7 +13,7 @@ class WeightedTreasureEditor : PropertyDrawer
         treasure.weight = EditorGUILayout.IntField(treasure.weight, GUILayout.Width(120));
         treasure.treasure = (GameObject)EditorGUILayout.ObjectField(treasure.treasure, typeof(GameObject), false);
         EditorGUILayout.EndHorizontal();
-    }*/
+    }
 
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
     {
@@ -27,3 +28,4 @@ class WeightedTreasureEditor : PropertyDrawer
         }
     }
 }
+*/
