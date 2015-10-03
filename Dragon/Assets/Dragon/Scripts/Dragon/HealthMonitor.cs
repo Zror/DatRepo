@@ -50,6 +50,11 @@ public class HealthMonitor : MonoBehaviour {
         }
     }
 
+	public void StatInput(uint HP_add, uint Stam_add, float Flame_add)
+	{
+		this.StatInput ((int)HP_add, (int)Stam_add, Flame_add);
+	}
+
     public void StatInput(int HP_add, int Stam_add, float Flame_add)
     {
         /* StatInput
@@ -124,11 +129,11 @@ public class HealthMonitor : MonoBehaviour {
             // What we hit
             if (HP_Last > this.HP)
             { // Clearly damage
-
+				// @@@ SOUND HERE
             }
             else if (HP_Last < this.HP)
             { // Clearly heal
-
+				// @@@ SOUND HERE
             }
 
         }
