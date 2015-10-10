@@ -12,7 +12,8 @@ GameObject:
   - 23: {fileID: 2326014}
   - 58: {fileID: 5830854}
   - 50: {fileID: 5097334}
-  - 114: {fileID: 11471654}
+  - 114: {fileID: 11452752}
+  - 114: {fileID: 11469912}
   m_Layer: 0
   m_Name: Dragon
   m_TagString: Untagged
@@ -27,7 +28,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 196474}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -15, y: 15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -71,14 +72,14 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 196474}
   m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: .0500000007
-  m_GravityScale: .100000001
+  m_LinearDrag: .100000001
+  m_AngularDrag: 0
+  m_GravityScale: .5
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &5830854
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -86,13 +87,13 @@ CircleCollider2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 196474}
   m_Enabled: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: bc623c00d947b15469672ad2355c3b8d, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: .5
---- !u!114 &11471654
+--- !u!114 &11452752
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -100,17 +101,33 @@ MonoBehaviour:
   m_GameObject: {fileID: 196474}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 038fa94d3cf7b134d8e493dfdba264ee, type: 3}
+  m_Script: {fileID: 11500000, guid: 1527f83df34dd06489c354545b418183, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: 100
+  velocity: {x: 0, y: 0}
+--- !u!114 &11469912
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 196474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d779f1451e8fb0d47851e7c859135ff6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: 300
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: velocity
+      value: 300
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 196474}
