@@ -3,45 +3,56 @@ using UnityEngine.UI;
 using System.Collections;
 
 public class ImageBehavior : MonoBehaviour {
-    public int index = 0;
+    public xmlSavingClass save;
+    public int current = 0;
     public int selected = 0;
     public ImageData[] images;
     public Button butt;
-    public GoldBehavior gold;
+    public SavedData gold;
     bool notEnough=false;
     public Image render;
     // Use this for initialization
-    void Start () {}
+    void Start () {
+        gold = save.stats;
+        gold.boolArraySize("skins", images.Length);
+        gold.getBought("skins", images);
+        selected = gold.getSelected("skins");
+    }
 	// Update is called once per frame
 	void Update () {
         Text t = butt.GetComponentInChildren<Text>();
-        render.sprite = images[index].getImage();
-        if (!images[index].isOwned())
+        render.sprite = images[current].getImage();
+        if (!images[current].isOwned())
         {
-            t.text = images[index].getCost() + "\n" + images[index].getName();
+            t.text = images[current].getCost() + "\n" + images[current].getName();
         }
         else
         {
-            t.text = "You own this already\n" + images[index].getName();
-            if (index == selected)
+            t.text = "You own this already\n" + images[current].getName();
+            if (current == selected)
             {
-                t.text = "You own this already\n" + images[index].getName() + "\nEquipped";
+                t.text = "You own this already\n" + images[current].getName() + "\nEquipped";
             }
         }
 
     }
     public void onClick()
     {
-        if (canBuy(gold.get(), images[index].getCost()) && !images[index].isOwned())
+        if (canBuy(gold.get(), images[current].getCost()) && !images[current].isOwned())
         {
-            images[index].buy();
-            gold.lose(images[index].getCost());
-            selected = index;
+            images[current].buy();
+            gold.lose(images[current].getCost());
+            selected = current;
             //Save the states of the variables back to where ever it saves
+            gold.updateArray("skins", images);
+            gold.selected("skins", selected);
+            save.Save();
         }
-        else if (images[index].isOwned())
+        else if (images[current].isOwned())
         {
-            selected = index;
+            selected = current;
+            gold.selected("skins", selected);
+            save.Save();
         }
     }
     private bool canBuy(uint have, uint need)

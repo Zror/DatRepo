@@ -16,16 +16,16 @@ public class ArrowBehavior : MonoBehaviour {
     {
         if(arg.Equals("<"))
         {
-            if (image.index != 0)
+            if (image.current != 0)
             {
-                image.index--;
+                image.current--;
             }
         }
         else if (arg.Equals(">"))
         {
-            if (image.index != max_size)
+            if (image.current != max_size)
             {
-                image.index++;
+                image.current++;
             }
         }
     }
