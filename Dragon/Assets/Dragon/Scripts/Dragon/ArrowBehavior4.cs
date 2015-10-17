@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class ArrowBehavior4 : MonoBehaviour {
-    public BreathBehavior image;
+    public BreathButtonBehavior image;
     private int max_size;
     // Use this for initialization
     void Start()

@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class GoldBehavior : MonoBehaviour {
+public class GoldTextBehavior : MonoBehaviour {
     public xmlSavingClass save;
     public SavedData gold;
     public Text t;

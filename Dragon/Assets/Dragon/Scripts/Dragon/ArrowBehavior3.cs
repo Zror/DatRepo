@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class ArrowBehavior3 : MonoBehaviour {
-    public WingBehavaior image;
+    public WingButtonBehavaior image;
     private int max_size;
     // Use this for initialization
     void Start()

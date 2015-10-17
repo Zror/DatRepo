@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class ArrowBehavior2 : MonoBehaviour {
-    public PerksBehavior image;
+    public PerksButtonBehavior image;
     private int max_size;
     // Use this for initialization
     void Start()

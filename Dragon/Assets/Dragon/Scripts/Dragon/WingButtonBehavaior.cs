@@ -2,29 +2,29 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class PerksBehavior : MonoBehaviour {
+public class WingButtonBehavaior : MonoBehaviour {
     public xmlSavingClass save;
     public int index = 0;
-    public int selected = 0;
+    public int selected;
     public ImageData[] images;
     public Button butt;
     public SavedData gold;
     bool notEnough = false;
     public Image render;
-    //public sprite
     // Use this for initialization
     void Start()
     {
         gold = save.stats;
-        gold.boolArraySize("perks", images.Length);
-        gold.getBought("perks", images);
-        selected = gold.getSelected("perks");
+        gold.boolArraySize("wings", images.Length);
+        gold.getBought("wings", images);
+        selected = gold.getSelected("wings");
     }
 
     // Update is called once per frame
     void Update()
     {
         Text t = butt.GetComponentInChildren<Text>();
+
         render.sprite = images[index].getImage();
         if (!images[index].isOwned())
         {
@@ -48,14 +48,14 @@ public class PerksBehavior : MonoBehaviour {
             gold.lose(images[index].getCost());
             selected = index;
             //Save the states of the variables back to where ever it saves
-            gold.updateArray("perks", images);
-            gold.selected("perks", selected);
+            gold.updateArray("wings", images);
+            gold.selected("wings", selected);
             save.Save();
         }
         else if (images[index].isOwned())
         {
             selected = index;
-            gold.selected("perks", selected);
+            gold.selected("wings", selected);
             save.Save();
         }
     }
