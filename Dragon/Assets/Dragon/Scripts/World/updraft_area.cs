@@ -4,8 +4,9 @@ using System.Collections;
 public class updraft_area : MonoBehaviour {
 
 	public float Updraft_Amount = 10f;
+    private float Force_From_Area;
 	public bool Is_Ignited	= false;
-	private float[] Size_Bounds = new float[2]();
+	private Vector2[] Size_Bounds = new Vector2[2];
 	private Vector2 Position;
 
 	public LayerMask mask;
@@ -32,14 +33,17 @@ public class updraft_area : MonoBehaviour {
 	}
 
 	void Updraft(){
-		// Might need to make a trigger layer attached to this
+        // Might need to make a trigger layer attached to this
 
-		// Search
-		Collider2D[] temp = Physics2D.OverlapAreaAll (Size_Bounds [0], Size_Bounds [1], this.mask);
+        // Search
+        Bounds b = this.gameObject.GetComponent<Bounds>();
+        Vector2 area = new Vector2();
+
+		Collider2D[] temp = Physics2D.OverlapAreaAll (Size_Bounds[0], Size_Bounds[1], this.mask);
 
 		foreach (var Collider in temp) {
 			Rigidbody2D cur = Collider.gameObject.GetComponent<Rigidbody2D>();
-			cur.AddForceAtPosition(new Vector2(0, Updraft_Amount), );
+			cur.AddForceAtPosition(new Vector2(0, Updraft_Amount), this.transform.position );
 
 		}
 
@@ -75,9 +79,9 @@ public class updraft_area : MonoBehaviour {
 
 	}
 
-	float[] GetSizeBounds(){
-		// Return the global position of the Transform obj
-		float[] ans;
+	Vector2[] GetSizeBounds(){
+        // Return the global position of the Transform obj
+        Vector2[] ans = new Vector2[2];
 
 
 		Transform trans = GetComponent<Transform>();
@@ -85,16 +89,20 @@ public class updraft_area : MonoBehaviour {
 		Vector3 center = trans.position;
 		Vector3 scale = trans.lossyScale;
 
-
-		Vector2 left = new Vector2 (center.x - scale.x, center.y + scale.y);
-		Vector2 right = new Vector2 (center.x - scale.x, center.y + scale.y);
+        float leftx = center.x - scale.x;
+        float rightx = center.x + scale.x;
+        Vector2 left = new Vector2 (leftx, 0);
+		Vector2 right = new Vector2 (rightx, center.y + Updraft_Amount);
 		
 
-		// Ship out the answer
+		// Ship out the answer for X points
 		ans [0] = left;
 		ans [1] = right;
+
 		this.Position = new Vector2 (center.x, center.y);
 		this.Size_Bounds = ans;
+        this.Force_From_Area = rightx - leftx;
+
 		return ans;
 	}
 }
