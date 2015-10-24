@@ -1123,7 +1123,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1801563216}
   m_Direction: 0
   m_Value: 0
-  m_Size: .770295203
+  m_Size: .72577095
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1594,7 +1594,7 @@ GameObject:
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!81 &795731424
 AudioListener:

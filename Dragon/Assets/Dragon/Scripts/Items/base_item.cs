@@ -3,8 +3,8 @@ using System.Collections;
 
 public class base_item : MonoBehaviour {
 
-	public uint award_HP = 0;
-	public uint award_Stam = 0;
+	public int award_HP = 0;
+	public int award_Stam = 0;
 	public float award_Flame = 0f;
 	public uint award_Coin_Value = 0;
 
