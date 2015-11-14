@@ -7,14 +7,16 @@ public class base_item : MonoBehaviour {
 	public uint award_Stam = 0;
 	public float award_Flame = 0f;
 	public uint award_Coin_Value = 0;
+    public Session_Monitor monitor;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		// Correct init logics
 		this.tag 				= Globals.TAGS.Item;
 		this.award_Flame 		= Mathf.Max (award_Flame, 0f);
+        this.monitor = FindObjectOfType<Session_Monitor>();
 
-	}
+    }
 	
 	// Update is called once per frame
 	// IE nothing heavy here!!!
@@ -40,10 +42,11 @@ public class base_item : MonoBehaviour {
 			dragonSM.StatInput( this.award_HP,
 			                   	this.award_Stam,
 			                   	this.award_Flame);
-			// @@@ SESSION MONITOR
-			// dragon.awardCoins( this. award_Coin_Value )
+            // @@@ SESSION MONITOR
+            monitor.Add_Coins(this.award_Coin_Value);
 
-		}
+
+        }
 
 		Destroy(this.gameObject); // Goodbye
 	}
