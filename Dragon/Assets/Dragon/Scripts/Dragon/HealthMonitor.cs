@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class HealthMonitor : MonoBehaviour {
@@ -9,6 +10,7 @@ public class HealthMonitor : MonoBehaviour {
     public int MaxStamina = 100;
     public float Flame = 5f; // Fuel; Represents burntime in seconds?
     public float MaxFlame = 8f;
+    public Text t;
 
     public Collider2D Collison;
     public Rigidbody2D RBody;
@@ -33,7 +35,7 @@ public class HealthMonitor : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+        t.text = "HP: " + HP + "\nStamina: " + Stamina + "\nFuel: " + Flame;
 
 	}
 
