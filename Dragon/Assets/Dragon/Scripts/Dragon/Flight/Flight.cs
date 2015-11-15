@@ -42,4 +42,9 @@ public abstract class Flight : MonoBehaviour {
     {
 
     }
+    
+    public float getForwardSpeed()
+    {
+        return rigidbody.velocity.x;
+    }
 }
