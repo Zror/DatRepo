@@ -16,7 +16,7 @@ public class Tower_script : MonoBehaviour {
 			Vector3 t = new Vector3 (area.center.x, area.center.y + 500, 0); // 0 B/C layers
 			Vector3 top_center = area.ClosestPoint (t);
 			// Setup and spawn the princess
-			this.Princess = (GameObject)Instantiate (Resources.Load ("Princess"), top_center, Quaternion.identity);
+			//this.Princess = (GameObject)Instantiate (Resources.Load ("Princess"), top_center, Quaternion.identity);
 		}
 	}
 	
