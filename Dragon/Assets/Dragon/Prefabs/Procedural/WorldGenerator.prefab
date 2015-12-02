@@ -43,14 +43,23 @@ MonoBehaviour:
   grass: {fileID: 139442, guid: dc75078591acb7a43b6e079268455c14, type: 2}
   swamp: {fileID: 158828, guid: 5faf7c459d5fd5d489cb51033fb99233, type: 2}
   dirt: {fileID: 139268, guid: 447649ccabcbc3c42bba89972ec2d1a3, type: 2}
-  towers: []
-  clouds: []
-  storms: []
-  coins: []
-  haystacks: []
-  livestocks: []
+  towers:
+  - {fileID: 184662, guid: 3ee90a20568bf4046b55c34b089749eb, type: 2}
+  clouds:
+  - {fileID: 156718, guid: 6e1f6c7ad3c0e0c4fa80a84ff6082d6b, type: 2}
+  - {fileID: 177136, guid: 710179b82a9a2fb40932aef26a2f1fa4, type: 2}
+  storms:
+  - {fileID: 121678, guid: 309b3047ae6c8f943bf692437b83380c, type: 2}
+  coins:
+  - {fileID: 185666, guid: 72db78926dc6e5d40be6fcd3ed20684b, type: 2}
+  haystacks:
+  - {fileID: 0}
+  livestocks:
+  - {fileID: 154494, guid: 6527c4d4f6585024a8b91bb523ddd6ce, type: 2}
+  - {fileID: 194366, guid: 48541f635f1fbb9428e9086b15abd555, type: 2}
+  - {fileID: 112192, guid: fb989e01965bbc24fb7a5615c081c635, type: 2}
   origin: {fileID: 0}
-  border: 15
+  border: 30
   stepSize: 4
   offset: 0
   towerSpawnCounter: 0
@@ -70,7 +79,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad29717f09f8cf24ebbfecefebcea0a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  seed: 8706.0127
+  seed: 707.532166
   worldJitterAmount: .0500000007
   grassRate:
     serializedVersion: 2
@@ -80,27 +89,27 @@ MonoBehaviour:
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - time: 7.16618729
-      value: .614260077
+    - time: 55.4745712
+      value: .690745771
       inSlope: .036755275
       outSlope: .036755275
       tangentMode: 0
-    - time: 24.1488152
-      value: .484271914
-      inSlope: .105044067
-      outSlope: .105044067
+    - time: 81.0073547
+      value: .287594378
+      inSlope: .0248154271
+      outSlope: .0248154271
       tangentMode: 0
-    - time: 41.374157
-      value: .83065331
+    - time: 127.730743
+      value: .579343081
       inSlope: .0587716065
       outSlope: .0587716065
       tangentMode: 0
-    - time: 53.7821159
-      value: .77259016
+    - time: 178.823776
+      value: .694048405
       inSlope: .00834465027
       outSlope: .00834465027
       tangentMode: 0
-    - time: 60
+    - time: 240
       value: 1
       inSlope: -.000384609506
       outSlope: -.000384609506
@@ -125,15 +134,15 @@ MonoBehaviour:
       inSlope: .009983778
       outSlope: .009983778
       tangentMode: 0
-    - time: 80.1465836
-      value: .635246158
-      inSlope: .00640749931
-      outSlope: .00640749931
+    - time: 125.308105
+      value: .712550581
+      inSlope: -.00229299208
+      outSlope: -.00229299208
       tangentMode: 0
-    - time: 100
+    - time: 300
       value: .5
-      inSlope: 0
-      outSlope: 0
+      inSlope: -.0164240804
+      outSlope: -.0164240804
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -141,38 +150,33 @@ MonoBehaviour:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: .75
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - time: 2.32758522
       value: .237500072
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - time: 21.9516926
-      value: .788527012
+    - time: 60.7556152
+      value: .625219524
       inSlope: -.000447034836
       outSlope: -.000447034836
       tangentMode: 0
-    - time: 33.7393341
-      value: .657705605
-      inSlope: -.0438094139
-      outSlope: -.0438094139
+    - time: 104.683884
+      value: .380462676
+      inSlope: -.010493869
+      outSlope: -.010493869
       tangentMode: 0
-    - time: 39.7116661
-      value: .271519214
-      inSlope: .00685453415
-      outSlope: .00685453415
+    - time: 205.118301
+      value: .431028843
+      inSlope: -.00253561488
+      outSlope: -.00253561488
       tangentMode: 0
-    - time: 45
+    - time: 275
       value: .75
       inSlope: 0
       outSlope: 0
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-  towerSpawnAt: 300
+  towerSpawnAt: 200
   towerRate:
     serializedVersion: 2
     m_Curve:
@@ -261,7 +265,12 @@ MonoBehaviour:
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - time: 1
+    - time: 30.1570148
+      value: .950386643
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 60
       value: 1
       inSlope: 0
       outSlope: 0

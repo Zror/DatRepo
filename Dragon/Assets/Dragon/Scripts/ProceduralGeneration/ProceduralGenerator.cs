@@ -42,7 +42,7 @@ public class ProceduralGenerator : MonoBehaviour
         settings = GetComponent<ProceduralWorldSettings>();
         origin.OnOriginShift += PostShiftGeneration;
 
-        this.transform.position = Vector3.left*origin.clearChildAfter;
+        this.transform.position = new Vector3(origin.clearChildAfter,0,0);
         GenerateNewNodes();
     }
 
@@ -142,7 +142,6 @@ public class ProceduralGenerator : MonoBehaviour
 
     protected void CreateCloud()
     {
-
         CreateObject(SelectOne(clouds));
     }
 
@@ -171,11 +170,15 @@ public class ProceduralGenerator : MonoBehaviour
 
     protected void CreateObject(GameObject template)
     {
-        GameObject created = (GameObject)Instantiate(template, this.transform.position, this.transform.rotation);
-        created.transform.parent = origin.transform; // Make a parent of the floating origin
+        //Only instantiate objects if a valid object was selected
+        if (template != null)
+        {
+            GameObject created = (GameObject) Instantiate(template, this.transform.position, this.transform.rotation);
+            created.transform.parent = origin.transform; // Make a parent of the floating origin
+        }
     }
 
-    protected TObject SelectOne<TObject>(TObject[] objects)
+    protected TObject SelectOne<TObject>(TObject[] objects) where TObject : UnityEngine.Object
     {
         return objects[UnityEngine.Random.Range(0, objects.Length)];
     }
