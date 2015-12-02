@@ -65,7 +65,6 @@ LightmapSettings:
     m_TextureCompression: 1
     m_FinalGather: 0
     m_FinalGatherRayCount: 1024
-    m_ReflectionCompression: 2
   m_LightmapSnapshot: {fileID: 0}
   m_RuntimeCPUUsage: 25
 --- !u!196 &4
@@ -85,6 +84,9 @@ NavMeshSettings:
     cellSize: .166666672
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!127 &5
+LevelGameManager:
+  m_ObjectHideFlags: 0
 --- !u!1 &49568104
 GameObject:
   m_ObjectHideFlags: 0
@@ -162,19 +164,6 @@ Transform:
 GameObject:
   m_PrefabParentObject: {fileID: 196474, guid: 794386ae7f85d9c46b3e9e8326c02ce2, type: 2}
   m_PrefabInternal: {fileID: 1420484099}
---- !u!114 &96500622
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 96500621}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6cb7995511fa6343a91ed59e1e07b4a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocity: 300
-  scalar: .25
 --- !u!1 &231152778
 GameObject:
   m_ObjectHideFlags: 0
@@ -244,7 +233,6 @@ Camera:
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
-  m_TargetEye: 3
   m_HDR: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
@@ -625,8 +613,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 11469912, guid: 794386ae7f85d9c46b3e9e8326c02ce2, type: 2}
+    - target: {fileID: 11455306, guid: 794386ae7f85d9c46b3e9e8326c02ce2, type: 2}
+      propertyPath: scalar
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 794386ae7f85d9c46b3e9e8326c02ce2, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1751083059
