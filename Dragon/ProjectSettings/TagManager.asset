@@ -41,6 +41,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: EnvBackground
+    uniqueID: 882356429
+    locked: 0
+  - name: EnvFar
+    uniqueID: 3441102309
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Dragon
+    uniqueID: 4282046183
+    locked: 0
+  - name: EnvNear
+    uniqueID: 3137711399
     locked: 0
