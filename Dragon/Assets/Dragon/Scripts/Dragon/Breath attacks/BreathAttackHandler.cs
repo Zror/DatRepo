@@ -17,7 +17,7 @@ public class BreathAttackHandler : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if ((Input.GetMouseButton(0)||forceHeld)&&monitor.Flame!=0)
+        if ((Input.GetMouseButton(1)||forceHeld)&&monitor.Flame!=0)
         {
             timer -= Time.deltaTime;
             monitor.ChangeFlame(0-Time.deltaTime);
