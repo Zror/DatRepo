@@ -3,6 +3,20 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class Session_Monitor : MonoBehaviour {
+
+    private static Session_Monitor _instance = null;
+    public static Session_Monitor Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = FindObjectOfType<Session_Monitor>();
+            }
+            return _instance;
+        }
+    }
+
 	// Track the current sessions information
 	private Dictionary<string,uint> data = new Dictionary<string,uint>();
 
