@@ -33,7 +33,11 @@ public class base_item : MonoBehaviour {
 	// On trigger collision
 	void OnTriggerEnter2D(Collider2D coll)
 	{
-		if (coll.gameObject.tag == Globals.TAGS.Player) // @@@ENUM HERE!!!
+        if(coll.gameObject.tag== Globals.TAGS.Enemy)
+        {
+            return;
+        }
+        if (coll.gameObject.tag == Globals.TAGS.Player) // @@@ENUM HERE!!!
 		{
 			GameObject dragon = coll.gameObject;
 			UseItem(dragon); // For non awarding actions

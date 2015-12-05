@@ -13,7 +13,9 @@ GameObject:
   - 58: {fileID: 5830854}
   - 50: {fileID: 5097334}
   - 114: {fileID: 11452752}
-  - 114: {fileID: 11469912}
+  - 114: {fileID: 11485294}
+  - 114: {fileID: 11410950}
+  - 114: {fileID: 11434690}
   m_Layer: 0
   m_Name: Dragon
   m_TagString: Untagged
@@ -93,6 +95,43 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: .5
+--- !u!114 &11410950
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 196474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ba476d2ab6c35b4db46eab5c168b769, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HP: 1
+  MaxHP: 100
+  Stamina: 100
+  MaxStamina: 100
+  Flame: 8
+  MaxFlame: 8
+  t: {fileID: 0}
+  Collison: {fileID: 0}
+  RBody: {fileID: 0}
+--- !u!114 &11434690
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 196474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d36ca60dd8583f34bbbf394e27fb3906, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 114910, guid: 250cd658fbeb54a4fa85b9aba9de5d75, type: 2}
+  - {fileID: 181798, guid: 9186c333137aae146a92e3980708c638, type: 2}
+  - {fileID: 176324, guid: 5a3d1d96d570ff44cb9dc8fe83a6cf2f, type: 2}
+  selected: 2
+  monitor: {fileID: 11410950}
 --- !u!114 &11452752
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -105,7 +144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0}
---- !u!114 &11469912
+--- !u!114 &11485294
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -113,10 +152,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 196474}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d779f1451e8fb0d47851e7c859135ff6, type: 3}
+  m_Script: {fileID: 11500000, guid: f6cb7995511fa6343a91ed59e1e07b4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: 300
+  scalar: .25
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
