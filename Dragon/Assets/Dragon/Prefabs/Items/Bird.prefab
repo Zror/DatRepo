@@ -1,53 +1,71 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &154148
+--- !u!1 &125348
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 495004}
-  - 212: {fileID: 21220344}
-  - 114: {fileID: 11496072}
+  - 4: {fileID: 455208}
+  - 212: {fileID: 21204854}
+  - 58: {fileID: 5873036}
+  - 114: {fileID: 11436368}
   m_Layer: 0
-  m_Name: Gem_Green
-  m_TagString: Untagged
+  m_Name: Bird
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &495004
+--- !u!4 &455208
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 154148}
+  m_GameObject: {fileID: 125348}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.97119236, y: 3.08933353, z: 0}
+  m_LocalPosition: {x: -8.14412594, y: 1.19277596, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &11496072
+--- !u!58 &5873036
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 125348}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.64499998
+--- !u!114 &11436368
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 154148}
+  m_GameObject: {fileID: 125348}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66bf259ce1863264197dbe0b633b191e, type: 3}
+  m_Script: {fileID: 11500000, guid: 8042de4fecc93bd4fbebbfb8a9960cd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Worth: 5
-  monitor: {fileID: 0}
---- !u!212 &21220344
+  Fly_Height: 0
+  Rate: 10
+  direction: 0
+  give_HP: 5
+  give_Stam: 10
+  give_Flame: 3
+--- !u!212 &21204854
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 154148}
+  m_GameObject: {fileID: 125348}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -66,7 +84,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5516b6017cb1e144381d984064140b00, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d3b02977bfe459349a610f0c59f6ebe8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
@@ -77,5 +95,5 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 154148}
+  m_RootGameObject: {fileID: 125348}
   m_IsPrefabParent: 1
