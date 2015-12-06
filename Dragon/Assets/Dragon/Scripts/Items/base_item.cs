@@ -45,11 +45,15 @@ public class base_item : MonoBehaviour {
 	// On trigger collision
 	void OnTriggerEnter2D(Collider2D coll)
 	{
+        if(coll.gameObject.tag== Globals.TAGS.Enemy)
+        {
+            return;
+        }
 		if (coll.gameObject.tag == Globals.TAGS.Player) // @@@ENUM HERE!!!
 		{
 			GameObject dragon = coll.gameObject;
 			UseItem(dragon); // For non awarding actions
-			
+
 			dragonSM.StatInput( this.award_HP,
 			                   	this.award_Stam,
 			                   	this.award_Flame);
@@ -60,10 +64,10 @@ public class base_item : MonoBehaviour {
             {
                 // Award
                 monitor.Livestock_Destroyed();
-            }
-
-            Destroy(this.gameObject); // Goodbye
         }
+
+		Destroy(this.gameObject); // Goodbye
+	}
 	}
 
 	// What we need to do to use this item

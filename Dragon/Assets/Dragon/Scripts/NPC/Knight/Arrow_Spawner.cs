@@ -16,9 +16,8 @@ public class Arrow_Spawner : MonoBehaviour {
         timer -= Time.deltaTime;
         if (timer < 0)
         {
-           // float time = projectile.GetComponent<base_projectile>().speed / projectile.GetComponent<Rigidbody2D>().gravityScale;
-           // projectile.GetComponent<base_projectile>().angle = aimer.arcTan(time, transform.position.x,transform.position.y);
             Instantiate(projectile, transform.position, Quaternion.Euler(0, 0, 135));
+           // projectile.GetComponent<base_projectile>().angle = aimer.angle(transform.position.x,transform.position.y, projectile.GetComponent<base_projectile>().speed, projectile.GetComponent<Rigidbody2D>().gravityScale);
             timer += rate;
         }
 	}

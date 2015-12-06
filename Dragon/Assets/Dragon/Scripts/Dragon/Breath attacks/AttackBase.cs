@@ -28,8 +28,9 @@ public class AttackBase : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D coll)
     {
-        if (coll.tag.Equals(Globals.TAGS.Enemy)|| coll.tag.Equals(Globals.TAGS.World)) { Destroy(this.gameObject); }
         if (coll.tag.Equals(Globals.TAGS.Enemy)) { Destroy(coll.gameObject); }
+        if (coll.tag.Equals(Globals.TAGS.Enemy)|| coll.tag.Equals(Globals.TAGS.World)) { Destroy(this.gameObject); }
+        
 
     }
 }

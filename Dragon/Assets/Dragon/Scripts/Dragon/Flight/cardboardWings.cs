@@ -3,14 +3,11 @@ using System.Collections;
 
 public class cardboardWings : Flight{
 
-	public float scalar = .25F;
+	private float scalar = .5F;
 
 	public override void Start(){
 		velocity = (velocity * scalar);
 
 		base.Start ();
 	}
-
-	// Use this for initialization
-
 }
