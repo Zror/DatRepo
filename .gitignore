@@ -19,3 +19,7 @@
 
 # Unity3D Generated File On Crash Reports
 sysinfo.txt
+/Dragon/ProjectSettings/NavMeshLayers.asset
+/Dragon/Assets/Dragon/Scripts/NPCs/Bird
+/Dragon/Assets/Dragon/Scripts/NPCs/Bird/FlightBehaviour.cs
+/Dragon/Assets/Dragon/Scripts/NPCs/Bird/FlightBehaviour.cs.meta
