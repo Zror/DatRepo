@@ -11,9 +11,13 @@ public abstract class Flight : MonoBehaviour {
 
     private float grav;
 
+    
+	private float maxSpeed = 25;
+
 	// Use this for initialization
 	public virtual void Start () {
         rigidbody = GetComponent<Rigidbody2D>();
+        
 	}
 
     //Use this for gliding over fires
@@ -43,7 +47,9 @@ public abstract class Flight : MonoBehaviour {
 
     void FixedUpdate()
     {
-
+		if(rigidbody.velocity.x > maxSpeed){
+			rigidbody.velocity = new Vector2(maxSpeed, rigidbody.velocity.y);
+		}
     }
     
     public float getForwardSpeed()
