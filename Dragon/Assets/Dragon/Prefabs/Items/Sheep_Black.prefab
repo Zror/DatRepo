@@ -9,6 +9,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 468830}
   - 212: {fileID: 21254734}
+  - 114: {fileID: 11412430}
+  - 61: {fileID: 6131756}
   m_Layer: 0
   m_Name: Sheep_Black
   m_TagString: Item
@@ -28,6 +30,35 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!61 &6131756
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 194366}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 2.82999992, y: 2.01999998}
+--- !u!114 &11412430
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 194366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35646010e84cdd54b8186f5efd707654, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  award_HP: 15
+  award_Stam: 15
+  award_Flame: 15
+  award_Coin_Value: 1
+  Is_LiveStock: 1
 --- !u!212 &21254734
 SpriteRenderer:
   m_ObjectHideFlags: 1

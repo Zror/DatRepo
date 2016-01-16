@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class Bird : MonoBehaviour {
@@ -9,14 +9,14 @@ public class Bird : MonoBehaviour {
     public float Rate = 10; // Units/Second
     public int direction; // Going negative or positive x distances?
 
-    public uint give_HP = 5;
-    public uint give_Stam = 10;
+    public uint give_HP = 4;
+    public uint give_Stam = 8;
     public float give_Flame = 3f;
 
 	// Use this for initialization
 	void Start () {
 
-        if (Fly_Height == null)
+        if (Fly_Height == 0f)
         {
             // Establish fly height from where
             // we were spawned in
@@ -33,7 +33,8 @@ public class Bird : MonoBehaviour {
     // THINK
     void FixedUpdate()
     {
-        if (Fly_Height != getHeight())
+        // Avoid dragons?
+        if (Fly_Height != getHeight()+(5*Mathf.Sin(240)))
         {
             float diff = Fly_Height - getHeight();
             // use the difference to assess direction to go

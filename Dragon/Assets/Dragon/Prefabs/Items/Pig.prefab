@@ -9,6 +9,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 444396}
   - 212: {fileID: 21283372}
+  - 114: {fileID: 11479598}
+  - 61: {fileID: 6187810}
   m_Layer: 0
   m_Name: Pig
   m_TagString: Item
@@ -23,11 +25,40 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 112192}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.86579943, y: -1.00946283, z: 0}
+  m_LocalPosition: {x: 7.82697296, y: 2.88674903, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!61 &6187810
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 112192}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 2.38000011, y: 1.83000004}
+--- !u!114 &11479598
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 112192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35646010e84cdd54b8186f5efd707654, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  award_HP: 7
+  award_Stam: 5
+  award_Flame: 10
+  award_Coin_Value: 0
+  Is_LiveStock: 1
 --- !u!212 &21283372
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -64,6 +95,26 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_TagString
       value: Item
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: award_HP
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: award_Stam
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: award_Flame
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: Is_LiveStock
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
