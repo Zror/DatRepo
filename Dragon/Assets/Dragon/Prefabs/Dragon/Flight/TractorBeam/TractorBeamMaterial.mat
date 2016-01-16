@@ -131,6 +131,14 @@ Material:
         first:
           name: _InvFade
         second: 1
+      data:
+        first:
+          name: _Frequency
+        second: 500
+      data:
+        first:
+          name: _Phase
+        second: 2
     m_Colors:
       data:
         first:
@@ -139,7 +147,7 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: .389626116, g: .147437289, b: .836000025, a: 1}
+        second: {r: 0, g: .580882311, b: .164434418, a: 0}
       data:
         first:
           name: _TintColor
