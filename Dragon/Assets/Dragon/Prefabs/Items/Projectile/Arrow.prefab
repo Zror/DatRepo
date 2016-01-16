@@ -72,7 +72,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d97f9a33a713c734eac3951d26e5558e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 10
+  body: {fileID: 5092354}
+  angle: 0
 --- !u!114 &11464424
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -88,6 +90,7 @@ MonoBehaviour:
   award_Stam: 0
   award_Flame: 0
   award_Coin_Value: 0
+  Is_LiveStock: 0
 --- !u!212 &21292624
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -123,7 +126,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: speed
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Enabled
@@ -133,6 +136,10 @@ Prefab:
       propertyPath: m_GravityScale
       value: .100000001
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: body
+      value: 
+      objectReference: {fileID: 5092354}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 197812}

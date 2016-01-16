@@ -3,7 +3,7 @@
 using System.Collections.Generic;
 using System.Collections;
 
-public class SavedData {
+public class SavedData  {
     public List<bool> wings= new List<bool>();
     public List<bool> perks = new List<bool>();
     public List<bool> breath = new List<bool>();

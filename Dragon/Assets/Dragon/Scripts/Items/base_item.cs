@@ -58,7 +58,7 @@ public class base_item : MonoBehaviour {
 			                   	this.award_Stam,
 			                   	this.award_Flame);
             // @@@ SESSION MONITOR
-            monitor.Add_Coins(this.award_Coin_Value);
+            //monitor.Add_Coins(this.award_Coin_Value);
 
             if (this.Is_LiveStock)
             {

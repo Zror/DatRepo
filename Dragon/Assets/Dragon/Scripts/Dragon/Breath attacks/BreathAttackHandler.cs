@@ -49,18 +49,21 @@ public class BreathAttackHandler : MonoBehaviour {
 	}
     void normal()
     {
-        Instantiate(objects[selected], transform.position, Quaternion.Euler(0, 0, breath.angle));
+        GameObject attack= (GameObject)Instantiate(objects[selected], transform.position, Quaternion.Euler(0, 0, breath.angle));
+        attack.transform.parent = this.transform.parent;
     }
     void bulletHell()
     {
         Random.seed = System.DateTime.Now.Millisecond;
         int angle = Random.Range(0, 360);
-        Instantiate(objects[selected], transform.position, Quaternion.Euler(0, 0,angle));
+        GameObject attack = (GameObject)Instantiate(objects[selected], transform.position, Quaternion.Euler(0, 0,angle));
+        attack.transform.parent = this.transform.parent;
     }
     void shoopdawhoop()
     {
         Random.seed = System.DateTime.Now.Millisecond;
         int angle = Random.Range(0, 360);
-        Instantiate(objects[selected], transform.position, Quaternion.Euler(0, 0, 315));
+        GameObject attack = (GameObject)Instantiate(objects[selected], transform.position, Quaternion.Euler(0, 0, 315));
+        attack.transform.parent = this.transform.parent;
     }
 }

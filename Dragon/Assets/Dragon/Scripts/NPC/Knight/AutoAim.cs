@@ -26,16 +26,25 @@ public class AutoAim : MonoBehaviour {
         return (Mathf.Atan2(yy,xx) * Mathf.Rad2Deg);
 
     }
-    public float angle(float x, float y, float speed, float time)
+    private float time(float x, float y, float speed)
     {
-        float t1 =Mathf.Cos(45*Mathf.Deg2Rad) * speed / time;
-        float a2 = arcTan(t1, x, y);
-        float t2 = Mathf.Cos(a2 * Mathf.Deg2Rad) * speed / time;
-        float a3 = arcTan(t2, x, y);
-        float t3 = 180 - (Mathf.Cos(a3 * Mathf.Deg2Rad) * speed / time);
-        return arcTan(t3, x, y);
+        float dist = Mathf.Sqrt((point1.x-x)* (point1.x - x)+ (point1.y - y) * (point1.y -y));
+        return dist / speed;
+    }
+    public float angle(float x, float y, float speed)
+    {
+        float t1 = time(x, y, speed);
+
+        //        float a2 = arcTan(t1, x, y);
+        //
+        //        float t2 = Mathf.Cos(a2 * Mathf.Deg2Rad) * speed / time;
+
+        //        float a3 = arcTan(t2, x, y);
+
+        //        float t3 =  (Mathf.Cos(a3 * Mathf.Deg2Rad) * speed / time);
+
+        return arcTan(t1, x, y) - 17;
 
 
     }
-
 }
