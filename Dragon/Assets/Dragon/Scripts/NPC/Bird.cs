@@ -6,9 +6,10 @@ public class Bird : MonoBehaviour {
     // Bird needs 0 gravity
     public float Fly_Height;
     private Transform trans;
+    public float cur_height;
     public float Rate = 10; // Units/Second
     public int direction; // Going negative or positive x distances?
-
+    public float Height_Diff;
     public uint give_HP = 4;
     public uint give_Stam = 8;
     public float give_Flame = 3f;
@@ -24,6 +25,12 @@ public class Bird : MonoBehaviour {
             this.direction = getDirection();
         }
 		this.give_Flame = Mathf.Max (give_Flame, 0f);
+
+        if (Height_Diff == 0f)
+        {
+            // Adjust for difficulty
+            this.Height_Diff = 10;
+        }
 	}
 	
 	// Update is called once per frame
@@ -34,13 +41,18 @@ public class Bird : MonoBehaviour {
     void FixedUpdate()
     {
         // Avoid dragons?
-        if (Fly_Height != getHeight()+(5*Mathf.Sin(240)))
-        {
-            float diff = Fly_Height - getHeight();
-            // use the difference to assess direction to go
-            adjsustHeight(diff);
-            // @@@ Forward Motion
-        }
+
+        float a = (getHeight());
+        float cake = (this.Height_Diff * Mathf.Sin(Time.realtimeSinceStartup));
+        float diff = a + cake;//Fly_Height - a;
+        Debug.Log("A & cake & diff: " + a + ", " + cake + ", " + diff + ", "+ this.Fly_Height);
+
+        // use the difference to assess direction to go
+        adjsustHeight(diff);
+        // @@@ Forward Motion
+
+        this.Fly_Height = a;
+       // Debug.Log("FIxedupdate time: " + Time.realtimeSinceStartup);
     }
 
     public int getDirection()
@@ -67,16 +79,16 @@ public class Bird : MonoBehaviour {
     public void adjsustHeight(float dist)
     {
         // @@@ Sync wing flap animation!
-        if (dist == 0) { return; }; // Get out.
-
+        //if (dist == 0f) { return; }; // Get out.
+        
         dist = Mathf.Clamp(dist, -1*DistPerTick(), DistPerTick()); // Make sure were not moving too far too fast
 
         Transform temp = GetComponent<Transform>();
-
+ //Debug.Log("Old pos: " + temp.position);
         temp.position.Set(  temp.position.x,
                             temp.position.y + dist,
                             temp.position.z);
-
+ //Debug.Log("New pos: " + temp.position);
     }
     public float DistPerTick(){
         int TicksPerSecond = 60;
