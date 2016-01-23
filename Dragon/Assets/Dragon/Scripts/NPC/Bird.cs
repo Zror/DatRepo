@@ -5,23 +5,23 @@ public class Bird : MonoBehaviour {
 
     // Bird needs 0 gravity
     public float Fly_Height;
-    private Transform trans;
-    public float cur_height;
-    public float Rate = 10; // Units/Second
+    public float Rate = 5; // Units/Second
     public int direction; // Going negative or positive x distances?
-    public float Height_Diff;
+    public float Height_Diff = 0f;
+    // STATS
     public uint give_HP = 4;
     public uint give_Stam = 8;
     public float give_Flame = 3f;
 
-	// Use this for initialization
-	void Start () {
+    private Transform trans;
+    // Use this for initialization
+    void Start () {
 
         if (Fly_Height == 0f)
         {
             // Establish fly height from where
             // we were spawned in
-            this.Fly_Height = getHeight();
+            this.Fly_Height = getHeight()+5;
             this.direction = getDirection();
         }
 		this.give_Flame = Mathf.Max (give_Flame, 0f);
@@ -31,6 +31,8 @@ public class Bird : MonoBehaviour {
             // Adjust for difficulty
             this.Height_Diff = 10;
         }
+
+        this.trans = this.GetComponent<Transform>();
 	}
 	
 	// Update is called once per frame
@@ -45,7 +47,7 @@ public class Bird : MonoBehaviour {
         float a = (getHeight());
         float cake = (this.Height_Diff * Mathf.Sin(Time.realtimeSinceStartup));
         float diff = a + cake;//Fly_Height - a;
-        Debug.Log("A & cake & diff: " + a + ", " + cake + ", " + diff + ", "+ this.Fly_Height);
+        //Debug.Log("A & cake & diff: " + a + ", " + cake + ", " + diff + ", "+ this.Fly_Height);
 
         // use the difference to assess direction to go
         adjsustHeight(diff);
@@ -85,10 +87,12 @@ public class Bird : MonoBehaviour {
 
         Transform temp = GetComponent<Transform>();
  //Debug.Log("Old pos: " + temp.position);
-        temp.position.Set(  temp.position.x,
-                            temp.position.y + dist,
-                            temp.position.z);
- //Debug.Log("New pos: " + temp.position);
+        trans.position = new Vector3(   trans.position.x,
+                                        trans.position.y + dist,
+                                        trans.position.z
+                                    );
+
+        Debug.Log("New pos: " + trans.position);
     }
     public float DistPerTick(){
         int TicksPerSecond = 60;
