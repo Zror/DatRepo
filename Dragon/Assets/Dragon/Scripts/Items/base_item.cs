@@ -1,20 +1,34 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Linq;
 
 public class base_item : MonoBehaviour {
 
-	public uint award_HP = 0;
-	public uint award_Stam = 0;
+	public int award_HP = 0;
+	public int award_Stam = 0;
 	public float award_Flame = 0f;
 	public uint award_Coin_Value = 0;
+    public bool Is_LiveStock = false;
 
-	// Use this for initialization
-	void Start () {
+    public static Session_Monitor monitor;
+    public static HealthMonitor dragonSM;
+
+    // Use this for initialization
+    void Start () {
 		// Correct init logics
+
 		this.tag 				= Globals.TAGS.Item;
 		this.award_Flame 		= Mathf.Max (award_Flame, 0f);
+        if (monitor == null)
+        {
+            monitor = Session_Monitor.Instance;
+        }
+        if (dragonSM == null)
+        {
+            dragonSM = FindObjectsOfType<HealthMonitor>().First(t => t.tag == Globals.TAGS.Player);
+        }
 
-	}
+    }
 	
 	// Update is called once per frame
 	// IE nothing heavy here!!!
@@ -31,21 +45,29 @@ public class base_item : MonoBehaviour {
 	// On trigger collision
 	void OnTriggerEnter2D(Collider2D coll)
 	{
+        if(coll.gameObject.tag== Globals.TAGS.Enemy)
+        {
+            return;
+        }
 		if (coll.gameObject.tag == Globals.TAGS.Player) // @@@ENUM HERE!!!
 		{
 			GameObject dragon = coll.gameObject;
 			UseItem(dragon); // For non awarding actions
 
-			HealthMonitor dragonSM = dragon.GetComponent<HealthMonitor>();
 			dragonSM.StatInput( this.award_HP,
 			                   	this.award_Stam,
 			                   	this.award_Flame);
-			// @@@ SESSION MONITOR
-			// dragon.awardCoins( this. award_Coin_Value )
+            // @@@ SESSION MONITOR
+            //monitor.Add_Coins(this.award_Coin_Value);
 
-		}
+            if (this.Is_LiveStock)
+            {
+                // Award
+                monitor.Livestock_Destroyed();
+        }
 
 		Destroy(this.gameObject); // Goodbye
+	}
 	}
 
 	// What we need to do to use this item

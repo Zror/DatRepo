@@ -11,9 +11,13 @@ public abstract class Flight : MonoBehaviour {
 
     private float grav;
 
+    
+	private float maxSpeed = 25;
+
 	// Use this for initialization
 	public virtual void Start () {
         rigidbody = GetComponent<Rigidbody2D>();
+        
 	}
 
     //Use this for gliding over fires
@@ -27,8 +31,11 @@ public abstract class Flight : MonoBehaviour {
     //}
 	
 	// Update is called once per frame
-	public virtual void Update () {
-        if (Input.GetKeyDown(KeyCode.Space))
+	public virtual void Update ()
+	{
+	    Input.simulateMouseWithTouches = true;
+
+        if (Input.GetMouseButtonDown(0))
         {
             rigidbody.AddForce(new Vector2(velocity * .55F, velocity));
         }
@@ -40,6 +47,13 @@ public abstract class Flight : MonoBehaviour {
 
     void FixedUpdate()
     {
-
+		if(rigidbody.velocity.x > maxSpeed){
+			rigidbody.velocity = new Vector2(maxSpeed, rigidbody.velocity.y);
+		}
+    }
+    
+    public float getForwardSpeed()
+    {
+        return rigidbody.velocity.x;
     }
 }
