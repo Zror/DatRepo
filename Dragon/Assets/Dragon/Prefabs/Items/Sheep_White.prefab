@@ -11,6 +11,7 @@ GameObject:
   - 212: {fileID: 21244618}
   - 114: {fileID: 11477074}
   - 61: {fileID: 6144098}
+  - 114: {fileID: 11487008}
   m_Layer: 0
   m_Name: Sheep_White
   m_TagString: Untagged
@@ -59,6 +60,19 @@ MonoBehaviour:
   award_Flame: 5
   award_Coin_Value: 0
   Is_LiveStock: 1
+--- !u!114 &11487008
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 154494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 838ce71d82a613841a6271ababcaeb9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 0
+  rate: 0
 --- !u!212 &21244618
 SpriteRenderer:
   m_ObjectHideFlags: 1
