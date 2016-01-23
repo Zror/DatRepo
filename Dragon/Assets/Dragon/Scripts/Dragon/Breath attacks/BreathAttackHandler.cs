@@ -7,6 +7,7 @@ public class BreathAttackHandler : MonoBehaviour {
     public HealthMonitor monitor;
     bool forceHeld;
     AttackBase breath;
+    private float angle;
     float timer;
     // Use this for initialization
     void Start () {
@@ -19,6 +20,15 @@ public class BreathAttackHandler : MonoBehaviour {
 	void Update () {
         if ((Input.GetMouseButton(1)||forceHeld)&&monitor.Flame!=0)
         {
+            Vector3 position = Input.mousePosition;
+            float xx = position.x - (gameObject.transform).position.x;
+            float yy=position.y- (gameObject.transform).position.y;
+            angle = (Mathf.Atan2(yy, xx) * Mathf.Rad2Deg);
+            Debug.Log(angle + "\n");
+           // if (position.y > gameObject.transform.position.y)
+        //    {
+         //       angle-=90;
+        //    }
             timer -= Time.deltaTime;
             monitor.ChangeFlame(0-Time.deltaTime);
             if (timer <= 0)
@@ -49,7 +59,7 @@ public class BreathAttackHandler : MonoBehaviour {
 	}
     void normal()
     {
-        GameObject attack= (GameObject)Instantiate(objects[selected], transform.position, Quaternion.Euler(0, 0, breath.angle));
+        GameObject attack= (GameObject)Instantiate(objects[selected], transform.position, Quaternion.Euler(0, 0, angle));
         attack.transform.parent = this.transform.parent;
     }
     void bulletHell()
