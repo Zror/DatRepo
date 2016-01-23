@@ -5,7 +5,7 @@ public class Base_Livestock : MonoBehaviour {
 
     public uint range = 0;
     public uint rate = 0; // per second
-    private bool direction = true; // 0 left, 1 right
+    public bool direction = false; // 1 left, 0 right
     private Transform move;
     private float covered = 0;
 
