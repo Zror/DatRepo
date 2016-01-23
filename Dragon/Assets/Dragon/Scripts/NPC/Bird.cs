@@ -60,8 +60,8 @@ public class Bird : MonoBehaviour {
     public int getDirection()
     {
         // Returns only the x-direct as -1,0,1
-        Transform temp = GetComponent<Transform>();
-        float cur = temp.position.x;
+        
+        float cur = trans.position.x;
         int ans = (int)(Mathf.Abs(cur) / cur);
 
         return ans;
@@ -70,11 +70,7 @@ public class Bird : MonoBehaviour {
 
     public float getHeight()
     {
-        float ans = 0f;
-
-        Transform temp = GetComponent<Transform>();
-         ans = temp.position.y;
-
+        float ans = trans.position.y;
 
         return ans;
     }
@@ -82,17 +78,25 @@ public class Bird : MonoBehaviour {
     {
         // @@@ Sync wing flap animation!
         //if (dist == 0f) { return; }; // Get out.
-        
+        int vert_dir = 1;
         dist = Mathf.Clamp(dist, -1*DistPerTick(), DistPerTick()); // Make sure were not moving too far too fast
 
-        Transform temp = GetComponent<Transform>();
- //Debug.Log("Old pos: " + temp.position);
+
+        if (trans.position.y + dist > this.Height_Diff)
+        {
+            // Make sure the bird cant just fly away
+            vert_dir = -1;
+        }
+
+         //Debug.Log("Old pos: " + temp.position);
         trans.position = new Vector3(   trans.position.x,
-                                        trans.position.y + dist,
+                                        trans.position.y + (dist * vert_dir),
                                         trans.position.z
                                     );
 
-        Debug.Log("New pos: " + trans.position);
+        
+
+        //Debug.Log("New pos: " + trans.position);
     }
     public float DistPerTick(){
         int TicksPerSecond = 60;
