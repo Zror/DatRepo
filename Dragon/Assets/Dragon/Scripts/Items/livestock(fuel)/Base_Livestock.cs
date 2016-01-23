@@ -15,12 +15,12 @@ public class Base_Livestock : MonoBehaviour {
 	void Start () {
 	    if (range == 0)
         {
-            this.range = (uint)(Random.value*15);
+            this.range = (uint)((Random.value+0.5)*15);
 
         }
         if (rate == 0)
         {
-            this.rate = (uint)(Random.value * 3);
+            this.rate = (uint)((Random.value+0.05) * 3);
         }
         this.move = this.GetComponent<Transform>();
 	}
@@ -28,6 +28,12 @@ public class Base_Livestock : MonoBehaviour {
     void FixedUpdate()
     {
         // MOOve
+        if (this.range == 0)
+        {
+            // Just dont..
+            return;
+        }
+
         float arg = ((float)(this.rate) / 60);
         if (direction)
         {
