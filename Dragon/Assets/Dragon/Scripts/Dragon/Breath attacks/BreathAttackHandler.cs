@@ -3,6 +3,7 @@ using System.Collections;
 
 public class BreathAttackHandler : MonoBehaviour {
     public GameObject[] objects;
+    private SavedData stats;
     public int selected;
     public HealthMonitor monitor;
     bool forceHeld;
@@ -12,6 +13,13 @@ public class BreathAttackHandler : MonoBehaviour {
     // Use this for initialization
     void Start () {
         forceHeld = false;
+        Data temp = GameObject.FindGameObjectWithTag("Load").GetComponent<Data>();
+        if (temp != null)
+        {
+            stats = temp.get();
+            selected = stats.getSelected("breath");
+            Debug.Log(selected);
+        }
         breath = objects[selected].GetComponent<AttackBase>();
         timer = breath.rate;
     }
@@ -20,44 +28,45 @@ public class BreathAttackHandler : MonoBehaviour {
 	void Update () {
         if ((Input.GetMouseButton(1)||forceHeld)&&monitor.Flame!=0)
         {
-            Vector3 position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            float xx = position.x - (gameObject.transform).position.x;
-            float yy= Mathf.Abs(position.y)- Mathf.Abs((gameObject.transform).position.y);
-            angle = (Mathf.Atan2(Mathf.Abs(yy), Mathf.Abs(xx)) * Mathf.Rad2Deg);
-            Debug.Log(angle + "\n");
-            if (position.y < gameObject.transform.position.y)
+            Vector3 position=Input.mousePosition;
+            if (position.x > (Screen.width / 4))
             {
-               angle*=-1;
-            }
-            timer -= Time.deltaTime;
-            monitor.ChangeFlame(0-Time.deltaTime);
-           // LineRenderer test = new LineRenderer();
-           // test.SetPosition(0, gameObject.transform.position);
-           //test.SetPosition(1, position);
-           //test.SetWidth(2, 2);
-            if (timer <= 0)
-            {
-                if (breath.spec1 || breath.spec2)
+                position = Camera.main.ScreenToWorldPoint(position);
+                float xx = position.x - (gameObject.transform).position.x;
+                float yy = Mathf.Abs(position.y) - Mathf.Abs((gameObject.transform).position.y);
+                angle = (Mathf.Atan2(Mathf.Abs(yy), Mathf.Abs(xx)) * Mathf.Rad2Deg);
+                Debug.Log(angle + "\n");
+                if (position.y < gameObject.transform.position.y)
                 {
-                    forceHeld = true;
+                    angle *= -1;
                 }
-                if (breath.spec1)
+                timer -= Time.deltaTime;
+                monitor.ChangeFlame(0 - Time.deltaTime);
+                if (timer <= 0)
                 {
-                    bulletHell();
+                    if (breath.spec1 || breath.spec2)
+                    {
+                        forceHeld = true;
+                    }
+                    if (breath.spec1)
+                    {
+                        bulletHell();
+                    }
+                    else if (breath.spec2)
+                    {
+                        shoopdawhoop();
+                    }
+                    else
+                    {
+                        normal();
+                    }
+                    timer += breath.rate;
                 }
-                else if (breath.spec2)
+
+                if (monitor.Flame == 0)
                 {
-                    shoopdawhoop();
+                    forceHeld = false;
                 }
-                else
-                {
-                    normal();
-                }
-                timer += breath.rate;
-            }
-            if (monitor.Flame == 0)
-            {
-                forceHeld = false;
             }
         }
 	}
