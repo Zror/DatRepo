@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class Tower_script : MonoBehaviour {
-    public float Spawn_Chance = 0.25f; //0.85f;
+    public float Spawn_Chance = 0.85f;
     public Vector3 princess_spawn_location;
 	private GameObject Princess;
 
