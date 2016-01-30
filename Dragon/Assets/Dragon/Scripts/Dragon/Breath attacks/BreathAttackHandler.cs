@@ -20,17 +20,21 @@ public class BreathAttackHandler : MonoBehaviour {
 	void Update () {
         if ((Input.GetMouseButton(1)||forceHeld)&&monitor.Flame!=0)
         {
-            Vector3 position = Input.mousePosition;
+            Vector3 position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             float xx = position.x - (gameObject.transform).position.x;
-            float yy=position.y- (gameObject.transform).position.y;
-            angle = (Mathf.Atan2(yy, xx) * Mathf.Rad2Deg);
+            float yy= Mathf.Abs(position.y)- Mathf.Abs((gameObject.transform).position.y);
+            angle = (Mathf.Atan2(Mathf.Abs(yy), Mathf.Abs(xx)) * Mathf.Rad2Deg);
             Debug.Log(angle + "\n");
-           // if (position.y > gameObject.transform.position.y)
-        //    {
-         //       angle-=90;
-        //    }
+            if (position.y < gameObject.transform.position.y)
+            {
+               angle*=-1;
+            }
             timer -= Time.deltaTime;
             monitor.ChangeFlame(0-Time.deltaTime);
+           // LineRenderer test = new LineRenderer();
+           // test.SetPosition(0, gameObject.transform.position);
+           //test.SetPosition(1, position);
+           //test.SetWidth(2, 2);
             if (timer <= 0)
             {
                 if (breath.spec1 || breath.spec2)
