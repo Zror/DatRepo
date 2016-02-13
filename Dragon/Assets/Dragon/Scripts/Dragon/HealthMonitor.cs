@@ -14,10 +14,10 @@ public class HealthMonitor : MonoBehaviour {
 
     public Collider2D Collison;
     public Rigidbody2D RBody;
-    
+    public int increment = 360;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 
         // If the starting HP is not set, set as total
         // So people dont die RIGHT at start
@@ -43,11 +43,12 @@ public class HealthMonitor : MonoBehaviour {
         // In addition to physics...
         // Fixed interval regen will be handled here
         bool flag1 = true;
-
-        if (flag1 && this.Stamina < MaxStamina)
+        increment -= 1;
+        if (flag1 && this.Stamina < MaxStamina && increment ==0)
         {
             // Allow Stamina regen (when not in use)
-            this.Stamina += 2;
+            this.Stamina += 1;
+            increment += 360;
         }
     }
 
