@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public abstract class Flight : MonoBehaviour {
@@ -24,18 +25,18 @@ public abstract class Flight : MonoBehaviour {
 
     //Use this for gliding over fires
     //void Updraft() {
-    /*
-    At the moment this is just bound to a key, 
-    this will be changed when we have a fire object and a way to check for collision 
-    between the dragon and the air above a fire.
-    */
+      /*
+      At the moment this is just bound to a key, 
+      this will be changed when we have a fire object and a way to check for collision 
+      between the dragon and the air above a fire.
+      */ 
     //rigidbody.AddForce(new Vector2(0, 1.25F * velocity));
     //}
-
-    // Update is called once per frame
+	
+	// Update is called once per frame
     public virtual void Update()
-    {
-        Input.simulateMouseWithTouches = true;
+	{
+	    Input.simulateMouseWithTouches = true;
 
         if (Input.GetMouseButtonDown(0) && health.HasStamina && clickLeft())
         {
@@ -63,9 +64,9 @@ public abstract class Flight : MonoBehaviour {
         if( Input.mousePosition.x < (Screen.width / 4))
         {
             return true;
-        }
+    }
         return false;
-
+    
     }
     public float getForwardSpeed()
     {

@@ -11,16 +11,20 @@ public class xmlLoadingClass : MonoBehaviour {
     // Use this for initialization
     void Start () {
         //PlayerPrefs.DeleteAll();
-        string s = PlayerPrefs.GetString(ADDRESS, "FIRST!");
-        if (!s.Equals("FIRST!"))
+        Data temp = GameObject.FindGameObjectWithTag("Load").GetComponent<Data>();
+        if (temp == null)
         {
+            string s = PlayerPrefs.GetString(ADDRESS, "FIRST!");
+            if (!s.Equals("FIRST!"))
+            {
 
-            StringReader status = new StringReader(s);
-            stats = (SavedData)serialize.Deserialize(status);
-        }
-        else
-        {
-            stats = new SavedData();
+                StringReader status = new StringReader(s);
+                stats = (SavedData)serialize.Deserialize(status);
+            }
+            else
+            {
+                stats = new SavedData();
+            }
         }
     }
 	

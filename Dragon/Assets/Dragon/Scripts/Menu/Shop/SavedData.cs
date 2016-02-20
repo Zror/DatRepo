@@ -14,6 +14,7 @@ public class SavedData  {
     public int skinSelected;
     public uint gold = 100;
     public int first = 0;
+    public int princess_captured;
 	// Use this for initialization
 	
 	// Update is called once per frame
