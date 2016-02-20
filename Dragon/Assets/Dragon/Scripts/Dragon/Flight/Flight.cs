@@ -8,17 +8,19 @@ public abstract class Flight : MonoBehaviour {
 
     protected new Rigidbody2D rigidbody;
 
+    protected new HealthMonitor health;
+
     private bool overFire;
 
     private float grav;
 
-
+    
 	private float maxSpeed = 25;
 
 	// Use this for initialization
 	public virtual void Start () {
         rigidbody = GetComponent<Rigidbody2D>();
-        
+        health = GetComponent<HealthMonitor>();
 	}
 
     //Use this for gliding over fires
@@ -32,17 +34,19 @@ public abstract class Flight : MonoBehaviour {
     //}
 	
 	// Update is called once per frame
-	public virtual void Update ()
+    public virtual void Update()
 	{
 	    Input.simulateMouseWithTouches = true;
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && health.HasStamina && clickLeft())
         {
-           rigidbody.AddForce(new Vector2(velocity * .55F, velocity));
+            rigidbody.AddForce(new Vector2(velocity * .55F, velocity));
+            health.ChangeStamina(-10);
         }
         if (Input.GetKeyDown(KeyCode.LeftAlt))
-       {
+        {
             //Updraft();
+            //lol jk, we're probably never going to use this.
         }
     }
 
@@ -52,9 +56,21 @@ public abstract class Flight : MonoBehaviour {
 			rigidbody.velocity = new Vector2(maxSpeed, rigidbody.velocity.y);
 		}
     }
+
+    public bool clickLeft()
+    {
+        //Returns if the mouse is clicked on the left quarter of the screen
+        Input.simulateMouseWithTouches = true;
+        if( Input.mousePosition.x < (Screen.width / 4))
+        {
+            return true;
+    }
+        return false;
     
+    }
     public float getForwardSpeed()
     {
         return rigidbody.velocity.x;
+        
     }
 }

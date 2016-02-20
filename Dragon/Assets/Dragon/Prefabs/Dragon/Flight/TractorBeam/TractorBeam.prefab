@@ -66,8 +66,8 @@ LineRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Positions:
-  - {x: -30, y: 40, z: 0}
-  - {x: 0, y: -10, z: 0}
+  - {x: -15, y: 25, z: 0}
+  - {x: 15, y: -25, z: 0}
   m_Parameters:
     startWidth: 1
     endWidth: 10
