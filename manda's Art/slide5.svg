@@ -14,10 +14,7 @@
    id="svg5234"
    version="1.1"
    inkscape:version="0.48.5 r10040"
-   sodipodi:docname="slide5.svg"
-   inkscape:export-filename="C:\Users\abcharbo\Source\Repos\DatRepo\manda's Art\slide5.png"
-   inkscape:export-xdpi="90"
-   inkscape:export-ydpi="90">
+   sodipodi:docname="slide5.svg">
   <defs
      id="defs5236">
     <filter
@@ -58,10 +55,10 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.87087521"
-     inkscape:cx="373.34254"
-     inkscape:cy="383.51269"
-     inkscape:current-layer="g3227"
+     inkscape:zoom="0.61580177"
+     inkscape:cx="375.71179"
+     inkscape:cy="301.95359"
+     inkscape:current-layer="layer1"
      id="namedview5238"
      showgrid="false"
      inkscape:window-width="1920"
@@ -83,49 +80,8 @@
   </metadata>
   <g
      inkscape:groupmode="layer"
-     id="layer2"
-     inkscape:label="Layer#2"
-     sodipodi:insensitive="true">
-    <rect
-       style="fill:#000020;fill-opacity:1;stroke:none"
-       id="rect3497"
-       width="1453.3898"
-       height="889.89673"
-       x="-227.34587"
-       y="-150.67398"
-       rx="47.323944"
-       ry="17.297964" />
-  </g>
-  <g
-     inkscape:groupmode="layer"
      id="layer1"
-     inkscape:label="Layer#1"
-     sodipodi:insensitive="true">
-    <path
-       style="fill:#454837;fill-opacity:1;stroke:none"
-       id="path4136"
-       sodipodi:type="arc"
-       sodipodi:cx="366.92603"
-       sodipodi:cy="-1056.3721"
-       sodipodi:rx="366.92575"
-       sodipodi:ry="372.50992"
-       sodipodi:start="0"
-       sodipodi:end="3.138936"
-       d="m 733.85178,-1056.3721 a 366.92575,372.50992 0 0 1 -733.8502105,0.9897 l 366.9244605,-0.9897 z"
-       transform="matrix(-1.6805347,0,0,-0.67304912,1062.4085,39.10634)" />
-    <path
-       style="fill:#8a916f;fill-opacity:1;stroke:none"
-       id="path4136-6"
-       sodipodi:type="arc"
-       sodipodi:cx="381.927"
-       sodipodi:cy="-1056.1122"
-       sodipodi:rx="362.5722"
-       sodipodi:ry="369.53635"
-       sodipodi:start="0"
-       sodipodi:end="3.138936"
-       d="m 744.49921,-1056.1122 a 362.5722,369.53635 0 0 1 -725.143133,0.9817 l 362.570923,-0.9817 z"
-       transform="matrix(-1.6805347,0,0,-0.67304912,1062.4085,39.10634)" />
-  </g>
+     inkscape:label="Layer#1" />
   <g
      inkscape:groupmode="layer"
      id="layer8"
@@ -1134,7 +1090,8 @@
      inkscape:groupmode="layer"
      id="g3227"
      inkscape:label="Layer copy copy"
-     style="display:inline">
+     style="display:inline"
+     sodipodi:insensitive="true">
     <rect
        style="fill:#ff9955;fill-opacity:1;stroke:none;display:inline;filter:url(#filter8300-4-6)"
        id="rect3229"
