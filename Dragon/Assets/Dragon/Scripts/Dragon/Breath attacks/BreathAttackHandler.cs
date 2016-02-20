@@ -9,24 +9,26 @@ public class BreathAttackHandler : MonoBehaviour {
     bool forceHeld;
     AttackBase breath;
     private float angle;
+    private Session_Monitor session;
     float timer;
+    private float xScale;
+    private Vector3 spawn;
     // Use this for initialization
     void Start () {
         forceHeld = false;
-        Data temp = GameObject.FindGameObjectWithTag("Load").GetComponent<Data>();
-        if (temp != null)
-        {
-            stats = temp.get();
-            selected = stats.getSelected("breath");
-            Debug.Log(selected);
-        }
+        session = FindObjectOfType<Session_Monitor>();
+   
+        selected = session.getBreaths();
+        Debug.Log(selected);
+
         breath = objects[selected].GetComponent<AttackBase>();
         timer = breath.rate;
+        xScale = transform.lossyScale.x / 2;
     }
 	
 	// Update is called once per frame
 	void Update () {
-        if ((Input.GetMouseButton(1)||forceHeld)&&monitor.Flame!=0)
+        if ((Input.GetMouseButton(0)||forceHeld)&&monitor.Flame!=0)
         {
             Vector3 position=Input.mousePosition;
             if (position.x > (Screen.width / 4))
@@ -44,6 +46,7 @@ public class BreathAttackHandler : MonoBehaviour {
                 monitor.ChangeFlame(0 - Time.deltaTime);
                 if (timer <= 0)
                 {
+                    spawn = new Vector3(transform.position.x + Mathf.Cos(angle * Mathf.Deg2Rad) * xScale, transform.position.y);
                     if (breath.spec1 || breath.spec2)
                     {
                         forceHeld = true;
@@ -71,22 +74,21 @@ public class BreathAttackHandler : MonoBehaviour {
         }
 	}
     void normal()
-    {
-        GameObject attack= (GameObject)Instantiate(objects[selected], transform.position, Quaternion.Euler(0, 0, angle));
+    { 
+        GameObject attack= (GameObject)Instantiate(objects[selected], spawn, Quaternion.Euler(0, 0, angle));
         attack.transform.parent = this.transform.parent;
     }
     void bulletHell()
     {
         Random.seed = System.DateTime.Now.Millisecond;
         int angle = Random.Range(0, 360);
-        GameObject attack = (GameObject)Instantiate(objects[selected], transform.position, Quaternion.Euler(0, 0,angle));
+        GameObject attack = (GameObject)Instantiate(objects[selected], spawn, Quaternion.Euler(0, 0,angle));
         attack.transform.parent = this.transform.parent;
     }
     void shoopdawhoop()
     {
-        Random.seed = System.DateTime.Now.Millisecond;
         int angle = Random.Range(0, 360);
-        GameObject attack = (GameObject)Instantiate(objects[selected], transform.position, Quaternion.Euler(0, 0, 315));
+        GameObject attack = (GameObject)Instantiate(objects[selected], spawn, Quaternion.Euler(0, 0, 315));
         attack.transform.parent = this.transform.parent;
     }
 }

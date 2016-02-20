@@ -21,4 +21,9 @@ public class Data : MonoBehaviour {
     {
         return Stats;
     }
+    public void updateThings(uint gold, int p)
+    {
+        Stats.gold += gold;
+        Stats.princess_captured += p;
+    }
 }
