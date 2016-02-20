@@ -11,10 +11,10 @@ public class HealthMonitor : MonoBehaviour {
     public float Flame = 5f; // Fuel; Represents burntime in seconds?
     public float MaxFlame = 8f;
     public Text t;
-
+    public bool flag1 = false;
     public Collider2D Collison;
     public Rigidbody2D RBody;
-    public int increment = 360;
+  
 
     // Use this for initialization
     void Start () {
@@ -42,13 +42,12 @@ public class HealthMonitor : MonoBehaviour {
     {
         // In addition to physics...
         // Fixed interval regen will be handled here
-        bool flag1 = true;
-        increment -= 1;
-        if (flag1 && this.Stamina < MaxStamina && increment ==0)
+        
+        if (flag1 && this.Stamina < MaxStamina)
         {
             // Allow Stamina regen (when not in use)
             this.Stamina += 1;
-            increment += 360;
+          
         }
     }
 
