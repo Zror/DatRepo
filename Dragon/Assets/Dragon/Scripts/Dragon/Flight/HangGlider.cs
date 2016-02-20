@@ -7,7 +7,7 @@ public class HangGlider : Flight {
 	public override void Update () {
         Input.simulateMouseWithTouches = true;
 
-        if (Input.GetMouseButtonDown(0) && health.HasStamina)
+        if (Input.GetMouseButtonDown(0) && health.HasStamina && clickLeft())
         {
             if ( rigidbody.velocity.x > 15){
 				rigidbody.AddForce(new Vector2(velocity * .55F, velocity));

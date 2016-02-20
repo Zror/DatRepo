@@ -37,7 +37,7 @@ public abstract class Flight : MonoBehaviour {
     {
         Input.simulateMouseWithTouches = true;
 
-        if (Input.GetMouseButtonDown(0) && health.HasStamina)
+        if (Input.GetMouseButtonDown(0) && health.HasStamina && clickLeft())
         {
             rigidbody.AddForce(new Vector2(velocity * .55F, velocity));
             health.ChangeStamina(-10);
@@ -45,6 +45,7 @@ public abstract class Flight : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.LeftAlt))
         {
             //Updraft();
+            //lol jk, we're probably never going to use this.
         }
     }
 
@@ -54,9 +55,21 @@ public abstract class Flight : MonoBehaviour {
 			rigidbody.velocity = new Vector2(maxSpeed, rigidbody.velocity.y);
 		}
     }
-    
+
+    public bool clickLeft()
+    {
+        //Returns if the mouse is clicked on the left quarter of the screen
+        Input.simulateMouseWithTouches = true;
+        if( Input.mousePosition.x < (Screen.width / 4))
+        {
+            return true;
+        }
+        return false;
+
+    }
     public float getForwardSpeed()
     {
         return rigidbody.velocity.x;
+        
     }
 }
