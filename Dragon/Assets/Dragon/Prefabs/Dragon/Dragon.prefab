@@ -133,8 +133,8 @@ GameObject:
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 212: {fileID: 21273606}
   - 4: {fileID: 431238}
+  - 212: {fileID: 21273606}
   m_Layer: 0
   m_Name: eyeball
   m_TagString: Untagged
@@ -273,7 +273,7 @@ Transform:
   - {fileID: 456624}
   - {fileID: 465496}
   m_Father: {fileID: 488244}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!4 &449072
 Transform:
   m_ObjectHideFlags: 1
@@ -285,7 +285,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 466750}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!4 &456624
 Transform:
   m_ObjectHideFlags: 1
@@ -310,7 +310,7 @@ Transform:
   m_Children:
   - {fileID: 402016}
   m_Father: {fileID: 488244}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!4 &465496
 Transform:
   m_ObjectHideFlags: 1
@@ -333,8 +333,8 @@ Transform:
   m_LocalPosition: {x: .338999987, y: .689999998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 475298}
   - {fileID: 449072}
+  - {fileID: 475298}
   m_Father: {fileID: 440600}
   m_RootOrder: 0
 --- !u!4 &475298
@@ -348,7 +348,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 466750}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!4 &487130
 Transform:
   m_ObjectHideFlags: 1
@@ -368,10 +368,9 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 196474}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15, y: 15, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 104300}
   - {fileID: 440600}
   - {fileID: 456884}
   m_Father: {fileID: 0}
@@ -407,7 +406,7 @@ CircleCollider2D:
   m_Radius: .5
 --- !u!114 &11448608
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 196474}
@@ -441,13 +440,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ba476d2ab6c35b4db46eab5c168b769, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 1
+  HP: 100
   MaxHP: 100
   Stamina: 100
   MaxStamina: 100
   Flame: 5
   MaxFlame: 8
-  t: {fileID: 0}
+  DEBUG_Bleedout_on: 0
+  Allow_Stamina_Regen: 0
   Collison: {fileID: 5830854}
   RBody: {fileID: 5097334}
 --- !u!114 &11488104

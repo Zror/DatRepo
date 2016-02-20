@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
 public class Session_Monitor : MonoBehaviour {
 
     private static Session_Monitor _instance = null;
+
     public static Session_Monitor Instance
     {
         get
@@ -56,6 +58,8 @@ public class Session_Monitor : MonoBehaviour {
 	public static readonly string PRINCESSES_TAKEN 		= "Princesses_taken";
 	public static readonly string HAY_BURNED 			= "Hay_burned";
 	public static readonly string CLOUDS_HIT 			= "Clouds_hit";
+
+    public Text t;
 	
 	// Use this for initialization
 	void Start () {
@@ -77,6 +81,14 @@ public class Session_Monitor : MonoBehaviour {
 	void FixedUpdate() {
 		this.time_elapsed += Time.fixedDeltaTime;
 	}
+
+    void Update()
+    {
+        if (t != null)
+        {
+            t.text = "Gold: " + earned_coins;
+        }
+    }
 
 	public void Add_Coins(uint amt){
 		this.data [EARNED_COINS] += amt;

@@ -54,7 +54,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5337529078c22c74ea14ef05a51327b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Spawn_Chance: .850000024
+  Spawn_Chance: .449999988
+  princess_spawn_location: {x: 0, y: 0, z: 0}
 --- !u!212 &21237148
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -87,7 +88,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: Spawn_Chance
+      value: .449999988
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 184662}
