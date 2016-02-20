@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public abstract class Flight : MonoBehaviour {
@@ -11,7 +12,7 @@ public abstract class Flight : MonoBehaviour {
 
     private float grav;
 
-    
+
 	private float maxSpeed = 25;
 
 	// Use this for initialization
@@ -37,10 +38,10 @@ public abstract class Flight : MonoBehaviour {
 
         if (Input.GetMouseButtonDown(0))
         {
-            rigidbody.AddForce(new Vector2(velocity * .55F, velocity));
+           rigidbody.AddForce(new Vector2(velocity * .55F, velocity));
         }
         if (Input.GetKeyDown(KeyCode.LeftAlt))
-        {
+       {
             //Updraft();
         }
     }

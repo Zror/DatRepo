@@ -41,7 +41,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -75,9 +75,9 @@ MonoBehaviour:
   angle: -45
   spec1: 0
   spec2: 0
-  Dragon: {fileID: 11455306, guid: 794386ae7f85d9c46b3e9e8326c02ce2, type: 2}
+  Dragon: {fileID: 0}
   speedAddition: 10
-  rate: 1
+  rate: 9.99999975e-05
 --- !u!212 &21291186
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -118,7 +118,7 @@ Prefab:
         type: 2}
     - target: {fileID: 0}
       propertyPath: rate
-      value: 1
+      value: 9.99999975e-05
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: speedAddition
@@ -139,6 +139,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_LocalScale.z
       value: .125
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_GravityScale
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

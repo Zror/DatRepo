@@ -30,9 +30,9 @@ public class Session_Monitor : MonoBehaviour {
 	 * 
 	*/
 
-	public int earned_coins = 0; // Merge me!
+	public uint earned_coins = 0; // Merge me!
 	public int Livestock_destroyed = 0;
-	public int Prioncesses_taken = 0;
+	public int Princesses_taken = 0;
 	public int Hay_burned = 0;
 	public int Clouds_hit = 0;
 
@@ -40,10 +40,10 @@ public class Session_Monitor : MonoBehaviour {
 	private uint calls = 0;
 
 	// This is for Dan's request
-	private bool[] perks;
-	private bool[] wings;
-	private bool[] breaths;
-	private bool[] skins;
+	private List<bool> perks;
+	private List<bool> wings;
+	private List<bool> breaths;
+	private List<bool> skins;
 
 	public int perks_i = 0;
 	public int wings_i = 0;
@@ -56,6 +56,8 @@ public class Session_Monitor : MonoBehaviour {
 	public static readonly string PRINCESSES_TAKEN 		= "Princesses_taken";
 	public static readonly string HAY_BURNED 			= "Hay_burned";
 	public static readonly string CLOUDS_HIT 			= "Clouds_hit";
+
+    SavedData saveStuff;
 	
 	// Use this for initialization
 	void Start () {
@@ -69,7 +71,18 @@ public class Session_Monitor : MonoBehaviour {
 		this.data.Add(CLOUDS_HIT			, 0);
 
 
-		this.time_elapsed = -1f; // Stays out of the table until the end lol
+        saveStuff = GameObject.FindGameObjectWithTag("Load").GetComponent<Data>().get();
+
+        perks = saveStuff.perks;
+
+        perks_i = saveStuff.perkSelected;
+        breaths_i = saveStuff.breathSelected;
+        wings_i = saveStuff.wingSelected;
+        skins_i = saveStuff.skinSelected;
+
+
+
+        this.time_elapsed = -1f; // Stays out of the table until the end lol
 
 	}
 	
@@ -107,35 +120,19 @@ public class Session_Monitor : MonoBehaviour {
 
 	// ACCESSORS
 	public int getWings(){
-		if (wings[wings_i]){
 			return this.wings_i;
-		}else{
-			return 0;
-		}
 	}
 	
 	public int getPerks(){
-		if (perks[perks_i]){
 			return this.perks_i;
-		}else{
-			return 0;
-		}
 	}
 	
 	public int getBreaths(){
-		if (breaths[breaths_i]){
-			return this.breaths_i;
-		}else{
-			return 0;
-		}
+		return breaths_i;
 	}
 
 	public int getSkins(){
-		if (skins[skins_i]){
 			return this.skins_i;
-		}else{
-			return 0;
-		}
 	}
 
 	public float getElapsed(){
@@ -157,7 +154,8 @@ public class Session_Monitor : MonoBehaviour {
 	}
 
 	 private void End(){
-		// End the session_monitor
+        FindObjectOfType<Data>().updateThings(earned_coins, Princesses_taken);
+        // End the session_monitor
 
 		//Destory( this.gameObject );
 

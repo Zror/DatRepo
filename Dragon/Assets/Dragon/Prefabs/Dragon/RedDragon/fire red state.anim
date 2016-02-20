@@ -1,0 +1,1364 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: fire red state
+  serializedVersion: 6
+  m_Legacy: 0
+  m_Compressed: 0
+  m_UseHighQualityCurve: 1
+  m_RotationCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0, y: 0, z: 0, w: 1}
+        inSlope: {x: 0, y: 0, z: -3.10582876, w: -.408890247}
+        outSlope: {x: 0, y: 0, z: -3.10582876, w: -.408890247}
+        tangentMode: 0
+      - time: .0833333358
+        value: {x: 0, y: 0, z: -.258819073, w: .965925813}
+        inSlope: {x: 0, y: 0, z: -2.09125566, w: -.376242399}
+        outSlope: {x: 0, y: 0, z: -2.09125566, w: -.376242399}
+        tangentMode: 0
+      - time: .166666672
+        value: {x: 0, y: 0, z: -.348542601, w: .937292933}
+        inSlope: {x: 0, y: 0, z: -.813325882, w: -.281853318}
+        outSlope: {x: 0, y: 0, z: -.813325882, w: -.281853318}
+        tangentMode: 0
+      - time: .25
+        value: {x: 0, y: 0, z: -.394373387, w: .91895026}
+        inSlope: {x: 0, y: 0, z: -.338810235, w: -.137886643}
+        outSlope: {x: 0, y: 0, z: -.338810235, w: -.137886643}
+        tangentMode: 0
+      - time: .333333343
+        value: {x: 0, y: 0, z: -.405010968, w: .914311826}
+        inSlope: {x: 0, y: 0, z: .0412770435, w: .017531991}
+        outSlope: {x: 0, y: 0, z: .0412770435, w: .017531991}
+        tangentMode: 0
+      - time: .416666687
+        value: {x: 0, y: 0, z: -.387493879, w: .921872258}
+        inSlope: {x: 0, y: 0, z: .343235552, w: .139530316}
+        outSlope: {x: 0, y: 0, z: .343235552, w: .139530316}
+        tangentMode: 0
+      - time: .5
+        value: {x: 0, y: 0, z: -.347805053, w: .937566876}
+        inSlope: {x: 0, y: 0, z: .5746454, w: .207789719}
+        outSlope: {x: 0, y: 0, z: .5746454, w: .207789719}
+        tangentMode: 0
+      - time: .583333313
+        value: {x: 0, y: 0, z: -.291719675, w: .956503868}
+        inSlope: {x: 0, y: 0, z: .7342875, w: .220163643}
+        outSlope: {x: 0, y: 0, z: .7342875, w: .220163643}
+        tangentMode: 0
+      - time: .666666627
+        value: {x: 0, y: 0, z: -.225423828, w: .974260807}
+        inSlope: {x: 0, y: 0, z: .815908074, w: .187770054}
+        outSlope: {x: 0, y: 0, z: .815908074, w: .187770054}
+        tangentMode: 0
+      - time: .74999994
+        value: {x: 0, y: 0, z: -.155735031, w: .98779887}
+        inSlope: {x: 0, y: 0, z: .812759459, w: .130105406}
+        outSlope: {x: 0, y: 0, z: .812759459, w: .130105406}
+        tangentMode: 0
+      - time: .833333254
+        value: {x: 0, y: 0, z: -.0899639502, w: .995945036}
+        inSlope: {x: 0, y: 0, z: .720845819, w: .0694048554}
+        outSlope: {x: 0, y: 0, z: .720845819, w: .0694048554}
+        tangentMode: 0
+      - time: .916666567
+        value: {x: 0, y: 0, z: -.0355940871, w: .999366343}
+        inSlope: {x: 0, y: 0, z: .539783537, w: .0243297834}
+        outSlope: {x: 0, y: 0, z: .539783537, w: .0243297834}
+        tangentMode: 0
+      - time: 1
+        value: {x: 0, y: 0, z: 0, w: 1}
+        inSlope: {x: 0, y: 0, z: .427128524, w: .0076038749}
+        outSlope: {x: 0, y: 0, z: .427128524, w: .0076038749}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: TheRedDragon/RedDragon-LowerJaw
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0, y: 0, z: .045027636, w: .998985767}
+        inSlope: {x: 0, y: 0, z: -2.1066463, w: -.0904905796}
+        outSlope: {x: 0, y: 0, z: -2.1066463, w: -.0904905796}
+        tangentMode: 0
+      - time: .0833333358
+        value: {x: 0, y: 0, z: -.130526215, w: .991444886}
+        inSlope: {x: 0, y: 0, z: -1.42816091, w: -.106721163}
+        outSlope: {x: 0, y: 0, z: -1.42816091, w: -.106721163}
+        tangentMode: 0
+      - time: .166666672
+        value: {x: 0, y: 0, z: -.192999169, w: .981198907}
+        inSlope: {x: 0, y: 0, z: -.569497287, w: -.103130221}
+        outSlope: {x: 0, y: 0, z: -.569497287, w: -.103130221}
+        tangentMode: 0
+      - time: .25
+        value: {x: 0, y: 0, z: -.225442424, w: .974256516}
+        inSlope: {x: 0, y: 0, z: -.240207925, w: -.0523817576}
+        outSlope: {x: 0, y: 0, z: -.240207925, w: -.0523817576}
+        tangentMode: 0
+      - time: .333333343
+        value: {x: 0, y: 0, z: -.233033821, w: .972468615}
+        inSlope: {x: 0, y: 0, z: .0293799303, w: .00672054198}
+        outSlope: {x: 0, y: 0, z: .0293799303, w: .00672054198}
+        tangentMode: 0
+      - time: .416666687
+        value: {x: 0, y: 0, z: -.220545769, w: .975376606}
+        inSlope: {x: 0, y: 0, z: .243321091, w: .052993305}
+        outSlope: {x: 0, y: 0, z: .243321091, w: .052993305}
+        tangentMode: 0
+      - time: .5
+        value: {x: 0, y: 0, z: -.192480311, w: .981300831}
+        inSlope: {x: 0, y: 0, z: .403512776, w: .0768245608}
+        outSlope: {x: 0, y: 0, z: .403512776, w: .0768245608}
+        tangentMode: 0
+      - time: .583333313
+        value: {x: 0, y: 0, z: -.153293654, w: .988180697}
+        inSlope: {x: 0, y: 0, z: .509532452, w: .0773878247}
+        outSlope: {x: 0, y: 0, z: .509532452, w: .0773878247}
+        tangentMode: 0
+      - time: .666666627
+        value: {x: 0, y: 0, z: -.107558258, w: .994198799}
+        inSlope: {x: 0, y: 0, z: .559698105, w: .0601022393}
+        outSlope: {x: 0, y: 0, z: .559698105, w: .0601022393}
+        tangentMode: 0
+      - time: .74999994
+        value: {x: 0, y: 0, z: -.0600106679, w: .998197734}
+        inSlope: {x: 0, y: 0, z: .552357256, w: .0340865925}
+        outSlope: {x: 0, y: 0, z: .552357256, w: .0340865925}
+        tangentMode: 0
+      - time: .833333254
+        value: {x: 0, y: 0, z: -.0154987378, w: .999879897}
+        inSlope: {x: 0, y: 0, z: .486755133, w: .00947606843}
+        outSlope: {x: 0, y: 0, z: .486755133, w: .00947606843}
+        tangentMode: 0
+      - time: .916666567
+        value: {x: 0, y: 0, z: .0211151689, w: .999777079}
+        inSlope: {x: 0, y: 0, z: .363158137, w: -.00536477007}
+        outSlope: {x: 0, y: 0, z: .363158137, w: -.00536477007}
+        tangentMode: 0
+      - time: 1
+        value: {x: 0, y: 0, z: .045027636, w: .998985767}
+        inSlope: {x: 0, y: 0, z: .286949277, w: -.00949572399}
+        outSlope: {x: 0, y: 0, z: .286949277, w: -.00949572399}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: TheRedDragon/RedDragon-FrontLeg
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0, y: 0, z: -.045027636, w: .998985767}
+        inSlope: {x: 0, y: 0, z: 2.1066463, w: -.0904905796}
+        outSlope: {x: 0, y: 0, z: 2.1066463, w: -.0904905796}
+        tangentMode: 0
+      - time: .0833333358
+        value: {x: 0, y: 0, z: .130526215, w: .991444886}
+        inSlope: {x: 0, y: 0, z: 1.42816091, w: -.106721163}
+        outSlope: {x: 0, y: 0, z: 1.42816091, w: -.106721163}
+        tangentMode: 0
+      - time: .166666672
+        value: {x: 0, y: 0, z: .192999169, w: .981198907}
+        inSlope: {x: 0, y: 0, z: .569497287, w: -.103130221}
+        outSlope: {x: 0, y: 0, z: .569497287, w: -.103130221}
+        tangentMode: 0
+      - time: .25
+        value: {x: 0, y: 0, z: .225442424, w: .974256516}
+        inSlope: {x: 0, y: 0, z: .240207925, w: -.0523817576}
+        outSlope: {x: 0, y: 0, z: .240207925, w: -.0523817576}
+        tangentMode: 0
+      - time: .333333343
+        value: {x: 0, y: 0, z: .233033821, w: .972468615}
+        inSlope: {x: 0, y: 0, z: -.0293799303, w: .00672054198}
+        outSlope: {x: 0, y: 0, z: -.0293799303, w: .00672054198}
+        tangentMode: 0
+      - time: .416666687
+        value: {x: 0, y: 0, z: .220545769, w: .975376606}
+        inSlope: {x: 0, y: 0, z: -.243321091, w: .052993305}
+        outSlope: {x: 0, y: 0, z: -.243321091, w: .052993305}
+        tangentMode: 0
+      - time: .5
+        value: {x: 0, y: 0, z: .192480311, w: .981300831}
+        inSlope: {x: 0, y: 0, z: -.403512776, w: .0768245608}
+        outSlope: {x: 0, y: 0, z: -.403512776, w: .0768245608}
+        tangentMode: 0
+      - time: .583333313
+        value: {x: 0, y: 0, z: .153293654, w: .988180697}
+        inSlope: {x: 0, y: 0, z: -.509532452, w: .0773878247}
+        outSlope: {x: 0, y: 0, z: -.509532452, w: .0773878247}
+        tangentMode: 0
+      - time: .666666627
+        value: {x: 0, y: 0, z: .107558258, w: .994198799}
+        inSlope: {x: 0, y: 0, z: -.559698105, w: .0601022393}
+        outSlope: {x: 0, y: 0, z: -.559698105, w: .0601022393}
+        tangentMode: 0
+      - time: .74999994
+        value: {x: 0, y: 0, z: .0600106679, w: .998197734}
+        inSlope: {x: 0, y: 0, z: -.552357256, w: .0340865925}
+        outSlope: {x: 0, y: 0, z: -.552357256, w: .0340865925}
+        tangentMode: 0
+      - time: .833333254
+        value: {x: 0, y: 0, z: .0154987378, w: .999879897}
+        inSlope: {x: 0, y: 0, z: -.486755133, w: .00947606843}
+        outSlope: {x: 0, y: 0, z: -.486755133, w: .00947606843}
+        tangentMode: 0
+      - time: .916666567
+        value: {x: 0, y: 0, z: -.0211151689, w: .999777079}
+        inSlope: {x: 0, y: 0, z: -.363158137, w: -.00536477007}
+        outSlope: {x: 0, y: 0, z: -.363158137, w: -.00536477007}
+        tangentMode: 0
+      - time: 1
+        value: {x: 0, y: 0, z: -.045027636, w: .998985767}
+        inSlope: {x: 0, y: 0, z: -.286949277, w: -.00949572399}
+        outSlope: {x: 0, y: 0, z: -.286949277, w: -.00949572399}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: TheRedDragon/RedDragon-BackLeg
+  m_CompressedRotationCurves: []
+  m_PositionCurves: []
+  m_ScaleCurves: []
+  m_FloatCurves: []
+  m_PPtrCurves: []
+  m_SampleRate: 12
+  m_WrapMode: 0
+  m_Bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_ClipBindingConstant:
+    genericBindings:
+    - path: 275032246
+      attribute: 2
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 1204096665
+      attribute: 2
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 2075694421
+      attribute: 2
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    pptrCurveMapping: []
+  m_AnimationClipSettings:
+    serializedVersion: 2
+    m_StartTime: 0
+    m_StopTime: 1
+    m_OrientationOffsetY: 0
+    m_Level: 0
+    m_CycleOffset: 0
+    m_LoopTime: 0
+    m_LoopBlend: 0
+    m_LoopBlendOrientation: 0
+    m_LoopBlendPositionY: 0
+    m_LoopBlendPositionXZ: 0
+    m_KeepOriginalOrientation: 0
+    m_KeepOriginalPositionY: 1
+    m_KeepOriginalPositionXZ: 0
+    m_HeightFromFeet: 0
+    m_Mirror: 0
+  m_EditorCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0833333358
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .166666672
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .25
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .333333343
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .416666687
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .5
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .583333313
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .666666627
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .74999994
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .833333254
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .916666567
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.x
+    path: TheRedDragon/RedDragon-LowerJaw
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0833333358
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .166666672
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .25
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .333333343
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .416666687
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .5
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .583333313
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .666666627
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .74999994
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .833333254
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .916666567
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.y
+    path: TheRedDragon/RedDragon-LowerJaw
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: -3.10582876
+        outSlope: -3.10582876
+        tangentMode: 0
+      - time: .0833333358
+        value: -.258819073
+        inSlope: -2.09125566
+        outSlope: -2.09125566
+        tangentMode: 0
+      - time: .166666672
+        value: -.348542601
+        inSlope: -.813325882
+        outSlope: -.813325882
+        tangentMode: 0
+      - time: .25
+        value: -.394373387
+        inSlope: -.338810235
+        outSlope: -.338810235
+        tangentMode: 0
+      - time: .333333343
+        value: -.405010968
+        inSlope: .0412770435
+        outSlope: .0412770435
+        tangentMode: 0
+      - time: .416666687
+        value: -.387493879
+        inSlope: .343235552
+        outSlope: .343235552
+        tangentMode: 0
+      - time: .5
+        value: -.347805053
+        inSlope: .5746454
+        outSlope: .5746454
+        tangentMode: 0
+      - time: .583333313
+        value: -.291719675
+        inSlope: .7342875
+        outSlope: .7342875
+        tangentMode: 0
+      - time: .666666627
+        value: -.225423828
+        inSlope: .815908074
+        outSlope: .815908074
+        tangentMode: 0
+      - time: .74999994
+        value: -.155735031
+        inSlope: .812759459
+        outSlope: .812759459
+        tangentMode: 0
+      - time: .833333254
+        value: -.0899639502
+        inSlope: .720845819
+        outSlope: .720845819
+        tangentMode: 0
+      - time: .916666567
+        value: -.0355940871
+        inSlope: .539783537
+        outSlope: .539783537
+        tangentMode: 0
+      - time: 1
+        value: 0
+        inSlope: .427128524
+        outSlope: .427128524
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.z
+    path: TheRedDragon/RedDragon-LowerJaw
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: -.408890247
+        outSlope: -.408890247
+        tangentMode: 0
+      - time: .0833333358
+        value: .965925813
+        inSlope: -.376242399
+        outSlope: -.376242399
+        tangentMode: 0
+      - time: .166666672
+        value: .937292933
+        inSlope: -.281853318
+        outSlope: -.281853318
+        tangentMode: 0
+      - time: .25
+        value: .91895026
+        inSlope: -.137886643
+        outSlope: -.137886643
+        tangentMode: 0
+      - time: .333333343
+        value: .914311826
+        inSlope: .017531991
+        outSlope: .017531991
+        tangentMode: 0
+      - time: .416666687
+        value: .921872258
+        inSlope: .139530316
+        outSlope: .139530316
+        tangentMode: 0
+      - time: .5
+        value: .937566876
+        inSlope: .207789719
+        outSlope: .207789719
+        tangentMode: 0
+      - time: .583333313
+        value: .956503868
+        inSlope: .220163643
+        outSlope: .220163643
+        tangentMode: 0
+      - time: .666666627
+        value: .974260807
+        inSlope: .187770054
+        outSlope: .187770054
+        tangentMode: 0
+      - time: .74999994
+        value: .98779887
+        inSlope: .130105406
+        outSlope: .130105406
+        tangentMode: 0
+      - time: .833333254
+        value: .995945036
+        inSlope: .0694048554
+        outSlope: .0694048554
+        tangentMode: 0
+      - time: .916666567
+        value: .999366343
+        inSlope: .0243297834
+        outSlope: .0243297834
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: .0076038749
+        outSlope: .0076038749
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.w
+    path: TheRedDragon/RedDragon-LowerJaw
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0833333358
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .166666672
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .25
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .333333343
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .416666687
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .5
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .583333313
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .666666627
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .74999994
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .833333254
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .916666567
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.x
+    path: TheRedDragon/RedDragon-FrontLeg
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0833333358
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .166666672
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .25
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .333333343
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .416666687
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .5
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .583333313
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .666666627
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .74999994
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .833333254
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .916666567
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.y
+    path: TheRedDragon/RedDragon-FrontLeg
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: .045027636
+        inSlope: -2.1066463
+        outSlope: -2.1066463
+        tangentMode: 0
+      - time: .0833333358
+        value: -.130526215
+        inSlope: -1.42816091
+        outSlope: -1.42816091
+        tangentMode: 0
+      - time: .166666672
+        value: -.192999169
+        inSlope: -.569497287
+        outSlope: -.569497287
+        tangentMode: 0
+      - time: .25
+        value: -.225442424
+        inSlope: -.240207925
+        outSlope: -.240207925
+        tangentMode: 0
+      - time: .333333343
+        value: -.233033821
+        inSlope: .0293799303
+        outSlope: .0293799303
+        tangentMode: 0
+      - time: .416666687
+        value: -.220545769
+        inSlope: .243321091
+        outSlope: .243321091
+        tangentMode: 0
+      - time: .5
+        value: -.192480311
+        inSlope: .403512776
+        outSlope: .403512776
+        tangentMode: 0
+      - time: .583333313
+        value: -.153293654
+        inSlope: .509532452
+        outSlope: .509532452
+        tangentMode: 0
+      - time: .666666627
+        value: -.107558258
+        inSlope: .559698105
+        outSlope: .559698105
+        tangentMode: 0
+      - time: .74999994
+        value: -.0600106679
+        inSlope: .552357256
+        outSlope: .552357256
+        tangentMode: 0
+      - time: .833333254
+        value: -.0154987378
+        inSlope: .486755133
+        outSlope: .486755133
+        tangentMode: 0
+      - time: .916666567
+        value: .0211151689
+        inSlope: .363158137
+        outSlope: .363158137
+        tangentMode: 0
+      - time: 1
+        value: .045027636
+        inSlope: .286949277
+        outSlope: .286949277
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.z
+    path: TheRedDragon/RedDragon-FrontLeg
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: .998985767
+        inSlope: -.0904905796
+        outSlope: -.0904905796
+        tangentMode: 0
+      - time: .0833333358
+        value: .991444886
+        inSlope: -.106721163
+        outSlope: -.106721163
+        tangentMode: 0
+      - time: .166666672
+        value: .981198907
+        inSlope: -.103130221
+        outSlope: -.103130221
+        tangentMode: 0
+      - time: .25
+        value: .974256516
+        inSlope: -.0523817576
+        outSlope: -.0523817576
+        tangentMode: 0
+      - time: .333333343
+        value: .972468615
+        inSlope: .00672054198
+        outSlope: .00672054198
+        tangentMode: 0
+      - time: .416666687
+        value: .975376606
+        inSlope: .052993305
+        outSlope: .052993305
+        tangentMode: 0
+      - time: .5
+        value: .981300831
+        inSlope: .0768245608
+        outSlope: .0768245608
+        tangentMode: 0
+      - time: .583333313
+        value: .988180697
+        inSlope: .0773878247
+        outSlope: .0773878247
+        tangentMode: 0
+      - time: .666666627
+        value: .994198799
+        inSlope: .0601022393
+        outSlope: .0601022393
+        tangentMode: 0
+      - time: .74999994
+        value: .998197734
+        inSlope: .0340865925
+        outSlope: .0340865925
+        tangentMode: 0
+      - time: .833333254
+        value: .999879897
+        inSlope: .00947606843
+        outSlope: .00947606843
+        tangentMode: 0
+      - time: .916666567
+        value: .999777079
+        inSlope: -.00536477007
+        outSlope: -.00536477007
+        tangentMode: 0
+      - time: 1
+        value: .998985767
+        inSlope: -.00949572399
+        outSlope: -.00949572399
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.w
+    path: TheRedDragon/RedDragon-FrontLeg
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0833333358
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .166666672
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .25
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .333333343
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .416666687
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .5
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .583333313
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .666666627
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .74999994
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .833333254
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .916666567
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.x
+    path: TheRedDragon/RedDragon-BackLeg
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .0833333358
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .166666672
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .25
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .333333343
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .416666687
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .5
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .583333313
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .666666627
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .74999994
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .833333254
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: .916666567
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.y
+    path: TheRedDragon/RedDragon-BackLeg
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -.045027636
+        inSlope: 2.1066463
+        outSlope: 2.1066463
+        tangentMode: 0
+      - time: .0833333358
+        value: .130526215
+        inSlope: 1.42816091
+        outSlope: 1.42816091
+        tangentMode: 0
+      - time: .166666672
+        value: .192999169
+        inSlope: .569497287
+        outSlope: .569497287
+        tangentMode: 0
+      - time: .25
+        value: .225442424
+        inSlope: .240207925
+        outSlope: .240207925
+        tangentMode: 0
+      - time: .333333343
+        value: .233033821
+        inSlope: -.0293799303
+        outSlope: -.0293799303
+        tangentMode: 0
+      - time: .416666687
+        value: .220545769
+        inSlope: -.243321091
+        outSlope: -.243321091
+        tangentMode: 0
+      - time: .5
+        value: .192480311
+        inSlope: -.403512776
+        outSlope: -.403512776
+        tangentMode: 0
+      - time: .583333313
+        value: .153293654
+        inSlope: -.509532452
+        outSlope: -.509532452
+        tangentMode: 0
+      - time: .666666627
+        value: .107558258
+        inSlope: -.559698105
+        outSlope: -.559698105
+        tangentMode: 0
+      - time: .74999994
+        value: .0600106679
+        inSlope: -.552357256
+        outSlope: -.552357256
+        tangentMode: 0
+      - time: .833333254
+        value: .0154987378
+        inSlope: -.486755133
+        outSlope: -.486755133
+        tangentMode: 0
+      - time: .916666567
+        value: -.0211151689
+        inSlope: -.363158137
+        outSlope: -.363158137
+        tangentMode: 0
+      - time: 1
+        value: -.045027636
+        inSlope: -.286949277
+        outSlope: -.286949277
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.z
+    path: TheRedDragon/RedDragon-BackLeg
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: .998985767
+        inSlope: -.0904905796
+        outSlope: -.0904905796
+        tangentMode: 0
+      - time: .0833333358
+        value: .991444886
+        inSlope: -.106721163
+        outSlope: -.106721163
+        tangentMode: 0
+      - time: .166666672
+        value: .981198907
+        inSlope: -.103130221
+        outSlope: -.103130221
+        tangentMode: 0
+      - time: .25
+        value: .974256516
+        inSlope: -.0523817576
+        outSlope: -.0523817576
+        tangentMode: 0
+      - time: .333333343
+        value: .972468615
+        inSlope: .00672054198
+        outSlope: .00672054198
+        tangentMode: 0
+      - time: .416666687
+        value: .975376606
+        inSlope: .052993305
+        outSlope: .052993305
+        tangentMode: 0
+      - time: .5
+        value: .981300831
+        inSlope: .0768245608
+        outSlope: .0768245608
+        tangentMode: 0
+      - time: .583333313
+        value: .988180697
+        inSlope: .0773878247
+        outSlope: .0773878247
+        tangentMode: 0
+      - time: .666666627
+        value: .994198799
+        inSlope: .0601022393
+        outSlope: .0601022393
+        tangentMode: 0
+      - time: .74999994
+        value: .998197734
+        inSlope: .0340865925
+        outSlope: .0340865925
+        tangentMode: 0
+      - time: .833333254
+        value: .999879897
+        inSlope: .00947606843
+        outSlope: .00947606843
+        tangentMode: 0
+      - time: .916666567
+        value: .999777079
+        inSlope: -.00536477007
+        outSlope: -.00536477007
+        tangentMode: 0
+      - time: 1
+        value: .998985767
+        inSlope: -.00949572399
+        outSlope: -.00949572399
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_LocalRotation.w
+    path: TheRedDragon/RedDragon-BackLeg
+    classID: 4
+    script: {fileID: 0}
+  m_EulerEditorCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: localEulerAnglesBaked.x
+    path: TheRedDragon/RedDragon-LowerJaw
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: localEulerAnglesBaked.y
+    path: TheRedDragon/RedDragon-LowerJaw
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: -360
+        outSlope: -360
+        tangentMode: 10
+      - time: .0833333358
+        value: -30
+        inSlope: -163.636368
+        outSlope: -163.636368
+        tangentMode: 10
+      - time: 1
+        value: 0
+        inSlope: 32.727272
+        outSlope: 32.727272
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: localEulerAnglesBaked.z
+    path: TheRedDragon/RedDragon-LowerJaw
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .0833333358
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: localEulerAnglesBaked.x
+    path: TheRedDragon/RedDragon-FrontLeg
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: .0833333358
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: localEulerAnglesBaked.y
+    path: TheRedDragon/RedDragon-FrontLeg
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 5.16153145
+        inSlope: -241.93837
+        outSlope: -241.93837
+        tangentMode: 10
+      - time: .0833333358
+        value: -15
+        inSlope: -109.971985
+        outSlope: -109.971985
+        tangentMode: 10
+      - time: 1
+        value: 5.16153145
+        inSlope: 21.9943981
+        outSlope: 21.9943981
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: localEulerAnglesBaked.z
+    path: TheRedDragon/RedDragon-FrontLeg
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: localEulerAnglesBaked.x
+    path: TheRedDragon/RedDragon-BackLeg
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: localEulerAnglesBaked.y
+    path: TheRedDragon/RedDragon-BackLeg
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: -5.16153145
+        inSlope: 241.93837
+        outSlope: 241.93837
+        tangentMode: 10
+      - time: .0833333358
+        value: 15
+        inSlope: 109.971985
+        outSlope: 109.971985
+        tangentMode: 10
+      - time: 1
+        value: -5.16153145
+        inSlope: -21.9943981
+        outSlope: -21.9943981
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: localEulerAnglesBaked.z
+    path: TheRedDragon/RedDragon-BackLeg
+    classID: 4
+    script: {fileID: 0}
+  m_HasGenericRootTransform: 0
+  m_HasMotionFloatCurves: 0
+  m_GenerateMotionCurves: 0
+  m_Events: []
