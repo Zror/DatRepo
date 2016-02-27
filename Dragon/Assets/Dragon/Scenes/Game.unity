@@ -156,10 +156,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 896098684}
   m_RootOrder: 3
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 93, y: -52.3999939}
-  m_SizeDelta: {x: 121, y: 10}
+  m_AnchorMin: {x: 0, y: .5}
+  m_AnchorMax: {x: 1, y: .5}
+  m_AnchoredPosition: {x: -378, y: 213.600006}
+  m_SizeDelta: {x: -821, y: 10}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &239665190
 MonoBehaviour:
@@ -173,8 +173,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   source: {fileID: 0}
-  Use_Stat_Number: 1
   Trans: {fileID: 239665189}
+  img: {fileID: 239665191}
+  Use_Stat_Number: 1
+  atx: 0
 --- !u!114 &239665191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -402,8 +404,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   source: {fileID: 0}
-  Use_Stat_Number: 2
   Trans: {fileID: 789259851}
+  img: {fileID: 789259849}
+  Use_Stat_Number: 2
+  atx: 0
 --- !u!114 &789259849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -449,10 +453,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 896098684}
   m_RootOrder: 1
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 93, y: -32.3000031}
-  m_SizeDelta: {x: 120.75, y: 10}
+  m_AnchorMin: {x: 0, y: .5}
+  m_AnchorMax: {x: 1, y: .5}
+  m_AnchoredPosition: {x: -377.9375, y: 233.699997}
+  m_SizeDelta: {x: -821.125, y: 10}
   m_Pivot: {x: .5, y: .5}
 --- !u!1 &896098683
 GameObject:
@@ -725,10 +729,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 896098684}
   m_RootOrder: 2
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 93, y: -72.5999985}
-  m_SizeDelta: {x: 121, y: 10}
+  m_AnchorMin: {x: 0, y: .5}
+  m_AnchorMax: {x: 1, y: .5}
+  m_AnchoredPosition: {x: -378, y: 193.399994}
+  m_SizeDelta: {x: -821, y: 10}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1822981215
 MonoBehaviour:
@@ -775,8 +779,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   source: {fileID: 0}
-  Use_Stat_Number: 0
   Trans: {fileID: 1822981214}
+  img: {fileID: 1822981215}
+  Use_Stat_Number: 0
+  atx: 0
 --- !u!1 &1909697060
 GameObject:
   m_ObjectHideFlags: 0

@@ -24,8 +24,22 @@ public class HealthMonitor : MonoBehaviour {
     private bool onGround = true;
 
 
-	// Use this for initialization
-	void Start () {
+    private static HealthMonitor _instance = null;
+
+    public static HealthMonitor Instance // Use to call the opnly instance of the HealthMonitor
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = FindObjectOfType<HealthMonitor>();
+            }
+            return _instance;
+        }
+    }
+
+    // Use this for initialization
+    void Start () {
 
         // If the starting HP is not set, set as total
         // So people dont die RIGHT at start
@@ -94,6 +108,7 @@ public class HealthMonitor : MonoBehaviour {
             0 = HP
             1 = Stamina
             2 = Flame
+            3 (not supposed to be passed, returns 1 for use with SIN)
             else IDK
         */
         switch (i)
@@ -101,6 +116,7 @@ public class HealthMonitor : MonoBehaviour {
             case 0: return (float)this.HP;
             case 1: return (float)this.Stamina;
             case 2: return this.Flame;
+            case 3: return 1;
             default: Debug.LogError("[!] GetStatAtIndex was given a VERY bad index! @" + i); break;
         }
         return -1f;
