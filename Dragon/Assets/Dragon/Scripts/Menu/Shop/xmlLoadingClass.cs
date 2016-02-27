@@ -6,25 +6,40 @@ using System.IO;
 public class xmlLoadingClass : MonoBehaviour {
     private const string ADDRESS = "savedData";
     protected XmlSerializer serialize = new XmlSerializer(typeof(SavedData));
-    public SavedData stats = new SavedData();
+    public SavedData stats;
     
     // Use this for initialization
     void Start () {
-        //PlayerPrefs.DeleteAll();
+
+
+
+        //DELETE THIS BEFORE RELEASE
+        PlayerPrefs.DeleteAll();
+
+
+
+
+
         Data temp = GameObject.FindGameObjectWithTag("Load").GetComponent<Data>();
-        if (temp == null)
+        Debug.Log("1");
+        if (!temp.loaded)
         {
+            Debug.Log("2");
             string s = PlayerPrefs.GetString(ADDRESS, "FIRST!");
+            Debug.Log(s);
             if (!s.Equals("FIRST!"))
             {
-
+                
                 StringReader status = new StringReader(s);
                 stats = (SavedData)serialize.Deserialize(status);
+                Debug.Log(stats.gold);
             }
             else
             {
                 stats = new SavedData();
+                Debug.Log("no");
             }
+            temp.setStats(stats);
         }
     }
 	

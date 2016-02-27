@@ -16,11 +16,13 @@ public class Arrow_Spawner : MonoBehaviour {
         timer -= Time.deltaTime;
         if (timer < 0)
         {
-            GameObject arrow=(GameObject) Instantiate(projectile, transform.position, Quaternion.Euler(0, 0, 135));
+
+            GameObject arrow=(GameObject) Instantiate(projectile,transform.position, Quaternion.Euler(0, 0, 135));
             
             arrow.GetComponent<base_projectile>().angle = aimer.angle(transform.position.x, transform.position.y, projectile.GetComponent<base_projectile>().speed) * Mathf.Deg2Rad;
             arrow.GetComponent<base_projectile>().body.velocity = new Vector2(Mathf.Cos(arrow.GetComponent<base_projectile>().angle), Mathf.Sin(arrow.GetComponent<base_projectile>().angle)) * arrow.GetComponent<base_projectile>().speed;
-            arrow.transform.parent = FindObjectOfType<FloatingOrigin>().transform;
+
+            arrow.transform.parent = this.transform.parent;
             timer += rate;
         }
 	}

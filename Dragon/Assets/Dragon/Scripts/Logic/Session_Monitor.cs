@@ -45,10 +45,10 @@ public class Session_Monitor : MonoBehaviour {
 	private List<bool> breaths;
 	private List<bool> skins;
 
-	public int perks_i = 0;
-	public int wings_i = 0;
-	public int breaths_i = 0;
-	public int skins_i = 0;
+	public int perks_i;
+	public int wings_i;
+	public int breaths_i;
+	public int skins_i;
 
 	public static readonly string CALLS 				= "calls";
 	public static readonly string EARNED_COINS 			= "earned_coins";
@@ -58,7 +58,26 @@ public class Session_Monitor : MonoBehaviour {
 	public static readonly string CLOUDS_HIT 			= "Clouds_hit";
 
     SavedData saveStuff;
-	
+	void Awake()
+    {
+        Data temp = GameObject.FindGameObjectWithTag("Load").GetComponent<Data>();
+        if (temp != null)
+        {
+            saveStuff = temp.get();
+
+            perks = saveStuff.perks;
+            breaths = saveStuff.breath;
+            wings = saveStuff.wings;
+            skins = saveStuff.skins;
+
+            perks_i = saveStuff.perkSelected;
+            breaths_i = saveStuff.breathSelected;
+            wings_i = saveStuff.wingSelected;
+            skins_i = saveStuff.skinSelected;
+
+            Debug.Log(perks_i + ", " + breaths_i + ", " + wings_i + ", " + skins_i);
+        }
+    }
 	// Use this for initialization
 	void Start () {
 		// Enforce definitions o.O
@@ -71,14 +90,11 @@ public class Session_Monitor : MonoBehaviour {
 		this.data.Add(CLOUDS_HIT			, 0);
 
 
-        saveStuff = GameObject.FindGameObjectWithTag("Load").GetComponent<Data>().get();
+        
 
-        perks = saveStuff.perks;
+   
 
-        perks_i = saveStuff.perkSelected;
-        breaths_i = saveStuff.breathSelected;
-        wings_i = saveStuff.wingSelected;
-        skins_i = saveStuff.skinSelected;
+            
 
 
 
@@ -128,7 +144,8 @@ public class Session_Monitor : MonoBehaviour {
 	}
 	
 	public int getBreaths(){
-		return breaths_i;
+        Debug.Log(perks_i + ", " + breaths_i + ", " + wings_i + ", " + skins_i);
+        return breaths_i;
 	}
 
 	public int getSkins(){
@@ -154,6 +171,7 @@ public class Session_Monitor : MonoBehaviour {
 	}
 
 	 private void End(){
+        earned_coins += (uint)Princesses_taken * 75;
         FindObjectOfType<Data>().updateThings(earned_coins, Princesses_taken);
         // End the session_monitor
 

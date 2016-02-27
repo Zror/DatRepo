@@ -9,7 +9,7 @@ public class AutoAim : MonoBehaviour {
     GameObject dragon;
     // Use this for initialization
     void Start() {
-        dragon = GameObject.Find("Dragon");
+        dragon = GameObject.FindGameObjectWithTag(Globals.TAGS.Player);
         point1 = dragon.transform.position;
     }
 	// Update is called once per frame
@@ -42,7 +42,7 @@ public class AutoAim : MonoBehaviour {
         //        float a3 = arcTan(t2, x, y);
 
         //        float t3 =  (Mathf.Cos(a3 * Mathf.Deg2Rad) * speed / time);
-
+        Debug.Log(arcTan(t1, x, y) - 17);
         return arcTan(t1, x, y) - 17;
 
 

@@ -34,9 +34,7 @@ public class xmlSavingClass : MonoBehaviour {
         {
             Debug.Log("Success");
             this.stats = temp.get();
-            TextWriter text = new StringWriter();
-            serialize.Serialize(text, stats);
-            Debug.Log(text);
+            Debug.Log(stats);
         }
     }
 }

@@ -4,15 +4,22 @@ using System.Collections;
 public class Data : MonoBehaviour {
     private SavedData Stats;
     public xmlLoadingClass load;
+    public bool loaded;
 	// Use this for initialization
 	void Start () {
-        this.Stats = load.stats;
+        //this.Stats = null;
+        //loaded = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 	
 	}
+    public void setStats(SavedData s)
+    {
+        Stats = s;
+        loaded = true;
+    }
     void Awake()
     {
         DontDestroyOnLoad(transform.gameObject);

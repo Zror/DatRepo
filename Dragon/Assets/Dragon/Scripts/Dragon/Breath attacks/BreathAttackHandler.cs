@@ -4,7 +4,7 @@ using System.Collections;
 public class BreathAttackHandler : MonoBehaviour {
     public GameObject[] objects;
     private SavedData stats;
-    public int selected;
+    private int selected;
     public HealthMonitor monitor;
     bool forceHeld;
     AttackBase breath;
@@ -16,11 +16,15 @@ public class BreathAttackHandler : MonoBehaviour {
     // Use this for initialization
     void Start () {
         forceHeld = false;
+        /*Data temp = GameObject.FindGameObjectWithTag("Load").GetComponent<Data>();
+        if (temp != null)
+        {
+            selected = temp.get().breathSelected;
+            Debug.Log(selected);
+        }*/
         session = FindObjectOfType<Session_Monitor>();
-   
         selected = session.getBreaths();
         Debug.Log(selected);
-
         breath = objects[selected].GetComponent<AttackBase>();
         timer = breath.rate;
         xScale = transform.lossyScale.x / 2;
@@ -31,7 +35,7 @@ public class BreathAttackHandler : MonoBehaviour {
         if ((Input.GetMouseButton(0)||forceHeld)&&monitor.Flame!=0)
         {
             Vector3 position=Input.mousePosition;
-            if (position.x > (Screen.width / 4))
+            if (position.x > (Screen.width / 4)||forceHeld)
             {
                 position = Camera.main.ScreenToWorldPoint(position);
                 float xx = position.x - (gameObject.transform).position.x;
@@ -88,7 +92,7 @@ public class BreathAttackHandler : MonoBehaviour {
     void shoopdawhoop()
     {
         int angle = Random.Range(0, 360);
-        GameObject attack = (GameObject)Instantiate(objects[selected], spawn, Quaternion.Euler(0, 0, 315));
+        GameObject attack = (GameObject)Instantiate(objects[selected], spawn, Quaternion.Euler(0, 0, 330));
         attack.transform.parent = this.transform.parent;
     }
 }

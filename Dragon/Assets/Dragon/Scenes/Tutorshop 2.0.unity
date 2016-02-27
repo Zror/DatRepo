@@ -1136,7 +1136,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1801563216}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.7800353
+  m_Size: 0.7711397
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1262,6 +1262,11 @@ GameObject:
   - 114: {fileID: 627118298}
   - 114: {fileID: 627118297}
   - 114: {fileID: 627118301}
+  - 114: {fileID: 627118306}
+  - 114: {fileID: 627118305}
+  - 114: {fileID: 627118304}
+  - 114: {fileID: 627118303}
+  - 114: {fileID: 627118302}
   m_Layer: 5
   m_Name: Button (3)
   m_TagString: Untagged
@@ -1304,6 +1309,11 @@ MonoBehaviour:
   selected: 0
   images:
   - {fileID: 627118301}
+  - {fileID: 627118306}
+  - {fileID: 627118305}
+  - {fileID: 627118304}
+  - {fileID: 627118303}
+  - {fileID: 627118302}
   butt: {fileID: 627118298}
   render: {fileID: 1437456410}
 --- !u!114 &627118298
@@ -1402,10 +1412,85 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43446dd5020e60749bea30dba41c8bdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageName: {fileID: 0}
+  imageName: {fileID: 21300000, guid: e34645caa1b4c494f973dbc09c121246, type: 3}
   cost: 0
-  name2: Please Replace
+  name2: Red Dragon
   owned: 1
+--- !u!114 &627118302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 627118295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43446dd5020e60749bea30dba41c8bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageName: {fileID: 21300000, guid: 0760629a6dc116d41bf932add284c025, type: 3}
+  cost: 10
+  name2: copyright infringment
+  owned: 0
+--- !u!114 &627118303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 627118295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43446dd5020e60749bea30dba41c8bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageName: {fileID: 21300000, guid: b162a43d9b8f0bc46935597e2cbd06a6, type: 3}
+  cost: 10
+  name2: mecha
+  owned: 0
+--- !u!114 &627118304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 627118295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43446dd5020e60749bea30dba41c8bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageName: {fileID: 21300000, guid: c8d69ca3ff2e00e4ba301ea9001a3e11, type: 3}
+  cost: 10
+  name2: Ghost
+  owned: 0
+--- !u!114 &627118305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 627118295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43446dd5020e60749bea30dba41c8bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageName: {fileID: 21300000, guid: 446b4dee4357e684e896701e0fbd0dcc, type: 3}
+  cost: 10
+  name2: Emo
+  owned: 0
+--- !u!114 &627118306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 627118295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43446dd5020e60749bea30dba41c8bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageName: {fileID: 21300000, guid: da280a6e6ab48c1478b5074153e69c04, type: 3}
+  cost: 10
+  name2: black dragon
+  owned: 0
 --- !u!1 &652302310
 GameObject:
   m_ObjectHideFlags: 0
@@ -2285,9 +2370,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43446dd5020e60749bea30dba41c8bdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageName: {fileID: 21300000, guid: 00d49fbf0315f614d8a8eccd8187b6b7, type: 3}
+  imageName: {fileID: 21300000, guid: 0d1f76c3ecfd29842bd6510cdf5ff28c, type: 3}
   cost: 0
-  name2: Basic Breath
+  name2: FireBall
   owned: 1
 --- !u!114 &1137211367
 MonoBehaviour:
@@ -2300,9 +2385,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43446dd5020e60749bea30dba41c8bdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageName: {fileID: 21300000, guid: 00d49fbf0315f614d8a8eccd8187b6b7, type: 3}
+  imageName: {fileID: 21300000, guid: 0d1f76c3ecfd29842bd6510cdf5ff28c, type: 3}
   cost: 10
-  name2: Basic bullet H***
+  name2: Fire Explosion
   owned: 0
 --- !u!114 &1137211368
 MonoBehaviour:
@@ -2315,9 +2400,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43446dd5020e60749bea30dba41c8bdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageName: {fileID: 21300000, guid: 00d49fbf0315f614d8a8eccd8187b6b7, type: 3}
+  imageName: {fileID: 21300000, guid: 0d1f76c3ecfd29842bd6510cdf5ff28c, type: 3}
   cost: 10
-  name2: Basic Lasers
+  name2: FlameThrower
   owned: 0
 --- !u!1 &1139452625
 GameObject:

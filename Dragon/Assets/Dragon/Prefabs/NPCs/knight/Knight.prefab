@@ -276,7 +276,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b5765a4f6d68574ca215ed394506ed2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rate: 2.5
+  rate: 0.01
   projectile: {fileID: 197812, guid: 71024886ddfa7b34d9ae96c4cab6ee5b, type: 2}
   aimer: {fileID: 11481788}
 --- !u!114 &11481788
@@ -510,6 +510,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_TagString
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: rate
+      value: 0.01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
