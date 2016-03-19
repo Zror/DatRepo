@@ -13,6 +13,8 @@ public class base_item : MonoBehaviour {
     public static Session_Monitor monitor;
     public static HealthMonitor dragonSM;
 
+    Perks p;
+
     // Use this for initialization
     void Start () {
 		// Correct init logics
@@ -27,7 +29,7 @@ public class base_item : MonoBehaviour {
         {
             dragonSM = FindObjectsOfType<HealthMonitor>().First(t => t.tag == Globals.TAGS.Player);
         }
-
+        p = gameObject.GetComponent<Perks>();
     }
 	
 	// Update is called once per frame
@@ -54,9 +56,27 @@ public class base_item : MonoBehaviour {
 			GameObject dragon = coll.gameObject;
 			UseItem(dragon); // For non awarding actions
 
-			dragonSM.StatInput( this.award_HP,
-			                   	this.award_Stam,
-			                   	this.award_Flame);
+
+            int hp = this.award_HP;
+            int stam = this.award_Stam;
+            float flame = this.award_Flame;
+
+            if (p.BE())
+            {
+                stam *= 2;
+                flame *= 2;
+            }
+            if (hp < 0)
+            {
+
+                hp = (int)(hp * p.damageMult()) + p.damageReduction();
+            }
+            if(hp>0 && p.BE())
+            {
+                hp *= 2;
+            }
+
+            dragonSM.StatInput(hp, stam,flame);
             // @@@ SESSION MONITOR
             //monitor.Add_Coins(this.award_Coin_Value);
 

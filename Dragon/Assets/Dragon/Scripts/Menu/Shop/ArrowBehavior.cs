@@ -10,8 +10,8 @@ public class ArrowBehavior : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
-	}
+        Input.simulateMouseWithTouches = true;
+    }
     public void onClick(string arg)
     {
         if(arg.Equals("<"))
