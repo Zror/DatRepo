@@ -24,6 +24,8 @@ public class PerksButtonBehavior : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        Input.simulateMouseWithTouches = true;
+
         Text t = butt.GetComponentInChildren<Text>();
         render.sprite = images[index].getImage();
         if (!images[index].isOwned())

@@ -1136,7 +1136,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1801563216}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.7711397
+  m_Size: 0.5354478
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -4195,6 +4195,8 @@ GameObject:
   - 114: {fileID: 2090099386}
   - 114: {fileID: 2090099385}
   - 114: {fileID: 2090099384}
+  - 114: {fileID: 2090099388}
+  - 114: {fileID: 2090099389}
   m_Layer: 5
   m_Name: Button (8)
   m_TagString: Untagged
@@ -4338,9 +4340,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43446dd5020e60749bea30dba41c8bdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageName: {fileID: 21300000, guid: 9aa6559dd5d62474198c384094e64bce, type: 3}
-  cost: 30
-  name2: Test3
+  imageName: {fileID: 21300000, guid: 5516b6017cb1e144381d984064140b00, type: 3}
+  cost: 60
+  name2: Feast
   owned: 0
 --- !u!114 &2090099385
 MonoBehaviour:
@@ -4353,9 +4355,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43446dd5020e60749bea30dba41c8bdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageName: {fileID: 21300000, guid: 76b8f46149f25224fb430acb393c731b, type: 3}
-  cost: 20
-  name2: Test3
+  imageName: {fileID: 21300000, guid: 28b1f105098490a4a83884b6ba3cdd0b, type: 3}
+  cost: 75
+  name2: Even More Gold
   owned: 0
 --- !u!114 &2090099386
 MonoBehaviour:
@@ -4368,9 +4370,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43446dd5020e60749bea30dba41c8bdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageName: {fileID: 21300000, guid: 589216b15ee148f40882a668c0e60d05, type: 3}
-  cost: 10
-  name2: Test2
+  imageName: {fileID: 21300000, guid: 5516b6017cb1e144381d984064140b00, type: 3}
+  cost: 50
+  name2: More gold
   owned: 0
 --- !u!114 &2090099387
 MonoBehaviour:
@@ -4383,10 +4385,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43446dd5020e60749bea30dba41c8bdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageName: {fileID: 21300000, guid: 00d49fbf0315f614d8a8eccd8187b6b7, type: 3}
+  imageName: {fileID: 21300000, guid: e34645caa1b4c494f973dbc09c121246, type: 3}
   cost: 0
-  name2: test
+  name2: No Perk
   owned: 1
+--- !u!114 &2090099388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2090099378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43446dd5020e60749bea30dba41c8bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageName: {fileID: 21300000, guid: 28b1f105098490a4a83884b6ba3cdd0b, type: 3}
+  cost: 90
+  name2: More Princess Bounty
+  owned: 0
+--- !u!114 &2090099389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2090099378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43446dd5020e60749bea30dba41c8bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageName: {fileID: 21300000, guid: e60ba0f27b6af7444a2c77950fca3f8b, type: 3}
+  cost: 100
+  name2: Even More Princess Bounty
+  owned: 0
 --- !u!1 &2112203795
 GameObject:
   m_ObjectHideFlags: 0

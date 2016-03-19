@@ -13,6 +13,7 @@ public class BreathAttackHandler : MonoBehaviour {
     float timer;
     private float xScale;
     private Vector3 spawn;
+    Perks p;
     // Use this for initialization
     void Start () {
         forceHeld = false;
@@ -28,10 +29,12 @@ public class BreathAttackHandler : MonoBehaviour {
         breath = objects[selected].GetComponent<AttackBase>();
         timer = breath.rate;
         xScale = transform.lossyScale.x / 2;
+        p = gameObject.GetComponentInParent<Perks>();
     }
 	
 	// Update is called once per frame
 	void Update () {
+        Input.simulateMouseWithTouches = true;
         if ((Input.GetMouseButton(0)||forceHeld)&&monitor.Flame!=0)
         {
             Vector3 position=Input.mousePosition;
@@ -47,7 +50,7 @@ public class BreathAttackHandler : MonoBehaviour {
                     angle *= -1;
                 }
                 timer -= Time.deltaTime;
-                monitor.ChangeFlame(0 - Time.deltaTime);
+                monitor.ChangeFlame((0 - Time.deltaTime)*p.breathMult());
                 if (timer <= 0)
                 {
                     spawn = new Vector3(transform.position.x + Mathf.Cos(angle * Mathf.Deg2Rad) * xScale, transform.position.y);
