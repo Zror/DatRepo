@@ -108,7 +108,8 @@ public class Session_Monitor : MonoBehaviour {
 	}
 
 	public void Add_Coins(uint amt){
-		this.data [EARNED_COINS] += amt;
+        Perks p = FindObjectOfType<Perks>();
+        this.data [EARNED_COINS] += amt*(uint)p.goldMult();
 		this.calls++;
 	}
 
@@ -144,7 +145,7 @@ public class Session_Monitor : MonoBehaviour {
 	}
 	
 	public int getBreaths(){
-        Debug.Log(perks_i + ", " + breaths_i + ", " + wings_i + ", " + skins_i);
+
         return breaths_i;
 	}
 
@@ -171,11 +172,13 @@ public class Session_Monitor : MonoBehaviour {
 	}
 
 	 private void End(){
-        earned_coins += (uint)Princesses_taken * 75;
+        Perks p = FindObjectOfType<Perks>();
+        earned_coins += (uint)Princesses_taken * 75*(uint)p.PrincessWorth();
         FindObjectOfType<Data>().updateThings(earned_coins, Princesses_taken);
         // End the session_monitor
 
-		//Destory( this.gameObject );
+        Application.LoadLevel(3);
+
 
 		// EXPORT STATS TO MAIN!
 	}
