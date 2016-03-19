@@ -22,13 +22,16 @@ public class UI_Single_Stat_Monitor : MonoBehaviour {
     private float left_x = 32.5f; // Do not rewrite after INIT!
     private float cur_x = -1;
 
+    private Vector3 loss_scale;
+
     private bool hasStatMonitor = false;
 
 	// Use this for initialization
 	void Start ()
     {
+        loss_scale = Trans.lossyScale;
 
-	}
+    }
 
     void Awake()
     {
@@ -70,21 +73,29 @@ public class UI_Single_Stat_Monitor : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate ()
     {
+        
         // Trans.S
         // Mess with the width
         cur_x = CalcTrans();
-        // Debug.Log("[@] x: " + xx + " , y:" + yy+" (xorg: "+this.len_x+", )");
-        Trans.sizeDelta = new Vector2(cur_x, Trans.sizeDelta.y);
+        //Debug.Log("[@] x: " + xx + " , y:" + yy+" (xorg: "+this.len_x+", )");
+        //Trans.sizeDelta = new Vector2(cur_x, Trans.sizeDelta.y);
 
         // Mess with the position
         // (len_x/2) - (cur_x/2) = offset
-        float offset = (this.len_x / 2) - (this.cur_x / 2);
-        float xxx = 2*(Trans.position.x - offset) ;
+        float num = (this.len_x / 2);
+        float denom = (this.cur_x / 2);
+        float offset = num - denom;
+
+        float xxx = 2* Mathf.Abs(Trans.position.x - offset) ;
         atx = xxx;
+        float derb = Mathf.Abs(Mathf.Max(Mathf.Min(Mathf.Abs(xxx), num), left_x));
+        //this.loss_scale.x * //Mathf.Abs(cur_x)
 
-        Trans.position.Set(Mathf.Max( Mathf.Min(xxx , len_x/2) , left_x), Trans.position.y, Trans.position.z);
+        Trans.localScale = new Vector3(xxx, this.loss_scale.y);
+        //Trans.position.Set(derb, Trans.position.y, Trans.position.z);
 
-        Debug.Log("[@" + Use_Stat_Number + "] x: " + xxx);
+        Debug.Log("[@" + Use_Stat_Number + "] x: " + derb + " xls: " + xxx + " <> offset: "+ offset + " <- " + num + " - " + denom + " ((lenx: " + len_x + ", cur_x: " + cur_x + ", left_x: "+ left_x +"))");
+        
     }
 
     float CalcTrans()
