@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public abstract class Flight : MonoBehaviour {
@@ -11,14 +12,16 @@ public abstract class Flight : MonoBehaviour {
 
     private float grav;
 
-    
-	private float maxSpeed = 25;
+    protected new HealthMonitor health;
 
+    private float maxSpeed = 25;
+
+    private enum Wing { card, hang, trac, magi, cano};
 	// Use this for initialization
 	public virtual void Start () {
         rigidbody = GetComponent<Rigidbody2D>();
-        
-	}
+        health = GetComponent<HealthMonitor>();
+    }
 
     //Use this for gliding over fires
     //void Updraft() {
@@ -35,12 +38,13 @@ public abstract class Flight : MonoBehaviour {
 	{
 	    Input.simulateMouseWithTouches = true;
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && health.HasStamina && clickLeft())
         {
-            rigidbody.AddForce(new Vector2(velocity * .55F, velocity));
+           rigidbody.AddForce(new Vector2(velocity * .55F, velocity));
+            health.ChangeStamina(-10);
         }
         if (Input.GetKeyDown(KeyCode.LeftAlt))
-        {
+       {
             //Updraft();
         }
     }
@@ -55,5 +59,17 @@ public abstract class Flight : MonoBehaviour {
     public float getForwardSpeed()
     {
         return rigidbody.velocity.x;
+    }
+
+    public bool clickLeft()
+    {
+        //Returns if the mouse is clicked on the left quarter of the screen
+        Input.simulateMouseWithTouches = true;
+        if (Input.mousePosition.x < (Screen.width / 4))
+        {
+            return true;
+        }
+        return false;
+
     }
 }

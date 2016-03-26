@@ -27,8 +27,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 197812}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.67000008, y: -14.8299999, z: 0}
-  m_LocalScale: {x: .0512694605, y: .0797142461, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -39,10 +39,11 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 197812}
+  m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
-  m_GravityScale: .100000001
+  m_AngularDrag: 0.05
+  m_GravityScale: 0.1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -55,12 +56,13 @@ BoxCollider2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 197812}
   m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 28.1599998, y: 18.7999992}
+  m_Size: {x: 0.75, y: 0.4}
 --- !u!114 &11420284
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -72,7 +74,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d97f9a33a713c734eac3951d26e5558e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 10
+  body: {fileID: 5092354}
+  angle: 0
 --- !u!114 &11464424
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -84,10 +88,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35646010e84cdd54b8186f5efd707654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  award_HP: -1
+  award_HP: -5
   award_Stam: 0
   award_Flame: 0
   award_Coin_Value: 0
+  Is_LiveStock: 0
 --- !u!212 &21292624
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -106,14 +111,18 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: -1157255897
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 00d49fbf0315f614d8a8eccd8187b6b7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: eaf58362e981b1042a4c1bc6ed9f8b6b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 1
+  m_FlipY: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -123,7 +132,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: speed
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Enabled
@@ -132,6 +141,27 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_GravityScale
       value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: body
+      value: 
+      objectReference: {fileID: 5092354}
+    - target: {fileID: 0}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: eaf58362e981b1042a4c1bc6ed9f8b6b,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: m_SortingLayerID
+      value: -1157255897
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: award_HP
+      value: -5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

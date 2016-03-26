@@ -1,12 +1,10 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
 public class Session_Monitor : MonoBehaviour {
 
     private static Session_Monitor _instance = null;
-
     public static Session_Monitor Instance
     {
         get
@@ -32,9 +30,9 @@ public class Session_Monitor : MonoBehaviour {
 	 * 
 	*/
 
-	public int earned_coins = 0; // Merge me!
+	public uint earned_coins = 0; // Merge me!
 	public int Livestock_destroyed = 0;
-	public int Prioncesses_taken = 0;
+	public int Princesses_taken = 0;
 	public int Hay_burned = 0;
 	public int Clouds_hit = 0;
 
@@ -42,15 +40,15 @@ public class Session_Monitor : MonoBehaviour {
 	private uint calls = 0;
 
 	// This is for Dan's request
-	private bool[] perks;
-	private bool[] wings;
-	private bool[] breaths;
-	private bool[] skins;
+	private List<bool> perks;
+	private List<bool> wings;
+	private List<bool> breaths;
+	private List<bool> skins;
 
-	public int perks_i = 0;
-	public int wings_i = 0;
-	public int breaths_i = 0;
-	public int skins_i = 0;
+	public int perks_i;
+	public int wings_i;
+	public int breaths_i;
+	public int skins_i;
 
 	public static readonly string CALLS 				= "calls";
 	public static readonly string EARNED_COINS 			= "earned_coins";
@@ -59,8 +57,27 @@ public class Session_Monitor : MonoBehaviour {
 	public static readonly string HAY_BURNED 			= "Hay_burned";
 	public static readonly string CLOUDS_HIT 			= "Clouds_hit";
 
-    public Text t;
-	
+    SavedData saveStuff;
+	void Awake()
+    {
+        Data temp = GameObject.FindGameObjectWithTag("Load").GetComponent<Data>();
+        if (temp != null)
+        {
+            saveStuff = temp.get();
+
+            perks = saveStuff.perks;
+            breaths = saveStuff.breath;
+            wings = saveStuff.wings;
+            skins = saveStuff.skins;
+
+            perks_i = saveStuff.perkSelected;
+            breaths_i = saveStuff.breathSelected;
+            wings_i = saveStuff.wingSelected;
+            skins_i = saveStuff.skinSelected;
+
+            Debug.Log(perks_i + ", " + breaths_i + ", " + wings_i + ", " + skins_i);
+        }
+    }
 	// Use this for initialization
 	void Start () {
 		// Enforce definitions o.O
@@ -73,7 +90,15 @@ public class Session_Monitor : MonoBehaviour {
 		this.data.Add(CLOUDS_HIT			, 0);
 
 
-		this.time_elapsed = -1f; // Stays out of the table until the end lol
+        
+
+   
+
+            
+
+
+
+        this.time_elapsed = -1f; // Stays out of the table until the end lol
 
 	}
 	
@@ -82,16 +107,9 @@ public class Session_Monitor : MonoBehaviour {
 		this.time_elapsed += Time.fixedDeltaTime;
 	}
 
-    void Update()
-    {
-        if (t != null)
-        {
-            t.text = "Gold: " + earned_coins;
-        }
-    }
-
 	public void Add_Coins(uint amt){
-		this.data [EARNED_COINS] += amt;
+        Perks p = FindObjectOfType<Perks>();
+        this.data [EARNED_COINS] += amt*(uint)p.goldMult();
 		this.calls++;
 	}
 
@@ -119,35 +137,20 @@ public class Session_Monitor : MonoBehaviour {
 
 	// ACCESSORS
 	public int getWings(){
-		if (wings[wings_i]){
 			return this.wings_i;
-		}else{
-			return 0;
-		}
 	}
 	
 	public int getPerks(){
-		if (perks[perks_i]){
 			return this.perks_i;
-		}else{
-			return 0;
-		}
 	}
 	
 	public int getBreaths(){
-		if (breaths[breaths_i]){
-			return this.breaths_i;
-		}else{
-			return 0;
-		}
+
+        return breaths_i;
 	}
 
 	public int getSkins(){
-		if (skins[skins_i]){
 			return this.skins_i;
-		}else{
-			return 0;
-		}
 	}
 
 	public float getElapsed(){
@@ -169,9 +172,13 @@ public class Session_Monitor : MonoBehaviour {
 	}
 
 	 private void End(){
-		// End the session_monitor
+        Perks p = FindObjectOfType<Perks>();
+        earned_coins += (uint)Princesses_taken * 75*(uint)p.PrincessWorth();
+        FindObjectOfType<Data>().updateThings(earned_coins, Princesses_taken);
+        // End the session_monitor
 
-		//Destory( this.gameObject );
+        Application.LoadLevel(3);
+
 
 		// EXPORT STATS TO MAIN!
 	}

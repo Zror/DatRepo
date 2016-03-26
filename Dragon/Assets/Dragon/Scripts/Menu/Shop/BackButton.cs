@@ -10,6 +10,7 @@ public class BackButton : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        Input.simulateMouseWithTouches = true;
     }
     public void onClick(){
          Application.LoadLevel(0);

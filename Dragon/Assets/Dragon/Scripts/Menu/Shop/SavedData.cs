@@ -3,7 +3,7 @@
 using System.Collections.Generic;
 using System.Collections;
 
-public class SavedData {
+public class SavedData  {
     public List<bool> wings= new List<bool>();
     public List<bool> perks = new List<bool>();
     public List<bool> breath = new List<bool>();
@@ -14,6 +14,7 @@ public class SavedData {
     public int skinSelected;
     public uint gold = 100;
     public int first = 0;
+    public int princess_captured;
 	// Use this for initialization
 	
 	// Update is called once per frame

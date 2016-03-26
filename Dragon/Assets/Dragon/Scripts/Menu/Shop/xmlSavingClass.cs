@@ -6,18 +6,11 @@ using System.IO;
 public class xmlSavingClass : MonoBehaviour {
     private const string ADDRESS = "savedData";
     protected XmlSerializer serialize = new XmlSerializer(typeof (SavedData));
-    public SavedData stats=new SavedData();
+    public SavedData stats;
 	// Use this for initialization
 	void Start () {
-        string s = PlayerPrefs.GetString(ADDRESS, "FIRST!");
-        if (!s.Equals("FIRST!"))
-        {
-            
-            StringReader status = new StringReader(s);
-            stats = (SavedData)serialize.Deserialize(status);
-        }
 
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -29,5 +22,19 @@ public class xmlSavingClass : MonoBehaviour {
         Debug.Log(text);
         PlayerPrefs.SetString(ADDRESS,text.ToString());
         PlayerPrefs.Save();
+    }
+    void Awake()
+    {
+       Data temp=GameObject.FindGameObjectWithTag("Load").GetComponent<Data>();
+        if (temp == null)
+        {
+            Debug.Log("Failed");
+        }
+        else
+        {
+            Debug.Log("Success");
+            this.stats = temp.get();
+            Debug.Log(stats);
+        }
     }
 }
