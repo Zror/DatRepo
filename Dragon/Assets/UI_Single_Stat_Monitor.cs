@@ -73,29 +73,43 @@ public class UI_Single_Stat_Monitor : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate ()
     {
+        AdjustBar();
         
+    }
+
+    void AdjustBar()
+    {
+        // Collapses to middle
+        float xx = CalcTrans();
+        float yy = Trans.sizeDelta.y;
+        //
+        Trans.sizeDelta = new Vector2(xx,yy);
+    }
+
+    void AdjustBar2()
+    {
         // Trans.S
         // Mess with the width
         cur_x = CalcTrans();
         //Debug.Log("[@] x: " + xx + " , y:" + yy+" (xorg: "+this.len_x+", )");
         //Trans.sizeDelta = new Vector2(cur_x, Trans.sizeDelta.y);
-
+        //C:\Users\bakriz\Source\Repos\DatRepo\Dragon\Assets\UI_Single_Stat_Monitor.cs
         // Mess with the position
         // (len_x/2) - (cur_x/2) = offset
         float num = (this.len_x / 2);
         float denom = (this.cur_x / 2);
         float offset = num - denom;
 
-        float xxx = 2* Mathf.Abs(Trans.position.x - offset) ;
+        float xxx = 2 * Mathf.Abs(Trans.position.x - offset);
         atx = xxx;
         float derb = Mathf.Abs(Mathf.Max(Mathf.Min(Mathf.Abs(xxx), num), left_x));
         //this.loss_scale.x * //Mathf.Abs(cur_x)
 
         Trans.localScale = new Vector3(xxx, this.loss_scale.y);
-        //Trans.position.Set(derb, Trans.position.y, Trans.position.z);
+        Trans.position.Set(derb, Trans.position.y, Trans.position.z);
 
-        Debug.Log("[@" + Use_Stat_Number + "] x: " + derb + " xls: " + xxx + " <> offset: "+ offset + " <- " + num + " - " + denom + " ((lenx: " + len_x + ", cur_x: " + cur_x + ", left_x: "+ left_x +"))");
-        
+        Debug.Log("[@" + Use_Stat_Number + "] x: " + derb + " xls: " + xxx + " <> offset: " + offset + " <- " + num + " - " + denom + " ((lenx: " + len_x + ", cur_x: " + cur_x + ", left_x: " + left_x + "))");
+
     }
 
     float CalcTrans()
