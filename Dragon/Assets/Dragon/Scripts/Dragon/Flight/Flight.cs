@@ -16,6 +16,7 @@ public abstract class Flight : MonoBehaviour {
 
     private float maxSpeed = 25;
 
+    private enum Wing { card, hang, trac, magi, cano};
 	// Use this for initialization
 	public virtual void Start () {
         rigidbody = GetComponent<Rigidbody2D>();
