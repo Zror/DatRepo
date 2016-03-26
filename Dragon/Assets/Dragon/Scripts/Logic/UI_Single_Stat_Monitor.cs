@@ -84,6 +84,7 @@ public class UI_Single_Stat_Monitor : MonoBehaviour {
         float yy = Trans.sizeDelta.y;
         //
         Trans.sizeDelta = new Vector2(xx,yy);
+
     }
 
     void AdjustBar2()
