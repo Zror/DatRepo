@@ -1136,7 +1136,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1801563216}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.5354478
+  m_Size: 0.6109375
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -4197,6 +4197,15 @@ GameObject:
   - 114: {fileID: 2090099384}
   - 114: {fileID: 2090099388}
   - 114: {fileID: 2090099389}
+  - 114: {fileID: 2090099398}
+  - 114: {fileID: 2090099397}
+  - 114: {fileID: 2090099396}
+  - 114: {fileID: 2090099395}
+  - 114: {fileID: 2090099394}
+  - 114: {fileID: 2090099393}
+  - 114: {fileID: 2090099392}
+  - 114: {fileID: 2090099391}
+  - 114: {fileID: 2090099390}
   m_Layer: 5
   m_Name: Button (8)
   m_TagString: Untagged
@@ -4327,6 +4336,17 @@ MonoBehaviour:
   - {fileID: 2090099386}
   - {fileID: 2090099385}
   - {fileID: 2090099384}
+  - {fileID: 2090099388}
+  - {fileID: 2090099389}
+  - {fileID: 2090099398}
+  - {fileID: 2090099397}
+  - {fileID: 2090099396}
+  - {fileID: 2090099395}
+  - {fileID: 2090099394}
+  - {fileID: 2090099393}
+  - {fileID: 2090099392}
+  - {fileID: 2090099391}
+  - {fileID: 0}
   butt: {fileID: 2090099380}
   render: {fileID: 1421104525}
 --- !u!114 &2090099384
@@ -4418,6 +4438,141 @@ MonoBehaviour:
   imageName: {fileID: 21300000, guid: e60ba0f27b6af7444a2c77950fca3f8b, type: 3}
   cost: 100
   name2: Even More Princess Bounty
+  owned: 0
+--- !u!114 &2090099390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2090099378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43446dd5020e60749bea30dba41c8bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageName: {fileID: 21300000, guid: 24dcd1cebf3cf574d94dbf1720d02519, type: 3}
+  cost: 500
+  name2: RNJesus
+  owned: 0
+--- !u!114 &2090099391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2090099378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43446dd5020e60749bea30dba41c8bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageName: {fileID: 21300000, guid: 288c942e1ce4e40449aeb5d9a2f2f3d3, type: 3}
+  cost: 300
+  name2: More Mores
+  owned: 0
+--- !u!114 &2090099392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2090099378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43446dd5020e60749bea30dba41c8bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageName: {fileID: 21300000, guid: e60ba0f27b6af7444a2c77950fca3f8b, type: 3}
+  cost: 150
+  name2: Longer Lasting Battery
+  owned: 0
+--- !u!114 &2090099393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2090099378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43446dd5020e60749bea30dba41c8bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageName: {fileID: 21300000, guid: 5516b6017cb1e144381d984064140b00, type: 3}
+  cost: 60
+  name2: More Stamina
+  owned: 0
+--- !u!114 &2090099394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2090099378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43446dd5020e60749bea30dba41c8bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageName: {fileID: 21300000, guid: cf28bbe117d9cb040af11f87757ce9b1, type: 3}
+  cost: 150
+  name2: Dragon Skin
+  owned: 0
+--- !u!114 &2090099395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2090099378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43446dd5020e60749bea30dba41c8bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageName: {fileID: 21300000, guid: e60ba0f27b6af7444a2c77950fca3f8b, type: 3}
+  cost: 100
+  name2: Strong shield
+  owned: 0
+--- !u!114 &2090099396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2090099378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43446dd5020e60749bea30dba41c8bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageName: {fileID: 21300000, guid: e60ba0f27b6af7444a2c77950fca3f8b, type: 3}
+  cost: 100
+  name2: Cow Skin
+  owned: 0
+--- !u!114 &2090099397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2090099378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43446dd5020e60749bea30dba41c8bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageName: {fileID: 21300000, guid: 5516b6017cb1e144381d984064140b00, type: 3}
+  cost: 50
+  name2: Weak shield
+  owned: 0
+--- !u!114 &2090099398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2090099378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43446dd5020e60749bea30dba41c8bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageName: {fileID: 21300000, guid: 5516b6017cb1e144381d984064140b00, type: 3}
+  cost: 60
+  name2: More Fire
   owned: 0
 --- !u!1 &2112203795
 GameObject:
