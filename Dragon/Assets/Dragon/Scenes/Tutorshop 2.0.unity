@@ -1267,6 +1267,7 @@ GameObject:
   - 114: {fileID: 627118304}
   - 114: {fileID: 627118303}
   - 114: {fileID: 627118302}
+  - 114: {fileID: 627118307}
   m_Layer: 5
   m_Name: Button (3)
   m_TagString: Untagged
@@ -1314,6 +1315,7 @@ MonoBehaviour:
   - {fileID: 627118304}
   - {fileID: 627118303}
   - {fileID: 627118302}
+  - {fileID: 627118307}
   butt: {fileID: 627118298}
   render: {fileID: 1437456410}
 --- !u!114 &627118298
@@ -1428,7 +1430,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imageName: {fileID: 21300000, guid: 0760629a6dc116d41bf932add284c025, type: 3}
-  cost: 10
+  cost: 450
   name2: copyright infringment
   owned: 0
 --- !u!114 &627118303
@@ -1443,7 +1445,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imageName: {fileID: 21300000, guid: b162a43d9b8f0bc46935597e2cbd06a6, type: 3}
-  cost: 10
+  cost: 450
   name2: mecha
   owned: 0
 --- !u!114 &627118304
@@ -1458,7 +1460,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imageName: {fileID: 21300000, guid: c8d69ca3ff2e00e4ba301ea9001a3e11, type: 3}
-  cost: 10
+  cost: 450
   name2: Ghost
   owned: 0
 --- !u!114 &627118305
@@ -1473,7 +1475,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imageName: {fileID: 21300000, guid: 446b4dee4357e684e896701e0fbd0dcc, type: 3}
-  cost: 10
+  cost: 450
   name2: Emo
   owned: 0
 --- !u!114 &627118306
@@ -1488,8 +1490,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imageName: {fileID: 21300000, guid: da280a6e6ab48c1478b5074153e69c04, type: 3}
-  cost: 10
+  cost: 450
   name2: black dragon
+  owned: 0
+--- !u!114 &627118307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 627118295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43446dd5020e60749bea30dba41c8bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageName: {fileID: 21300000, guid: 1173517d6a720894cbe5dd7eeb0d2665, type: 3}
+  cost: 450
+  name2: Pfddor
   owned: 0
 --- !u!1 &652302310
 GameObject:
@@ -4346,7 +4363,7 @@ MonoBehaviour:
   - {fileID: 2090099393}
   - {fileID: 2090099392}
   - {fileID: 2090099391}
-  - {fileID: 0}
+  - {fileID: 2090099390}
   butt: {fileID: 2090099380}
   render: {fileID: 1421104525}
 --- !u!114 &2090099384
