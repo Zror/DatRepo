@@ -19,7 +19,7 @@ public abstract class Flight : MonoBehaviour {
     private enum Wing { card, hang, trac, magi, cano};
 	// Use this for initialization
 	public virtual void Start () {
-        rigidbody = GetComponent<Rigidbody2D>();
+        rigidbody = GetComponentInParent<Rigidbody2D>();
         health = GetComponent<HealthMonitor>();
     }
 
