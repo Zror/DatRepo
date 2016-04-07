@@ -16,7 +16,10 @@
    id="svg5537"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="Story2.0.svg">
+   sodipodi:docname="Story2.0.svg"
+   inkscape:export-filename="C:\Users\wolfi_000\Source\Repos\NEWDatRepo\manda's Art\Story2.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
   <defs
      id="defs5539">
     <linearGradient
@@ -112,8 +115,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.71"
-     inkscape:cx="226.02461"
-     inkscape:cy="551.07163"
+     inkscape:cx="223.20771"
+     inkscape:cy="475.65685"
      inkscape:document-units="px"
      inkscape:current-layer="layer6"
      showgrid="false"
@@ -137,8 +140,7 @@
   <g
      inkscape:groupmode="layer"
      id="layer5"
-     inkscape:label="Layer 3"
-     sodipodi:insensitive="true">
+     inkscape:label="Layer 3">
     <rect
        style="fill:#e18600;fill-opacity:1;stroke:none"
        id="rect6024"
@@ -600,7 +602,8 @@
   <g
      inkscape:groupmode="layer"
      id="layer6"
-     inkscape:label="Layer 4">
+     inkscape:label="Layer 4"
+     sodipodi:insensitive="true">
     <rect
        style="opacity:1;fill:url(#linearGradient6490);fill-opacity:1;stroke:none;stroke-width:9.60400009;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect6482"
