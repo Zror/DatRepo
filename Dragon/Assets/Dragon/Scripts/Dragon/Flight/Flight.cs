@@ -20,7 +20,7 @@ public abstract class Flight : MonoBehaviour {
 	// Use this for initialization
 	public virtual void Start () {
         rigidbody = GetComponentInParent<Rigidbody2D>();
-        health = GetComponent<HealthMonitor>();
+        health = GetComponentInParent<HealthMonitor>();
     }
 
     //Use this for gliding over fires
