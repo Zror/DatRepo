@@ -168,11 +168,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22418920, guid: 2b679c4a9ecafc64c91d8c52748f20d1, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -395.8
+      value: -146.1
       objectReference: {fileID: 0}
     - target: {fileID: 22418920, guid: 2b679c4a9ecafc64c91d8c52748f20d1, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 259.9
+      value: 257.8
       objectReference: {fileID: 0}
     - target: {fileID: 22418920, guid: 2b679c4a9ecafc64c91d8c52748f20d1, type: 2}
       propertyPath: m_SizeDelta.x
@@ -285,14 +285,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   earned_coins: 0
   Livestock_destroyed: 0
-  Prioncesses_taken: 0
+  Princesses_taken: 0
   Hay_burned: 0
   Clouds_hit: 0
   perks_i: 0
   wings_i: 0
   breaths_i: 0
   skins_i: 0
-  t: {fileID: 0}
 --- !u!4 &326685229
 Transform:
   m_ObjectHideFlags: 0
@@ -420,11 +419,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22465336, guid: f6c17ebc0ca23c741a1ea57132f84c81, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -395.8
+      value: -146.1
       objectReference: {fileID: 0}
     - target: {fileID: 22465336, guid: f6c17ebc0ca23c741a1ea57132f84c81, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 239.8
+      value: 237.70001
       objectReference: {fileID: 0}
     - target: {fileID: 22465336, guid: f6c17ebc0ca23c741a1ea57132f84c81, type: 2}
       propertyPath: m_SizeDelta.x
@@ -774,11 +773,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22445086, guid: d4a9653234ac03f449a54b55b80aa190, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -395.8
+      value: -146.1
       objectReference: {fileID: 0}
     - target: {fileID: 22445086, guid: d4a9653234ac03f449a54b55b80aa190, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 219.6
+      value: 217.5
       objectReference: {fileID: 0}
     - target: {fileID: 22445086, guid: d4a9653234ac03f449a54b55b80aa190, type: 2}
       propertyPath: m_SizeDelta.x

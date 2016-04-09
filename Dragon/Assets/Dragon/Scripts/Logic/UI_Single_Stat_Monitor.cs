@@ -83,8 +83,11 @@ public class UI_Single_Stat_Monitor : MonoBehaviour {
         float xx = CalcTrans();
         float yy = Trans.sizeDelta.y;
         //
-        Trans.sizeDelta = new Vector2(xx,yy);
 
+        Trans.anchoredPosition.Set(Trans.anchoredPosition.x - (len_x * (xx / len_x)), Trans.anchoredPosition.y);
+
+        Trans.sizeDelta = new Vector2(xx,yy);
+        //Trans.position.Set(Trans.position.x -(len_x *(xx/len_x)), Trans.position.y, Trans.position.z);
     }
 
     void AdjustBar2()
