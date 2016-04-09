@@ -20,8 +20,9 @@ public class HealthMonitor : MonoBehaviour {
 
     public Collider2D Collison;
     public Rigidbody2D RBody;
+    public Session_Monitor Ses;
 
-    private bool onGround = true;
+    public bool onGround = true;
 
 
     private static HealthMonitor _instance = null;
@@ -39,8 +40,8 @@ public class HealthMonitor : MonoBehaviour {
     }
 
     // Use this for initialization
-    void Start () {
-
+    void Awake()
+    {
         // If the starting HP is not set, set as total
         // So people dont die RIGHT at start
         this.HP = this.MaxHP;
@@ -53,6 +54,16 @@ public class HealthMonitor : MonoBehaviour {
         {
             RBody = GetComponent<Rigidbody2D>();
         }
+        if (Ses == null)
+        {
+            Ses = Session_Monitor.Instance;
+        }
+    }
+
+    void Start () {
+
+        
+        
 	}
 	
 	// Update is called once per frame
@@ -181,7 +192,7 @@ public class HealthMonitor : MonoBehaviour {
         if (dmg <= 0)
         {
             // Nothing to do here
-            Debug.Log("@@@ " + dmg);
+            //Debug.Log("@@@ " + dmg);
             return;
         }
 
@@ -197,9 +208,12 @@ public class HealthMonitor : MonoBehaviour {
             // DEAD
             // @@@Death Hook?
 
+
             // Add pushback effect to the dragon body
             RBody.AddForce( new Vector2((float)dmg * -2, (float)Mathf.Sqrt(Mathf.Abs(dmg))) );
 
+            // Timer here
+            Ses.DoEnd();
 
         }
         else
@@ -223,12 +237,16 @@ public class HealthMonitor : MonoBehaviour {
     void OnCollisionEnter2D(Collision2D coll)
     {
         int dmg = 0; // coll.gameObject.getDamage
+        dmg = (int) Mathf.Abs(this.RBody.velocity.magnitude);
 
         // Please make these globals!!!
         bool IsEnemy = coll.gameObject.tag == "Enemy";
         bool IsItem = coll.gameObject.tag == "Item";
         bool IsWorld = coll.gameObject.tag == "World";
-        
+
+        bool IsOtherDead = (dmg > 5);
+        GameObject Other = coll.gameObject;
+
         // coll.gameObject
         // @@@Need flag based on what we hit...
 
@@ -236,11 +254,38 @@ public class HealthMonitor : MonoBehaviour {
         {
             // Its an enemy, so we'll take damage.
             // Damage is NEGATED for simplicity here!!!
-            this.ChangeHP( -dmg );
+            this.ChangeHP(-dmg);
+            if (IsOtherDead) { 
+                Destroy(Other); // Check me
+            }
+            this.onGround = true;
+
         }
         else if (IsItem)
         {
             // @@@
+
+        }
+        else if (IsWorld && !this.onGround)
+        {
+            // Hurt
+            this.ChangeHP( -dmg );
+            this.onGround = true;
+            Debug.Log("DAMAGE ON GROUND: " + dmg);
+        }
+    }
+
+    void OnCollisionExit2D(Collider coll)
+    {
+        bool IsEnemy = coll.gameObject.tag == "Enemy";
+        bool IsItem = coll.gameObject.tag == "Item";
+        bool IsWorld = coll.gameObject.tag == "World";
+
+        if (IsEnemy || IsWorld)
+        {
+            // Because you cant just take damage on ground
+            this.onGround = false;
+            Debug.Log("Off ground");
         }
     }
 

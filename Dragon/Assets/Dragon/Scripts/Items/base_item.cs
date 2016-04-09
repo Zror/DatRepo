@@ -15,12 +15,12 @@ public class base_item : MonoBehaviour {
 
     Perks p;
 
-    // Use this for initialization
-    void Start () {
-		// Correct init logics
+    void Awake()
+    {
+        // Correct init logics
 
-		this.tag 				= Globals.TAGS.Item;
-		this.award_Flame 		= Mathf.Max (award_Flame, 0f);
+        this.tag = Globals.TAGS.Item;
+        this.award_Flame = Mathf.Max(award_Flame, 0f);
         if (monitor == null)
         {
             monitor = Session_Monitor.Instance;
@@ -30,6 +30,11 @@ public class base_item : MonoBehaviour {
             dragonSM = FindObjectsOfType<HealthMonitor>().First(t => t.tag == Globals.TAGS.Player);
         }
         p = gameObject.GetComponent<Perks>();
+    }
+
+    // Use this for initialization
+    void Start () {
+		
     }
 	
 	// Update is called once per frame
@@ -60,6 +65,11 @@ public class base_item : MonoBehaviour {
             int hp = this.award_HP;
             int stam = this.award_Stam;
             float flame = this.award_Flame;
+
+            if (p == null)
+            {
+                p = gameObject.GetComponent<Perks>();
+            }
 
             if (p.BE())
             {

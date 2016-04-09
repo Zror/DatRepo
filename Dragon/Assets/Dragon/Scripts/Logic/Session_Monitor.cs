@@ -182,4 +182,14 @@ public class Session_Monitor : MonoBehaviour {
 
 		// EXPORT STATS TO MAIN!
 	}
+
+    public bool DoEnd()
+    {
+        // A precall before end
+        // Just do some air tight work to prevent hacky things
+
+        this.End();
+
+        return true;
+    }
 }
