@@ -21,7 +21,7 @@ public abstract class Flight : MonoBehaviour {
 	public virtual void Start () {
         //rigidbody = GetComponent<Rigidbody2D>();
         rigidbody = GetComponentInParent<Rigidbody2D>();
-        health = GetComponent<HealthMonitor>();
+        health = GetComponentInParent<HealthMonitor>();
     }
 
     //Use this for gliding over fires
