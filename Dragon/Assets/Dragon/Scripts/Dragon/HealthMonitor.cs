@@ -47,7 +47,7 @@ public class HealthMonitor : MonoBehaviour {
         if (flag1 && this.Stamina < MaxStamina)
         {
             // Allow Stamina regen (when not in use)
-            this.Stamina += 2;
+           // this.Stamina += 2;
         }
     }
 

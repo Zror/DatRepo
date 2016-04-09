@@ -20,7 +20,7 @@ public abstract class Flight : MonoBehaviour {
 	// Use this for initialization
 	public virtual void Start () {
         rigidbody = GetComponentInParent<Rigidbody2D>();
-        health = GetComponent<HealthMonitor>();
+        health = GetComponentInParent<HealthMonitor>();
     }
 
     //Use this for gliding over fires
@@ -41,7 +41,7 @@ public abstract class Flight : MonoBehaviour {
         if (Input.GetMouseButtonDown(0) && health.HasStamina && clickLeft())
         {
            rigidbody.AddForce(new Vector2(velocity * .55F, velocity));
-            health.ChangeStamina(-10);
+            health.ChangeStamina(-1);
         }
         if (Input.GetKeyDown(KeyCode.LeftAlt))
        {
