@@ -29,7 +29,7 @@ public class base_item : MonoBehaviour {
         {
             dragonSM = FindObjectsOfType<HealthMonitor>().First(t => t.tag == Globals.TAGS.Player);
         }
-        p = gameObject.GetComponent<Perks>();
+        p = FindObjectOfType<Perks>();
     }
 	
 	// Update is called once per frame

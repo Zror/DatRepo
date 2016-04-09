@@ -92,8 +92,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skins:
   - {fileID: 183194, guid: 68e0b77c3747d294bae3094062254b0f, type: 2}
+  - {fileID: 101052, guid: 0acce6e57ff900f438d56a4d9a942f18, type: 2}
+  - {fileID: 153464, guid: 37ee6ba1114de9648b6e0b03f9468ba4, type: 2}
+  - {fileID: 116660, guid: 96c9477f81420c04391966990beba0e1, type: 2}
+  - {fileID: 175714, guid: ad40511e33c0e89478ae5cb796824f96, type: 2}
+  - {fileID: 188940, guid: d7295ff37163d684b83cc5bea060f329, type: 2}
+  - {fileID: 170898, guid: 7c54d8eafeb6e684696b525257dbd8f7, type: 2}
   wings:
   - {fileID: 184570, guid: 1ffb3dbeb34c0c74cb23d092bc13098d, type: 2}
+  - {fileID: 139308, guid: df7bf534bc154b944bb13e7eb28ca998, type: 2}
+  - {fileID: 146970, guid: 879355e059c62814a80672ce17a8f554, type: 2}
+  - {fileID: 105162, guid: 78d1eecf8a350404e840a2382ca6144e, type: 2}
+  - {fileID: 111598, guid: 2f9a2786153ffe24f8fe4ade064a0c67, type: 2}
+  - {fileID: 126328, guid: 8842bacedc1e39f4ebce2e48eba0cd71, type: 2}
 --- !u!114 &11444786
 MonoBehaviour:
   m_ObjectHideFlags: 1

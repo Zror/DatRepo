@@ -1136,7 +1136,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1801563216}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.6109375
+  m_Size: 0.67279893
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1267,6 +1267,7 @@ GameObject:
   - 114: {fileID: 627118304}
   - 114: {fileID: 627118303}
   - 114: {fileID: 627118302}
+  - 114: {fileID: 627118307}
   m_Layer: 5
   m_Name: Button (3)
   m_TagString: Untagged
@@ -1313,6 +1314,7 @@ MonoBehaviour:
   - {fileID: 627118305}
   - {fileID: 627118304}
   - {fileID: 627118303}
+  - {fileID: 627118307}
   - {fileID: 627118302}
   butt: {fileID: 627118298}
   render: {fileID: 1437456410}
@@ -1428,7 +1430,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imageName: {fileID: 21300000, guid: 0760629a6dc116d41bf932add284c025, type: 3}
-  cost: 10
+  cost: 450
   name2: copyright infringment
   owned: 0
 --- !u!114 &627118303
@@ -1443,7 +1445,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imageName: {fileID: 21300000, guid: b162a43d9b8f0bc46935597e2cbd06a6, type: 3}
-  cost: 10
+  cost: 450
   name2: mecha
   owned: 0
 --- !u!114 &627118304
@@ -1458,7 +1460,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imageName: {fileID: 21300000, guid: c8d69ca3ff2e00e4ba301ea9001a3e11, type: 3}
-  cost: 10
+  cost: 450
   name2: Ghost
   owned: 0
 --- !u!114 &627118305
@@ -1473,7 +1475,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imageName: {fileID: 21300000, guid: 446b4dee4357e684e896701e0fbd0dcc, type: 3}
-  cost: 10
+  cost: 450
   name2: Emo
   owned: 0
 --- !u!114 &627118306
@@ -1488,8 +1490,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imageName: {fileID: 21300000, guid: da280a6e6ab48c1478b5074153e69c04, type: 3}
-  cost: 10
+  cost: 450
   name2: black dragon
+  owned: 0
+--- !u!114 &627118307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 627118295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43446dd5020e60749bea30dba41c8bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageName: {fileID: 21300000, guid: 1173517d6a720894cbe5dd7eeb0d2665, type: 3}
+  cost: 450
+  name2: Pfddor
   owned: 0
 --- !u!1 &652302310
 GameObject:
@@ -2209,7 +2226,7 @@ Transform:
   m_GameObject: {fileID: 1095679920}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 441.0599, y: 174.55608, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.025, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
@@ -2228,6 +2245,18 @@ GameObject:
   - 114: {fileID: 1137211366}
   - 114: {fileID: 1137211368}
   - 114: {fileID: 1137211367}
+  - 114: {fileID: 1137211374}
+  - 114: {fileID: 1137211373}
+  - 114: {fileID: 1137211372}
+  - 114: {fileID: 1137211371}
+  - 114: {fileID: 1137211370}
+  - 114: {fileID: 1137211369}
+  - 114: {fileID: 1137211380}
+  - 114: {fileID: 1137211379}
+  - 114: {fileID: 1137211378}
+  - 114: {fileID: 1137211377}
+  - 114: {fileID: 1137211376}
+  - 114: {fileID: 1137211375}
   m_Layer: 5
   m_Name: Button (10)
   m_TagString: Untagged
@@ -2357,6 +2386,18 @@ MonoBehaviour:
   - {fileID: 1137211366}
   - {fileID: 1137211368}
   - {fileID: 1137211367}
+  - {fileID: 1137211374}
+  - {fileID: 1137211373}
+  - {fileID: 1137211372}
+  - {fileID: 1137211371}
+  - {fileID: 1137211370}
+  - {fileID: 1137211369}
+  - {fileID: 1137211380}
+  - {fileID: 1137211379}
+  - {fileID: 1137211378}
+  - {fileID: 1137211377}
+  - {fileID: 1137211376}
+  - {fileID: 1137211375}
   butt: {fileID: 1137211362}
   render: {fileID: 1684885201}
 --- !u!114 &1137211366
@@ -2370,7 +2411,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43446dd5020e60749bea30dba41c8bdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageName: {fileID: 21300000, guid: 0d1f76c3ecfd29842bd6510cdf5ff28c, type: 3}
+  imageName: {fileID: 21300000, guid: bac3afbfb183ce84ebd4252ff08f91f1, type: 3}
   cost: 0
   name2: FireBall
   owned: 1
@@ -2385,8 +2426,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43446dd5020e60749bea30dba41c8bdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageName: {fileID: 21300000, guid: 0d1f76c3ecfd29842bd6510cdf5ff28c, type: 3}
-  cost: 10
+  imageName: {fileID: 21300000, guid: 2f9cad13e9b911142b3c331d1d96ded9, type: 3}
+  cost: 150
   name2: Fire Explosion
   owned: 0
 --- !u!114 &1137211368
@@ -2400,9 +2441,189 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43446dd5020e60749bea30dba41c8bdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageName: {fileID: 21300000, guid: 0d1f76c3ecfd29842bd6510cdf5ff28c, type: 3}
-  cost: 10
+  imageName: {fileID: 21300000, guid: 1e1ae330b73c21540b9389412962185c, type: 3}
+  cost: 75
   name2: FlameThrower
+  owned: 0
+--- !u!114 &1137211369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1137211360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43446dd5020e60749bea30dba41c8bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageName: {fileID: 21300000, guid: a6392c35b6e4e7f47be54a35507d0d01, type: 3}
+  cost: 150
+  name2: Love Sick
+  owned: 0
+--- !u!114 &1137211370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1137211360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43446dd5020e60749bea30dba41c8bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageName: {fileID: 21300000, guid: 9062f600316548d4d84a93accbfedc61, type: 3}
+  cost: 75
+  name2: Clingy Love
+  owned: 0
+--- !u!114 &1137211371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1137211360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43446dd5020e60749bea30dba41c8bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageName: {fileID: 21300000, guid: 78c2801ec104f2a4eaa9474601ec911b, type: 3}
+  cost: 30
+  name2: Love
+  owned: 0
+--- !u!114 &1137211372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1137211360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43446dd5020e60749bea30dba41c8bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageName: {fileID: 21300000, guid: 551225d61faf0f44ab6a5b28e21d0666, type: 3}
+  cost: 150
+  name2: Hurricane
+  owned: 0
+--- !u!114 &1137211373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1137211360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43446dd5020e60749bea30dba41c8bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageName: {fileID: 21300000, guid: 551225d61faf0f44ab6a5b28e21d0666, type: 3}
+  cost: 75
+  name2: Tornado
+  owned: 0
+--- !u!114 &1137211374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1137211360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43446dd5020e60749bea30dba41c8bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageName: {fileID: 21300000, guid: 551225d61faf0f44ab6a5b28e21d0666, type: 3}
+  cost: 30
+  name2: Windstorm
+  owned: 0
+--- !u!114 &1137211375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1137211360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43446dd5020e60749bea30dba41c8bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageName: {fileID: 21300000, guid: 27c5106ff4c4cff4d898282dcf3793ee, type: 3}
+  cost: 150
+  name2: Qusar
+  owned: 0
+--- !u!114 &1137211376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1137211360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43446dd5020e60749bea30dba41c8bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageName: {fileID: 21300000, guid: 225c73610018a104b92d57f03144362d, type: 3}
+  cost: 75
+  name2: Super Star
+  owned: 0
+--- !u!114 &1137211377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1137211360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43446dd5020e60749bea30dba41c8bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageName: {fileID: 21300000, guid: 0f15218dca1d3d544b2cd855fedd7403, type: 3}
+  cost: 30
+  name2: Star
+  owned: 0
+--- !u!114 &1137211378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1137211360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43446dd5020e60749bea30dba41c8bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageName: {fileID: 21300000, guid: ad7b8724fe556e541b1275ee1cc44309, type: 3}
+  cost: 150
+  name2: Nordic Judgement
+  owned: 0
+--- !u!114 &1137211379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1137211360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43446dd5020e60749bea30dba41c8bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageName: {fileID: 21300000, guid: 05e7800f86187ae4aa606a0ef99b278b, type: 3}
+  cost: 75
+  name2: Lightning Beam
+  owned: 0
+--- !u!114 &1137211380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1137211360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43446dd5020e60749bea30dba41c8bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageName: {fileID: 21300000, guid: f0795f09ddb0bde4ebcf2233fe87ed9a, type: 3}
+  cost: 30
+  name2: Lightning Breath
   owned: 0
 --- !u!1 &1139452625
 GameObject:
@@ -3839,7 +4060,12 @@ GameObject:
   - 114: {fileID: 1865604291}
   - 114: {fileID: 1865604290}
   - 114: {fileID: 1865604293}
+  - 114: {fileID: 1865604298}
+  - 114: {fileID: 1865604297}
+  - 114: {fileID: 1865604296}
+  - 114: {fileID: 1865604295}
   - 114: {fileID: 1865604294}
+  - 114: {fileID: 1865604299}
   m_Layer: 5
   m_Name: Button (9)
   m_TagString: Untagged
@@ -3966,7 +4192,12 @@ MonoBehaviour:
   index: 0
   selected: 0
   images:
+  - {fileID: 1865604298}
+  - {fileID: 1865604297}
+  - {fileID: 1865604296}
+  - {fileID: 1865604295}
   - {fileID: 1865604294}
+  - {fileID: 1865604299}
   butt: {fileID: 1865604290}
   render: {fileID: 1428454849}
 --- !u!114 &1865604294
@@ -3980,10 +4211,85 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43446dd5020e60749bea30dba41c8bdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageName: {fileID: 0}
+  imageName: {fileID: 21300000, guid: 00d49fbf0315f614d8a8eccd8187b6b7, type: 3}
+  cost: 200
+  name2: Margic Carpet
+  owned: 0
+--- !u!114 &1865604295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1865604288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43446dd5020e60749bea30dba41c8bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageName: {fileID: 21300000, guid: 00d49fbf0315f614d8a8eccd8187b6b7, type: 3}
+  cost: 200
+  name2: Hang Glider
+  owned: 0
+--- !u!114 &1865604296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1865604288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43446dd5020e60749bea30dba41c8bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageName: {fileID: 21300000, guid: 00d49fbf0315f614d8a8eccd8187b6b7, type: 3}
+  cost: 200
+  name2: Canoe
+  owned: 0
+--- !u!114 &1865604297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1865604288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43446dd5020e60749bea30dba41c8bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageName: {fileID: 21300000, guid: 5bfa21fbf62044c4fb59ffd63c88927b, type: 3}
+  cost: 200
+  name2: Bubble
+  owned: 0
+--- !u!114 &1865604298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1865604288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43446dd5020e60749bea30dba41c8bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageName: {fileID: 21300000, guid: ddd172909c8f2f041938019a0bba6970, type: 3}
   cost: 0
-  name2: replace please
+  name2: Cardboard Wings
   owned: 1
+--- !u!114 &1865604299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1865604288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43446dd5020e60749bea30dba41c8bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageName: {fileID: 21300000, guid: 00d49fbf0315f614d8a8eccd8187b6b7, type: 3}
+  cost: 300
+  name2: Tractor Beam
+  owned: 0
 --- !u!1 &1926899233
 GameObject:
   m_ObjectHideFlags: 0
@@ -4346,7 +4652,7 @@ MonoBehaviour:
   - {fileID: 2090099393}
   - {fileID: 2090099392}
   - {fileID: 2090099391}
-  - {fileID: 0}
+  - {fileID: 2090099390}
   butt: {fileID: 2090099380}
   render: {fileID: 1421104525}
 --- !u!114 &2090099384
