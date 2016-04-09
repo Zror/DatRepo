@@ -4211,7 +4211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43446dd5020e60749bea30dba41c8bdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageName: {fileID: 21300000, guid: 00d49fbf0315f614d8a8eccd8187b6b7, type: 3}
+  imageName: {fileID: 21300000, guid: 11be192ee15be5946898a433ec032fc0, type: 3}
   cost: 200
   name2: Margic Carpet
   owned: 0
@@ -4241,7 +4241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43446dd5020e60749bea30dba41c8bdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageName: {fileID: 21300000, guid: 00d49fbf0315f614d8a8eccd8187b6b7, type: 3}
+  imageName: {fileID: 21300000, guid: de950ab62a7960044a3f903594ae04c4, type: 3}
   cost: 200
   name2: Canoe
   owned: 0
@@ -4286,7 +4286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43446dd5020e60749bea30dba41c8bdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageName: {fileID: 21300000, guid: 00d49fbf0315f614d8a8eccd8187b6b7, type: 3}
+  imageName: {fileID: 21300000, guid: 72fb97ae925fc854b99934caf4c60f05, type: 3}
   cost: 300
   name2: Tractor Beam
   owned: 0
