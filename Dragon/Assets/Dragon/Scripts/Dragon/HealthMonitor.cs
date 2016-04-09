@@ -4,20 +4,42 @@ using System.Collections;
 
 public class HealthMonitor : MonoBehaviour {
 
-    public int HP = 1;
+    public int HP = 100;
     public int MaxHP = 100;
+
     public int Stamina = 100;
     public int MaxStamina = 100;
+
     public float Flame = 5f; // Fuel; Represents burntime in seconds?
     public float MaxFlame = 8f;
-    public Text t;
+
+    public bool DEBUG_Bleedout_on = false;
+    public bool Allow_Stamina_Regen = false;
+    //public Text t;
+    //public 
 
     public Collider2D Collison;
     public Rigidbody2D RBody;
-    
 
-	// Use this for initialization
-	void Start () {
+    private bool onGround = true;
+
+
+    private static HealthMonitor _instance = null;
+
+    public static HealthMonitor Instance // Use to call the opnly instance of the HealthMonitor
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = FindObjectOfType<HealthMonitor>();
+            }
+            return _instance;
+        }
+    }
+
+    // Use this for initialization
+    void Start () {
 
         // If the starting HP is not set, set as total
         // So people dont die RIGHT at start
@@ -35,19 +57,25 @@ public class HealthMonitor : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        t.text = "Hp: " + HP + "\nStamina: " + Stamina + "\nFuel:" + Flame;
+        // Heh lol
+        //t.text = "Hp: " + HP + "\nStamina: " + Stamina + "\nFuel:" + Flame;
+       
 	}
 
     void FixedUpdate()
     {
         // In addition to physics...
         // Fixed interval regen will be handled here
-        bool flag1 = true;
 
-        if (flag1 && this.Stamina < MaxStamina)
+        if (this.Allow_Stamina_Regen && this.Stamina < MaxStamina)
         {
             // Allow Stamina regen (when not in use)
            // this.Stamina += 2;
+        }
+        if (DEBUG_Bleedout_on == true)
+        {
+            this.HP -= 1;
+            //Debug.Log("[i] Bleeding... -1 -> "+this.HP);
         }
     }
 
@@ -66,17 +94,62 @@ public class HealthMonitor : MonoBehaviour {
          * 
          * 
          */
-
+        Debug.Log("[i] HP:" + HP_add + " STAM:" + Stam_add + " FLAME:" + Flame_add);
         this.ChangeHP(HP_add);
         this.ChangeStamina(Stam_add);
         this.ChangeFlame(Flame_add);
+    }
 
+    public float GetStatAtIndex(int i)
+    {
+        // A handy method for grabbing any stat with only an int
+        /*
+            How to use:
+            0 = HP
+            1 = Stamina
+            2 = Flame
+            3 (not supposed to be passed, returns 1 for use with SIN)
+            else IDK
+        */
+        switch (i)
+        {
+            case 0: return (float)this.HP;
+            case 1: return (float)this.Stamina;
+            case 2: return this.Flame;
+            case 3: return 1;
+            default: Debug.LogError("[!] GetStatAtIndex was given a VERY bad index! @" + i); break;
+        }
+        return -1f;
+    }
 
+    public int GetLimitAtIndex(int i)
+    {
+        // A handy method for grabbing any stat Limit with only an int
+        /*
+            How to use:
+            0 = HP
+            1 = Stamina
+            2 = Flame
+            else IDK
+        */
+        
+        switch (i)
+        {
+            case 0: return this.MaxHP;
+            case 1: return this.MaxStamina;
+            case 2: return (int)this.MaxFlame;
+            default: Debug.LogError("[!] GetLimitAtIndex was given a VERY bad index! @" + i); break;
+        }
+        return 0;
     }
 
     public bool IsAlive
     { // Attribute
         get { return this.HP > 0; }
+    }
+    public bool IsDead
+    {
+        get { return !this.IsAlive; }
     }
     public bool HasStamina
     {
@@ -105,14 +178,21 @@ public class HealthMonitor : MonoBehaviour {
     private void ChangeHP(int dmg)
     {
         // A main function to deal with HP change
-        
+        if (dmg <= 0)
+        {
+            // Nothing to do here
+            Debug.Log("@@@ " + dmg);
+            return;
+        }
+
+
         int HP_Last = this.HP;
         // You will notice, the damage is added...
         this.HP = Mathf.Clamp( this.HP + dmg, -101, this.MaxHP );
 
 
         // Check to make sure we didnt just die lol
-        if (this.IsAlive)
+        if (this.IsDead == true)
         {
             // DEAD
             // @@@Death Hook?
@@ -143,8 +223,11 @@ public class HealthMonitor : MonoBehaviour {
     void OnCollisionEnter2D(Collision2D coll)
     {
         int dmg = 0; // coll.gameObject.getDamage
+
+        // Please make these globals!!!
         bool IsEnemy = coll.gameObject.tag == "Enemy";
         bool IsItem = coll.gameObject.tag == "Item";
+        bool IsWorld = coll.gameObject.tag == "World";
         
         // coll.gameObject
         // @@@Need flag based on what we hit...

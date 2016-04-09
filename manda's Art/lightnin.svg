@@ -27,7 +27,7 @@
      inkscape:pageshadow="2"
      inkscape:zoom="0.7"
      inkscape:cx="164.28571"
-     inkscape:cy="520"
+     inkscape:cy="577.14286"
      inkscape:document-units="px"
      inkscape:current-layer="layer6"
      showgrid="false"
@@ -51,34 +51,40 @@
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1"
-     sodipodi:insensitive="true">
+     id="layer1">
     <path
        style="display:inline;fill:#ff9f26;fill-opacity:1;stroke:none"
        d="m 258.08438,567.80975 169.20336,71.72681 -162.0317,88.73723 66.03156,29.88891 -131.4641,75.0199 53.86147,22.75939 -163.829853,89.54411 70.501783,-122.06388 -46.24242,-19.31064 110.72007,-90.8928 -61.48048,-26.2081 z"
        id="path4777-82-2"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
     <path
        style="display:inline;fill:#ffff26;fill-opacity:1;stroke:none"
        d="m 266.70118,572.20837 159.52932,68.35435 -153.519,86.68829 62.24716,28.50916 -124.57177,73.25611 50.78228,21.68828 -155.22185,87.47839 67.19612,-118.37414 -43.59995,-18.39875 105.04759,-88.47818 -57.96471,-24.9778 z"
        id="path4777-82-1-6"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer5"
-     inkscape:label="blu"
-     sodipodi:insensitive="true">
+     inkscape:label="blu">
     <path
        style="display:inline;fill:#0000d3;fill-opacity:1;stroke:none"
        d="m 492.37009,166.38117 169.20336,71.72681 -162.0317,88.73723 66.03156,29.88891 -131.4641,75.0199 53.86147,22.75939 L 324.14083,544.05752 394.64262,421.99364 348.4002,402.683 459.12026,311.7902 397.63979,285.5821 Z"
        id="path4777-82-2-3"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
     <path
        style="display:inline;fill:#12ffff;fill-opacity:1;stroke:none"
        d="m 500.98689,170.77979 159.52932,68.35435 -153.519,86.68829 62.24716,28.50916 -124.57177,73.25611 50.78228,21.68828 -155.22184,87.47839 67.19612,-118.37414 -43.59995,-18.39875 105.04758,-88.47818 -57.9647,-24.9778 z"
        id="path4777-82-1-6-3"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -88,11 +94,15 @@
        style="display:inline;fill:#003e50;fill-opacity:1;stroke:none"
        d="m 235.22724,107.80974 169.20336,71.72681 -162.0317,88.73723 66.03156,29.88891 -131.4641,75.0199 53.86147,22.75939 -163.82985,89.54411 70.50178,-122.06388 -46.24242,-19.31064 110.72007,-90.8928 -61.48048,-26.2081 z"
        id="path4777-82-2-0"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
     <path
        style="display:inline;fill:#00ff26;fill-opacity:1;stroke:none"
        d="m 243.84404,112.20836 159.52932,68.35435 -153.519,86.68829 62.24716,28.50916 -124.57177,73.25611 50.78228,21.68828 -155.22185,87.47839 67.19612,-118.37414 -43.59995,-18.39875 105.04759,-88.47818 -57.96471,-24.9778 z"
        id="path4777-82-1-6-8"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
   </g>
 </svg>

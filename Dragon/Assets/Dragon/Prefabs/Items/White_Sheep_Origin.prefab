@@ -11,6 +11,7 @@ GameObject:
   - 212: {fileID: 21264882}
   - 114: {fileID: 11473254}
   - 61: {fileID: 6110462}
+  - 114: {fileID: 11440378}
   m_Layer: 0
   m_Name: Sheep_White
   m_TagString: Untagged
@@ -40,7 +41,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 131272}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.80706263, y: -1.48941803, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 456334}
@@ -71,6 +72,19 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 2.82999992, y: 2.01999998}
+--- !u!114 &11440378
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 120084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 838ce71d82a613841a6271ababcaeb9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 0
+  rate: 0
 --- !u!114 &11473254
 MonoBehaviour:
   m_ObjectHideFlags: 1

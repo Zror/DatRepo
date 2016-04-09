@@ -69,7 +69,9 @@
        inkscape:randomized="0"
        d="m 312.22421,749.80939 -50.26999,-41.83853 -62.96441,17.69232 24.25652,-60.73843 -36.28347,-54.41548 65.26135,4.30012 40.54,-51.32294 16.07721,63.39604 61.33856,22.69617 -55.32509,34.88079 z"
        inkscape:transform-center-x="-6.3472069"
-       inkscape:transform-center-y="-3.1614698" />
+       inkscape:transform-center-y="-3.1614698"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
     <path
        sodipodi:type="star"
        style="fill:#ffff00;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -86,13 +88,14 @@
        inkscape:randomized="0"
        d="m 333.6528,746.95227 -50.26999,-41.83853 -62.96442,17.69232 24.25653,-60.73842 -36.28347,-54.41549 65.26135,4.30012 40.53999,-51.32294 16.07721,63.39604 61.33857,22.69617 -55.32509,34.88079 z"
        inkscape:transform-center-x="-6.3472069"
-       inkscape:transform-center-y="-3.1614698" />
+       inkscape:transform-center-y="-3.1614698"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer4"
      inkscape:label="yell 1"
-     sodipodi:insensitive="true"
      style="display:inline">
     <path
        sodipodi:type="star"
@@ -110,7 +113,9 @@
        inkscape:randomized="0"
        d="m 626.50995,638.3808 -50.27,-41.83853 -62.96441,17.69232 24.25653,-60.73842 -36.28347,-54.41549 65.26135,4.30012 40.53999,-51.32294 16.07721,63.39604 61.33857,22.69617 -55.32509,34.88079 z"
        inkscape:transform-center-x="-6.3472069"
-       inkscape:transform-center-y="-3.1614698" />
+       inkscape:transform-center-y="-3.1614698"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
     <path
        sodipodi:type="star"
        style="fill:#ff91ff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -127,7 +132,9 @@
        inkscape:randomized="0"
        d="m 646.50995,635.52368 -50.27,-41.83853 -62.96441,17.69232 24.25653,-60.73842 -36.28347,-54.41549 65.26135,4.30012 40.53999,-51.32294 16.07721,63.39605 61.33857,22.69616 -55.32509,34.88079 z"
        inkscape:transform-center-x="-6.3472069"
-       inkscape:transform-center-y="-3.1614698" />
+       inkscape:transform-center-y="-3.1614698"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -150,7 +157,9 @@
        inkscape:randomized="0"
        d="m 352.22421,398.3808 -50.26999,-41.83853 -62.96441,17.69232 24.25652,-60.73842 -36.28347,-54.41549 65.26135,4.30012 40.54,-51.32294 16.07721,63.39604 61.33856,22.69617 -55.32509,34.88079 z"
        inkscape:transform-center-x="-6.3472069"
-       inkscape:transform-center-y="-3.1614698" />
+       inkscape:transform-center-y="-3.1614698"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
     <path
        sodipodi:type="star"
        style="fill:#ff9100;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -167,6 +176,8 @@
        inkscape:randomized="0"
        d="m 372.22424,395.52368 -50.26999,-41.83853 -62.96441,17.69232 24.25652,-60.73842 -36.28347,-54.41549 65.26135,4.30012 40.54,-51.32294 16.07721,63.39605 61.33856,22.69616 -55.32509,34.88079 z"
        inkscape:transform-center-x="-6.3472069"
-       inkscape:transform-center-y="-3.1614698" />
+       inkscape:transform-center-y="-3.1614698"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
   </g>
 </svg>
