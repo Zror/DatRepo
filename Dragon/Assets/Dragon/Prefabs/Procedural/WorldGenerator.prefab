@@ -52,19 +52,19 @@ MonoBehaviour:
   storms:
   - {fileID: 121678, guid: 309b3047ae6c8f943bf692437b83380c, type: 2}
   coins:
-  - {fileID: 104076, guid: 0c7139a09c46f7841b7f606eaa20bf07, type: 2}
-  - {fileID: 189406, guid: fc21f59ce1fb32442a05904fb2cef847, type: 2}
-  - {fileID: 186162, guid: 610dccc5223f8754aa58140e7c7ac984, type: 2}
-  - {fileID: 151830, guid: c39e805b5e8d12044b82d74f5cacb297, type: 2}
-  - {fileID: 139154, guid: 405aef1b4fe5d54438fe48d29bc6fed8, type: 2}
-  - {fileID: 187894, guid: 8fdfdb359a4c90a49a3ad10fa24e0256, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 185666, guid: 72db78926dc6e5d40be6fcd3ed20684b, type: 2}
-  - {fileID: 154414, guid: 16aa7f68375ae754e8d89c86e4d6bed7, type: 2}
-  - {fileID: 175726, guid: 5c21eefe5b3f589449ffd675b013d384, type: 2}
-  - {fileID: 114926, guid: 51cacc9e4468a4a45b812563a03afd1e, type: 2}
-  - {fileID: 180740, guid: 28087f34ffd02bb4fa085659ab7ee209, type: 2}
-  - {fileID: 171706, guid: 9f7b1316b81e4254bb110f65e3522ecf, type: 2}
-  - {fileID: 173934, guid: b9241f5d4665a0b4390064f88b5816ca, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   haystacks:
   - {fileID: 0}
   livestocks:
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad29717f09f8cf24ebbfecefebcea0a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  seed: 2263.3516
+  seed: 2854.5828
   worldJitterAmount: 0.05
   grassRate:
     serializedVersion: 2
