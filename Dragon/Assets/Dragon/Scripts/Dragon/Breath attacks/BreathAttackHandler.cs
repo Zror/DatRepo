@@ -13,6 +13,7 @@ public class BreathAttackHandler : MonoBehaviour {
     float timer;
     private float xScale;
     private Vector3 spawn;
+    float soundTime;
     Perks p;
     // Use this for initialization
     void Start () {
@@ -30,6 +31,7 @@ public class BreathAttackHandler : MonoBehaviour {
         timer = breath.rate;
         xScale = transform.lossyScale.x / 2;
         p = gameObject.GetComponentInParent<Perks>();
+        soundTime = 5.0f;
     }
 	
 	// Update is called once per frame
@@ -72,8 +74,13 @@ public class BreathAttackHandler : MonoBehaviour {
                         normal();
                     }
                     timer += breath.rate;
+                    if (soundTime <= 0)
+                    {
+                        soundTime = 5.0f;
+                        breath.play();
+                    }
                 }
-
+                soundTime -= Time.deltaTime;
                 if (monitor.Flame == 0)
                 {
                     forceHeld = false;
