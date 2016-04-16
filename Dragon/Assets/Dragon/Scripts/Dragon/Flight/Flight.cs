@@ -16,11 +16,14 @@ public abstract class Flight : MonoBehaviour {
 
     private float maxSpeed = 25;
 
-    private enum Wing { card, hang, trac, magi, cano};
+    public AudioSource Audi;
+
+    
 	// Use this for initialization
 	public virtual void Start () {
         rigidbody = GetComponentInParent<Rigidbody2D>();
         health = GetComponentInParent<HealthMonitor>();
+        Audi = GetComponentInParent<AudioSource>();
     }
 
     //Use this for gliding over fires
@@ -42,6 +45,7 @@ public abstract class Flight : MonoBehaviour {
         {
            rigidbody.AddForce(new Vector2(velocity * .55F, velocity));
             health.ChangeStamina(-1);
+            Audi.Play();
         }
         if (Input.GetKeyDown(KeyCode.LeftAlt))
        {

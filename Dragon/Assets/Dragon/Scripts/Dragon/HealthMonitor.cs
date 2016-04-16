@@ -35,7 +35,7 @@ public class HealthMonitor : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        t.text = "Hp: " + HP + "\nStamina: " + Stamina + "\nFuel:" + Flame;
+        //t.text = "Hp: " + HP + "\nStamina: " + Stamina + "\nFuel:" + Flame;
 	}
 
     void FixedUpdate()
