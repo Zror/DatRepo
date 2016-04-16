@@ -14,7 +14,7 @@ public class xmlLoadingClass : MonoBehaviour {
 
 
         //DELETE THIS BEFORE RELEASE
-        PlayerPrefs.DeleteAll();
+        
 
 
 
