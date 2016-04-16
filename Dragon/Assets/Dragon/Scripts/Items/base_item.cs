@@ -19,8 +19,8 @@ public class base_item : MonoBehaviour {
     void Start () {
 		// Correct init logics
 
-		this.tag 				= Globals.TAGS.Item;
-		this.award_Flame 		= Mathf.Max (award_Flame, 0f);
+        this.tag = Globals.TAGS.Item;
+        this.award_Flame = Mathf.Max(award_Flame, 0f);
         if (monitor == null)
         {
             monitor = Session_Monitor.Instance;
@@ -60,6 +60,11 @@ public class base_item : MonoBehaviour {
             int hp = this.award_HP;
             int stam = this.award_Stam;
             float flame = this.award_Flame;
+
+            if (p == null)
+            {
+                p = gameObject.GetComponent<Perks>();
+            }
 
             if (p.BE())
             {

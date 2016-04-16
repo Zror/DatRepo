@@ -11,6 +11,7 @@ GameObject:
   - 212: {fileID: 21254734}
   - 114: {fileID: 11412430}
   - 61: {fileID: 6131756}
+  - 114: {fileID: 11446414}
   m_Layer: 0
   m_Name: Sheep_Black
   m_TagString: Item
@@ -59,6 +60,19 @@ MonoBehaviour:
   award_Flame: 15
   award_Coin_Value: 1
   Is_LiveStock: 1
+--- !u!114 &11446414
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 194366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 838ce71d82a613841a6271ababcaeb9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 0
+  rate: 0
 --- !u!212 &21254734
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -25,8 +25,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 125348}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.14412594, y: 1.19277596, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: -5.46000004, z: 0}
+  m_LocalScale: {x: .5, y: .5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -42,7 +42,7 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1.64499998
+  m_Radius: 1.60000002
 --- !u!114 &11436368
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -54,9 +54,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8042de4fecc93bd4fbebbfb8a9960cd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Fly_Height: 0
-  Rate: 10
+  Fly_Height: 20
+  Rate: 5
   direction: 0
+  Height_Diff: 0
   give_HP: 5
   give_Stam: 10
   give_Flame: 3
