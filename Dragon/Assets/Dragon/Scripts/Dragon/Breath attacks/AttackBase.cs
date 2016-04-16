@@ -11,9 +11,14 @@ public class AttackBase : MonoBehaviour
     public float speedAddition;
     public float rate;
     float speed = 0.0f;
+    public AudioSource Audi;
     // Use this for initialization
     void Start()
     {
+        if( GetComponent<AudioSource>() != null)
+        {
+            Audi = GetComponent<AudioSource>();
+        }
         Dragon = FindObjectOfType<Flight>();
         speed = Dragon.getForwardSpeed() + speedAddition;
         body = GetComponent<Rigidbody2D>();
@@ -30,7 +35,10 @@ public class AttackBase : MonoBehaviour
     {
         if (coll.tag.Equals(Globals.TAGS.Enemy)) { Destroy(coll.gameObject); }
         if (coll.tag.Equals(Globals.TAGS.Enemy)|| coll.tag.Equals(Globals.TAGS.World)) { Destroy(this.gameObject); }
-        
+        if( Audi != null)
+        {
+            Audi.Play();
+        }
 
     }
 }
