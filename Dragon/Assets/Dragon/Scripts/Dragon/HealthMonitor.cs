@@ -36,7 +36,12 @@ public class HealthMonitor : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         //t.text = "Hp: " + HP + "\nStamina: " + Stamina + "\nFuel:" + Flame;
-	}
+        if (HP <= 0)
+        {
+            Session_Monitor s = FindObjectOfType<Session_Monitor>();
+            s.End();
+        }
+    }
 
     void FixedUpdate()
     {

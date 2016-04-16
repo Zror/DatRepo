@@ -1136,7 +1136,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1801563216}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.67279893
+  m_Size: 0.5354478
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1267,7 +1267,6 @@ GameObject:
   - 114: {fileID: 627118304}
   - 114: {fileID: 627118303}
   - 114: {fileID: 627118302}
-  - 114: {fileID: 627118307}
   m_Layer: 5
   m_Name: Button (3)
   m_TagString: Untagged
@@ -1314,7 +1313,6 @@ MonoBehaviour:
   - {fileID: 627118305}
   - {fileID: 627118304}
   - {fileID: 627118303}
-  - {fileID: 627118307}
   - {fileID: 627118302}
   butt: {fileID: 627118298}
   render: {fileID: 1437456410}
@@ -1492,21 +1490,6 @@ MonoBehaviour:
   imageName: {fileID: 21300000, guid: da280a6e6ab48c1478b5074153e69c04, type: 3}
   cost: 450
   name2: black dragon
-  owned: 0
---- !u!114 &627118307
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 627118295}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43446dd5020e60749bea30dba41c8bdf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  imageName: {fileID: 21300000, guid: 1173517d6a720894cbe5dd7eeb0d2665, type: 3}
-  cost: 450
-  name2: Pfddor
   owned: 0
 --- !u!1 &652302310
 GameObject:
@@ -4213,7 +4196,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   imageName: {fileID: 21300000, guid: 11be192ee15be5946898a433ec032fc0, type: 3}
   cost: 200
-  name2: Margic Carpet
+  name2: Magic Carpet
   owned: 0
 --- !u!114 &1865604295
 MonoBehaviour:

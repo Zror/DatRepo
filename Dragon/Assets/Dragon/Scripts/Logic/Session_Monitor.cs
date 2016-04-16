@@ -171,7 +171,7 @@ public class Session_Monitor : MonoBehaviour {
 		return this.data;
 	}
 
-	 private void End(){
+	 public void End(){
         Perks p = FindObjectOfType<Perks>();
         earned_coins += (uint)Princesses_taken * 75*(uint)p.PrincessWorth();
         FindObjectOfType<Data>().updateThings(earned_coins, Princesses_taken);
