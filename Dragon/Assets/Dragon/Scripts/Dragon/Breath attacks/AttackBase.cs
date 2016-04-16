@@ -12,7 +12,9 @@ public class AttackBase : MonoBehaviour
     public float rate;
     float speed = 0.0f;
     public AudioSource Audi;
+    int timer = 100;
     float last;
+    bool fired = false;
     // Use this for initialization
     void Start()
     {
@@ -26,11 +28,16 @@ public class AttackBase : MonoBehaviour
         float angle = transform.rotation.eulerAngles.z * Mathf.Deg2Rad;
         body.velocity = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)) * speed;
         last = 5.0f;
+        if (spec2 && Audi != null)
+        {
+            fired = true;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+       
         this.transform.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(body.velocity.y, body.velocity.x) * Mathf.Rad2Deg);
         last -= Time.deltaTime;
         if (last <= 0)
@@ -38,14 +45,29 @@ public class AttackBase : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    void checkFlameThrowerSound()
+    {
+        timer -= 1;
+        if (timer <= 0)
+        {
+            
+            timer = 100;
+        }
+    }
+
     void OnTriggerEnter2D(Collider2D coll)
     {
         if (coll.tag.Equals(Globals.TAGS.Enemy)) { Destroy(coll.gameObject); }
         if (coll.tag.Equals(Globals.TAGS.Enemy)|| coll.tag.Equals(Globals.TAGS.World)) { Destroy(this.gameObject); }
-        if( Audi != null)
+        if( Audi != null && !spec2)
         {
             Audi.Play();
         }
 
+    }
+    public void play()
+    {
+        if(spec2)
+            Audi.Play();
     }
 }
