@@ -21,8 +21,8 @@ public class HealthMonitor : MonoBehaviour {
     public Collider2D Collison;
     public Rigidbody2D RBody;
     public Session_Monitor Ses;
-    float hurtByGroundRate = 2.5f;
-
+    float hurtByGroundRate = 1.0f;
+    float wait = 10f;
     // Use this for initialization
     void Start()
     {
@@ -51,6 +51,15 @@ public class HealthMonitor : MonoBehaviour {
         {
             Session_Monitor s = FindObjectOfType<Session_Monitor>();
             s.End();
+        }
+        if (Stamina <= 0)
+        {
+            if (wait <= 0)
+            {
+                Session_Monitor s = FindObjectOfType<Session_Monitor>();
+                s.End();
+            }
+            wait -= Time.deltaTime;
         }
         hurtByGroundRate -= Time.deltaTime;
         
@@ -226,7 +235,7 @@ public class HealthMonitor : MonoBehaviour {
         {
             // Hurt
             HP -= dmg;
-            hurtByGroundRate = 2.5f;
+            hurtByGroundRate = 1.0f;
             Debug.Log("DAMAGE ON GROUND: " + dmg);
             Debug.Log(HP);
         }
@@ -242,6 +251,15 @@ public class HealthMonitor : MonoBehaviour {
         {
             // Because you cant just take damage on ground
             Debug.Log("Off ground");
+        }
+    }
+    void OnCollisionStay2D(Collider coll)
+    {
+        bool IsWorld = coll.gameObject.tag == "World";
+        if (IsWorld&&hurtByGroundRate<=0)
+        {
+            HP -= 10;
+            hurtByGroundRate = 1.0f;
         }
     }
 

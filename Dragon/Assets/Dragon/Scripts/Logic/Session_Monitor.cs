@@ -57,6 +57,7 @@ public class Session_Monitor : MonoBehaviour {
 	public static readonly string HAY_BURNED 			= "Hay_burned";
 	public static readonly string CLOUDS_HIT 			= "Clouds_hit";
 
+
     SavedData saveStuff;
 	void Awake()
     {
@@ -90,8 +91,6 @@ public class Session_Monitor : MonoBehaviour {
 		this.data.Add(CLOUDS_HIT			, 0);
 
 
-        
-
    
 
             
@@ -107,9 +106,9 @@ public class Session_Monitor : MonoBehaviour {
 		this.time_elapsed += Time.fixedDeltaTime;
 	}
 
-	public void Add_Coins(uint amt){
+    public void Add_Coins(uint amt) {
         Perks p = FindObjectOfType<Perks>();
-        this.data [EARNED_COINS] += amt*(uint)p.goldMult();
+        earned_coins += amt * (uint)p.goldMult();
 		this.calls++;
 	}
 
@@ -119,7 +118,7 @@ public class Session_Monitor : MonoBehaviour {
 	}
 
 	public void Princesses_Taken(){
-		this.data [PRINCESSES_TAKEN]++;
+        Princesses_taken++;
 		this.calls++;
 	}
 
