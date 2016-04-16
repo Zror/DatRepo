@@ -632,7 +632,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxOriginPoint: 20
   clearChildAfter: -20
-  trackedObject: {fileID: 0}
+  trackedObject: {fileID: 746843485}
 --- !u!1 &1146660265
 GameObject:
   m_ObjectHideFlags: 0
