@@ -6,9 +6,11 @@ public class Arrow_Spawner : MonoBehaviour {
     private float timer;
     public GameObject projectile;
     public AutoAim aimer;
+    public AudioSource Audi;
 	// Use this for initialization
 	void Start () {
         timer = rate;
+        Audi = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -23,6 +25,7 @@ public class Arrow_Spawner : MonoBehaviour {
             arrow.GetComponent<base_projectile>().body.velocity = new Vector2(Mathf.Cos(arrow.GetComponent<base_projectile>().angle), Mathf.Sin(arrow.GetComponent<base_projectile>().angle)) * arrow.GetComponent<base_projectile>().speed;
 
             arrow.transform.parent = this.transform.parent;
+            Audi.Play();
             timer += rate;
         }
 	}
