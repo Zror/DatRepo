@@ -37,7 +37,7 @@ public class BreathAttackHandler : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         Input.simulateMouseWithTouches = true;
-        if ((Input.GetMouseButton(0)||forceHeld)&&monitor.Flame!=0)
+        if ((Input.GetMouseButton(0)||forceHeld)&&monitor.Flame>0)
         {
             Vector3 position=Input.mousePosition;
             if (position.x > (Screen.width / 4)||forceHeld)

@@ -80,7 +80,8 @@ public class base_item : MonoBehaviour {
             {
                 dragonSM.HP += hp * 2;
             }
-
+            monitor.Add_Coins(award_Coin_Value);
+            Debug.Log(award_Coin_Value);
             dragonSM.StatInput(hp, stam,flame);
             // @@@ SESSION MONITOR
             //monitor.Add_Coins(this.award_Coin_Value);
