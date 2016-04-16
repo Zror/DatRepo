@@ -11,6 +11,7 @@ public class Arrow_Spawner : MonoBehaviour {
 	void Start () {
         timer = rate;
         Audi = GetComponent<AudioSource>();
+        gameObject.transform.parent = FindObjectOfType<FloatingOrigin>().transform;
 	}
 	
 	// Update is called once per frame

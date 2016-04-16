@@ -171,7 +171,7 @@ public class Session_Monitor : MonoBehaviour {
 		return this.data;
 	}
 
-	 private void End(){
+	 public void End(){
         Perks p = FindObjectOfType<Perks>();
         earned_coins += (uint)Princesses_taken * 75*(uint)p.PrincessWorth();
         FindObjectOfType<Data>().updateThings(earned_coins, Princesses_taken);
@@ -182,4 +182,14 @@ public class Session_Monitor : MonoBehaviour {
 
 		// EXPORT STATS TO MAIN!
 	}
+
+    public bool DoEnd()
+    {
+        // A precall before end
+        // Just do some air tight work to prevent hacky things
+
+        this.End();
+
+        return true;
+    }
 }

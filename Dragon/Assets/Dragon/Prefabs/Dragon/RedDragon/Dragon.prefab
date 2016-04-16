@@ -151,13 +151,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 117436}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c3d041741f140b41b13bb3fa46522ea, type: 3}
+  m_Script: {fileID: 11500000, guid: 35cdb62db08bf8f4eab53f1b069c87aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skins:
-  - {fileID: 183194, guid: 68e0b77c3747d294bae3094062254b0f, type: 2}
-  wings:
-  - {fileID: 184570, guid: 1ffb3dbeb34c0c74cb23d092bc13098d, type: 2}
+  selectedcombo: 00000000010000000200000004000000090000000a0000002000000040000000500000008000000090000000000100002001000074010000
 --- !u!114 &11432098
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -166,10 +163,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 117436}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95d6d6e1220f86942b2a26bcf11fb3cc, type: 3}
+  m_Script: {fileID: 11500000, guid: 27512800057c61b4286effb01860f98b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedcombo: 00000000
+  skins:
+  - {fileID: 183194, guid: 68e0b77c3747d294bae3094062254b0f, type: 2}
+  - {fileID: 101052, guid: 0acce6e57ff900f438d56a4d9a942f18, type: 2}
+  - {fileID: 153464, guid: 37ee6ba1114de9648b6e0b03f9468ba4, type: 2}
+  - {fileID: 116660, guid: 96c9477f81420c04391966990beba0e1, type: 2}
+  - {fileID: 175714, guid: ad40511e33c0e89478ae5cb796824f96, type: 2}
+  - {fileID: 170898, guid: 7c54d8eafeb6e684696b525257dbd8f7, type: 2}
+  wings:
+  - {fileID: 184570, guid: 1ffb3dbeb34c0c74cb23d092bc13098d, type: 2}
+  - {fileID: 139308, guid: df7bf534bc154b944bb13e7eb28ca998, type: 2}
+  - {fileID: 146970, guid: 879355e059c62814a80672ce17a8f554, type: 2}
+  - {fileID: 105162, guid: 78d1eecf8a350404e840a2382ca6144e, type: 2}
+  - {fileID: 111598, guid: 2f9a2786153ffe24f8fe4ade064a0c67, type: 2}
+  - {fileID: 126328, guid: 8842bacedc1e39f4ebce2e48eba0cd71, type: 2}
 --- !u!114 &11444786
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -282,6 +292,14 @@ Prefab:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 0}
+      propertyPath: skins.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: wings.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
       propertyPath: selectedcombo.Array.size
       value: 14
       objectReference: {fileID: 0}
@@ -349,6 +367,54 @@ Prefab:
       propertyPath: selectedcombo.Array.data[12]
       value: 288
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: skins.Array.data[0]
+      value: 
+      objectReference: {fileID: 183194, guid: 68e0b77c3747d294bae3094062254b0f, type: 2}
+    - target: {fileID: 0}
+      propertyPath: skins.Array.data[1]
+      value: 
+      objectReference: {fileID: 101052, guid: 0acce6e57ff900f438d56a4d9a942f18, type: 2}
+    - target: {fileID: 0}
+      propertyPath: skins.Array.data[2]
+      value: 
+      objectReference: {fileID: 153464, guid: 37ee6ba1114de9648b6e0b03f9468ba4, type: 2}
+    - target: {fileID: 0}
+      propertyPath: skins.Array.data[3]
+      value: 
+      objectReference: {fileID: 116660, guid: 96c9477f81420c04391966990beba0e1, type: 2}
+    - target: {fileID: 0}
+      propertyPath: skins.Array.data[4]
+      value: 
+      objectReference: {fileID: 175714, guid: ad40511e33c0e89478ae5cb796824f96, type: 2}
+    - target: {fileID: 0}
+      propertyPath: skins.Array.data[5]
+      value: 
+      objectReference: {fileID: 170898, guid: 7c54d8eafeb6e684696b525257dbd8f7, type: 2}
+    - target: {fileID: 0}
+      propertyPath: wings.Array.data[0]
+      value: 
+      objectReference: {fileID: 184570, guid: 1ffb3dbeb34c0c74cb23d092bc13098d, type: 2}
+    - target: {fileID: 0}
+      propertyPath: wings.Array.data[1]
+      value: 
+      objectReference: {fileID: 139308, guid: df7bf534bc154b944bb13e7eb28ca998, type: 2}
+    - target: {fileID: 0}
+      propertyPath: wings.Array.data[2]
+      value: 
+      objectReference: {fileID: 146970, guid: 879355e059c62814a80672ce17a8f554, type: 2}
+    - target: {fileID: 0}
+      propertyPath: wings.Array.data[3]
+      value: 
+      objectReference: {fileID: 105162, guid: 78d1eecf8a350404e840a2382ca6144e, type: 2}
+    - target: {fileID: 0}
+      propertyPath: wings.Array.data[4]
+      value: 
+      objectReference: {fileID: 111598, guid: 2f9a2786153ffe24f8fe4ade064a0c67, type: 2}
+    - target: {fileID: 0}
+      propertyPath: wings.Array.data[5]
+      value: 
+      objectReference: {fileID: 126328, guid: 8842bacedc1e39f4ebce2e48eba0cd71, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 117436}
