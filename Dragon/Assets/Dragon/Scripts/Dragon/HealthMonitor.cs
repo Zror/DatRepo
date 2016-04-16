@@ -4,7 +4,7 @@ using System.Collections;
 
 public class HealthMonitor : MonoBehaviour {
 
-    public int HP = 100;
+    public int HP;
     public int MaxHP = 100;
 
     public int Stamina = 100;
@@ -29,7 +29,7 @@ public class HealthMonitor : MonoBehaviour {
         {
         // If the starting HP is not set, set as total
         // So people dont die RIGHT at start
-        this.HP = this.MaxHP;
+        this.HP += this.MaxHP;
 
         if (Collison == null)
         {
@@ -157,7 +157,8 @@ public class HealthMonitor : MonoBehaviour {
     public void ChangeFlame(float add)
     {
         // A main function to deal with Flame (Fire breathe fuel) change
-        this.Flame = Mathf.Clamp(this.Flame + add, 0f, this.MaxFlame);
+        this.Flame = Mathf.Min(Flame += add, MaxFlame);
+            
     }
 
     public void ChangeStamina(int add)
@@ -169,7 +170,7 @@ public class HealthMonitor : MonoBehaviour {
 
     }
 
-    private void ChangeHP(int dmg)
+    public void ChangeHP(int dmg)
     {
         // A main function to deal with HP change
         if (dmg <= 0)
@@ -178,45 +179,18 @@ public class HealthMonitor : MonoBehaviour {
             //Debug.Log("@@@ " + dmg);
             return;
         }
-        
+
 
         int HP_Last = this.HP;
         // You will notice, the damage is added...
-        this.HP = Mathf.Clamp( this.HP + dmg, -101, this.MaxHP );
+        this.HP +=dmg;
 
 
         // Check to make sure we didnt just die lol
-        if (this.IsDead == true)
-        {
-            // DEAD
-            // @@@Death Hook?
 
 
-            // Add pushback effect to the dragon body
-            RBody.AddForce( new Vector2((float)dmg * -2, (float)Mathf.Sqrt(Mathf.Abs(dmg))) );
 
-            // Timer here
-            Ses.DoEnd();
-
-        }
-        else
-        {
-            // Hurt.
-            // @@@Sound?
-            // We might have to deal with the collision for
-            // What we hit
-            if (HP_Last > this.HP)
-            { // Clearly damage
-				// @@@ SOUND HERE
-            }
-            else if (HP_Last < this.HP)
-            { // Clearly heal
-				// @@@ SOUND HERE
-            }
-
-        }
     }
-
     void OnCollisionEnter2D(Collision2D coll)
     {
         int dmg = 0; // coll.gameObject.getDamage
@@ -237,7 +211,7 @@ public class HealthMonitor : MonoBehaviour {
         {
             // Its an enemy, so we'll take damage.
             // Damage is NEGATED for simplicity here!!!
-            this.ChangeHP(-dmg);
+            ChangeHP(-dmg);
             if (IsOtherDead) { 
                 Destroy(Other); // Check me
             }
@@ -251,9 +225,10 @@ public class HealthMonitor : MonoBehaviour {
         else if (IsWorld&&hurtByGroundRate<=0)
         {
             // Hurt
-            this.ChangeHP( -dmg );
+            HP -= dmg;
             hurtByGroundRate = 2.5f;
             Debug.Log("DAMAGE ON GROUND: " + dmg);
+            Debug.Log(HP);
         }
     }
 

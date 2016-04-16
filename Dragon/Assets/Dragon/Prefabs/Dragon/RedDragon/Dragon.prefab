@@ -191,15 +191,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ba476d2ab6c35b4db46eab5c168b769, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 1
+  HP: 0
   MaxHP: 100
   Stamina: 100
   MaxStamina: 100
-  Flame: 5
+  Flame: 8
   MaxFlame: 8
-  t: {fileID: 0}
+  DEBUG_Bleedout_on: 0
+  Allow_Stamina_Regen: 0
   Collison: {fileID: 5844064}
   RBody: {fileID: 5048580}
+  Ses: {fileID: 0}
 --- !u!114 &11449414
 MonoBehaviour:
   m_ObjectHideFlags: 1

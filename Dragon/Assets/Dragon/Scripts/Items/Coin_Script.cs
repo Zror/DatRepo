@@ -19,7 +19,6 @@ public class Coin_Script : MonoBehaviour {
     {
         // GIVE MONEY AND LEAVE!
         monitor.Add_Coins(this.Worth);
-
         Destroy(this.gameObject);
     }
 

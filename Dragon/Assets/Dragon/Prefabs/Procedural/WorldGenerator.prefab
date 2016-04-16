@@ -52,19 +52,9 @@ MonoBehaviour:
   storms:
   - {fileID: 121678, guid: 309b3047ae6c8f943bf692437b83380c, type: 2}
   coins:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   - {fileID: 185666, guid: 72db78926dc6e5d40be6fcd3ed20684b, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 154414, guid: 16aa7f68375ae754e8d89c86e4d6bed7, type: 2}
+  - {fileID: 104076, guid: 0c7139a09c46f7841b7f606eaa20bf07, type: 2}
   haystacks:
   - {fileID: 0}
   livestocks:
@@ -316,6 +306,10 @@ Prefab:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 0}
+      propertyPath: coins.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
       propertyPath: livestocks.Array.size
       value: 12
       objectReference: {fileID: 0}
@@ -351,6 +345,58 @@ Prefab:
       propertyPath: livestocks.Array.data[11]
       value: 
       objectReference: {fileID: 123448, guid: d175e196329657c4eb0e71877b0705f2, type: 2}
+    - target: {fileID: 0}
+      propertyPath: coins.Array.data[0]
+      value: 
+      objectReference: {fileID: 185666, guid: 72db78926dc6e5d40be6fcd3ed20684b, type: 2}
+    - target: {fileID: 0}
+      propertyPath: coins.Array.data[1]
+      value: 
+      objectReference: {fileID: 154414, guid: 16aa7f68375ae754e8d89c86e4d6bed7, type: 2}
+    - target: {fileID: 0}
+      propertyPath: coins.Array.data[2]
+      value: 
+      objectReference: {fileID: 104076, guid: 0c7139a09c46f7841b7f606eaa20bf07, type: 2}
+    - target: {fileID: 0}
+      propertyPath: coins.Array.data[3]
+      value: 
+      objectReference: {fileID: 186162, guid: 610dccc5223f8754aa58140e7c7ac984, type: 2}
+    - target: {fileID: 0}
+      propertyPath: coins.Array.data[4]
+      value: 
+      objectReference: {fileID: 151830, guid: c39e805b5e8d12044b82d74f5cacb297, type: 2}
+    - target: {fileID: 0}
+      propertyPath: coins.Array.data[5]
+      value: 
+      objectReference: {fileID: 139154, guid: 405aef1b4fe5d54438fe48d29bc6fed8, type: 2}
+    - target: {fileID: 0}
+      propertyPath: coins.Array.data[6]
+      value: 
+      objectReference: {fileID: 187894, guid: 8fdfdb359a4c90a49a3ad10fa24e0256, type: 2}
+    - target: {fileID: 0}
+      propertyPath: coins.Array.data[7]
+      value: 
+      objectReference: {fileID: 154414, guid: 16aa7f68375ae754e8d89c86e4d6bed7, type: 2}
+    - target: {fileID: 0}
+      propertyPath: coins.Array.data[8]
+      value: 
+      objectReference: {fileID: 175726, guid: 5c21eefe5b3f589449ffd675b013d384, type: 2}
+    - target: {fileID: 0}
+      propertyPath: coins.Array.data[9]
+      value: 
+      objectReference: {fileID: 114926, guid: 51cacc9e4468a4a45b812563a03afd1e, type: 2}
+    - target: {fileID: 0}
+      propertyPath: coins.Array.data[10]
+      value: 
+      objectReference: {fileID: 180740, guid: 28087f34ffd02bb4fa085659ab7ee209, type: 2}
+    - target: {fileID: 0}
+      propertyPath: coins.Array.data[11]
+      value: 
+      objectReference: {fileID: 171706, guid: 9f7b1316b81e4254bb110f65e3522ecf, type: 2}
+    - target: {fileID: 0}
+      propertyPath: coins.Array.data[12]
+      value: 
+      objectReference: {fileID: 173934, guid: b9241f5d4665a0b4390064f88b5816ca, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 121998}

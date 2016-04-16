@@ -51,6 +51,7 @@ public class BreathAttackHandler : MonoBehaviour {
                 }
                 timer -= Time.deltaTime;
                 monitor.ChangeFlame((0 - Time.deltaTime)*p.breathMult());
+                Debug.Log(monitor.Flame);
                 if (timer <= 0)
                 {
                     spawn = new Vector3(transform.position.x + Mathf.Cos(angle * Mathf.Deg2Rad) * xScale, transform.position.y);

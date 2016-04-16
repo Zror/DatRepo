@@ -148,7 +148,7 @@ public class Perks : MonoBehaviour {
         {
             return 0.5;
         }
-        return 0;
+        return 1;
     }
     public int PrincessWorth()
     {
@@ -164,7 +164,7 @@ public class Perks : MonoBehaviour {
         {
             return 0.5f;
         }
-        return 0;
+        return 1;
     }
     public float flightMult()
     {
@@ -172,7 +172,7 @@ public class Perks : MonoBehaviour {
         {
             return 0.5f;
         }
-        return 0;
+        return 1;
     }
     //test
 }

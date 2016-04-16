@@ -392,7 +392,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rate: 0.15
-  projectile: {fileID: 0}
+  projectile: {fileID: 147162, guid: cb2b70220e6abda4390eb31b05602ca5, type: 2}
   aimer: {fileID: 11437286}
   Audi: {fileID: 0}
 --- !u!212 &21201796
@@ -611,7 +611,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 147162, guid: cb2b70220e6abda4390eb31b05602ca5, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 143088}

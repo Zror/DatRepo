@@ -29,6 +29,10 @@ public class UI_Single_Stat_Monitor : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
+        if (Use_Stat_Number == 2)
+        {
+            max = 8;
+        }
         loss_scale = Trans.lossyScale;
 
     }

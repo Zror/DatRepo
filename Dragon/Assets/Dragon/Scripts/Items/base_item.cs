@@ -73,12 +73,12 @@ public class base_item : MonoBehaviour {
             }
             if (hp < 0)
             {
-
-                hp = (int)(hp * p.damageMult()) + p.damageReduction();
+                Debug.Log("1");
+                dragonSM.HP += (int)(hp * p.damageMult()) + p.damageReduction();
             }
             if(hp>0 && p.BE())
             {
-                hp *= 2;
+                dragonSM.HP += hp * 2;
             }
 
             dragonSM.StatInput(hp, stam,flame);
