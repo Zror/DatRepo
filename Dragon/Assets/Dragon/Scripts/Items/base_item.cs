@@ -84,13 +84,6 @@ public class base_item : MonoBehaviour {
             dragonSM.StatInput(hp, stam,flame);
             // @@@ SESSION MONITOR
             //monitor.Add_Coins(this.award_Coin_Value);
-
-            if (this.Is_LiveStock)
-            {
-                // Award
-                monitor.Livestock_Destroyed();
-        }
-
 		Destroy(this.gameObject); // Goodbye
 	}
 	}

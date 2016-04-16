@@ -21,27 +21,12 @@ public class HealthMonitor : MonoBehaviour {
     public Collider2D Collison;
     public Rigidbody2D RBody;
     public Session_Monitor Ses;
+    float hurtByGroundRate = 2.5f;
 
-    public bool onGround = true;
-    
-
-    private static HealthMonitor _instance = null;
-
-    public static HealthMonitor Instance // Use to call the opnly instance of the HealthMonitor
+    // Use this for initialization
+    void Start()
     {
-        get
         {
-            if (_instance == null)
-            {
-                _instance = FindObjectOfType<HealthMonitor>();
-            }
-            return _instance;
-        }
-    }
-
-	// Use this for initialization
-    void Awake()
-    {
         // If the starting HP is not set, set as total
         // So people dont die RIGHT at start
         this.HP = this.MaxHP;
@@ -54,16 +39,9 @@ public class HealthMonitor : MonoBehaviour {
         {
             RBody = GetComponent<Rigidbody2D>();
         }
-        if (Ses == null)
-        {
-            Ses = Session_Monitor.Instance;
-        }
     }
 
-    void Start () {
-
-        
-        
+    
 	}
 	
 	// Update is called once per frame
@@ -74,6 +52,8 @@ public class HealthMonitor : MonoBehaviour {
             Session_Monitor s = FindObjectOfType<Session_Monitor>();
             s.End();
         }
+        hurtByGroundRate -= Time.deltaTime;
+        
 	}
 
     void FixedUpdate()
@@ -261,7 +241,6 @@ public class HealthMonitor : MonoBehaviour {
             if (IsOtherDead) { 
                 Destroy(Other); // Check me
             }
-            this.onGround = true;
 
         }
         else if (IsItem)
@@ -269,11 +248,11 @@ public class HealthMonitor : MonoBehaviour {
             // @@@
 
         }
-        else if (IsWorld && !this.onGround)
+        else if (IsWorld&&hurtByGroundRate<=0)
         {
             // Hurt
             this.ChangeHP( -dmg );
-            this.onGround = true;
+            hurtByGroundRate = 2.5f;
             Debug.Log("DAMAGE ON GROUND: " + dmg);
         }
     }
@@ -287,7 +266,6 @@ public class HealthMonitor : MonoBehaviour {
         if (IsEnemy || IsWorld)
         {
             // Because you cant just take damage on ground
-            this.onGround = false;
             Debug.Log("Off ground");
         }
     }
