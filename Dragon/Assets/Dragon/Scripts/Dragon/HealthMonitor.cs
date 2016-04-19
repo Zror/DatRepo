@@ -251,12 +251,10 @@ public class HealthMonitor : MonoBehaviour {
         {
             // Because you cant just take damage on ground
             Debug.Log("Off ground");
-    }
+        }
     }
 
-}
-       }
-    }
+
     void OnCollisionStay2D(Collider coll)
     {
         bool IsWorld = coll.gameObject.tag == "World";
