@@ -10,6 +10,11 @@ public class base_item : MonoBehaviour {
 	public uint award_Coin_Value = 0;
     public bool Is_LiveStock = false;
 
+    //This is bad code, never do this again
+    public CoinSpin coin;
+    AudioSource Audi;
+
+
     public static Session_Monitor monitor;
     public static HealthMonitor dragonSM;
 
@@ -17,17 +22,32 @@ public class base_item : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-		// Correct init logics
+        // Correct init logics
 
+        if (GetComponent<CoinSpin>() != null)
+        {
+            coin = GetComponent<CoinSpin>();
+        }
+
+        if (GetComponent<AudioSource>() != null)
+        {
+            //Audi = GetComponent<AudioSource>();
+        }
         this.tag = Globals.TAGS.Item;
         this.award_Flame = Mathf.Max(award_Flame, 0f);
         if (monitor == null)
         {
             monitor = Session_Monitor.Instance;
+            Audi = ((AudioSource )monitor.gameObject.GetComponent<AudioSource>());
         }
         if (dragonSM == null)
         {
             dragonSM = FindObjectsOfType<HealthMonitor>().First(t => t.tag == Globals.TAGS.Player);
+        }
+        Audi = ((AudioSource)monitor.gameObject.GetComponent<AudioSource>());
+        if(GetComponent<CoinSpin>() == null)
+        {
+            Audi = null;
         }
         p = FindObjectOfType<Perks>();
     }
@@ -51,12 +71,16 @@ public class base_item : MonoBehaviour {
         {
             return;
         }
-		if (coll.gameObject.tag == Globals.TAGS.Player) // @@@ENUM HERE!!!
+       
+        if (coll.gameObject.tag == Globals.TAGS.Player) // @@@ENUM HERE!!!
 		{
 			GameObject dragon = coll.gameObject;
 			UseItem(dragon); // For non awarding actions
 
-
+            if (Audi != null)
+            {
+                Audi.Play();
+            }
             int hp = this.award_HP;
             int stam = this.award_Stam;
             float flame = this.award_Flame;
