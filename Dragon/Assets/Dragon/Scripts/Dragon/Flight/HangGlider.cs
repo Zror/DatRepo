@@ -3,6 +3,7 @@ using System.Collections;
 
 public class HangGlider : Flight {
 
+
     public override void Start()
     {
         rigidbody.gravityScale = 1;
@@ -21,4 +22,7 @@ public class HangGlider : Flight {
 				rigidbody.AddForce(new Vector2(velocity * .55F, 0));
 		}
 	}
+
+       
+
 }

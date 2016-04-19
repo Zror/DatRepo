@@ -37,6 +37,10 @@ public class BreathAttackHandler : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         Input.simulateMouseWithTouches = true;
+        if (monitor.Flame <= 0)
+        {
+            forceHeld = false;
+        }
         if ((Input.GetMouseButton(0)||forceHeld)&&monitor.Flame>0)
         {
             Vector3 position=Input.mousePosition;
@@ -81,13 +85,11 @@ public class BreathAttackHandler : MonoBehaviour {
                     }
                 }
                 soundTime -= Time.deltaTime;
-                if (monitor.Flame == 0)
-                {
-                    forceHeld = false;
-                }
+                
             }
         }
-	}
+        
+    }
     void normal()
     { 
         GameObject attack= (GameObject)Instantiate(objects[selected], spawn, Quaternion.Euler(0, 0, angle));

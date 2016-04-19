@@ -9,12 +9,16 @@ public class Data : MonoBehaviour {
 	void Start () {
         //this.Stats = null;
         //loaded = false;
+        
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
-	}
+        if (!loaded)
+        {
+            Destroy(gameObject);
+        }
+    }
     public void setStats(SavedData s)
     {
         Stats = s;
