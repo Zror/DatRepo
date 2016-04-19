@@ -100,7 +100,14 @@ public class Session_Monitor : MonoBehaviour {
         this.time_elapsed = -1f; // Stays out of the table until the end lol
 
 	}
-	
+    //In case we break shit
+	public void Update()
+    {
+        if(Input.GetKeyDown("escape"))
+        {
+            this.End();
+        }
+    }
 	// COUNTS
 	void FixedUpdate() {
 		this.time_elapsed += Time.fixedDeltaTime;
@@ -173,7 +180,9 @@ public class Session_Monitor : MonoBehaviour {
 	 public void End(){
         Perks p = FindObjectOfType<Perks>();
         earned_coins += (uint)Princesses_taken * 75*(uint)p.PrincessWorth();
+      
         FindObjectOfType<Data>().updateThings(earned_coins, Princesses_taken);
+      
         // End the session_monitor
 
         Application.LoadLevel(3);

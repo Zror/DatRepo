@@ -26,6 +26,7 @@ public class HealthMonitor : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
+        Ses = Session_Monitor.Instance;
         {
         // If the starting HP is not set, set as total
         // So people dont die RIGHT at start
@@ -46,6 +47,14 @@ public class HealthMonitor : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if (Input.GetKeyDown("escape"))
+        {
+            Ses.End();
+        }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Ses.End();
+        }
         //t.text = "Hp: " + HP + "\nStamina: " + Stamina + "\nFuel:" + Flame;
         if (HP <= 0)
         {
