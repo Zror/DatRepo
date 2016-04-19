@@ -20,6 +20,10 @@ public class Canoe : Flight {
         }
         freq -= Time.deltaTime;
 
-        base.Update();
+        if(Input.GetMouseButtonDown(0) && health.HasStamina && clickLeft())
+        {
+            rigidbody.AddForce(new Vector2(velocity * 1.5F, velocity * .75F));
+            health.ChangeStamina(-1);
+        }
     }
 }

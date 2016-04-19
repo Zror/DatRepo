@@ -8,7 +8,7 @@ public class TractorBeam : Flight {
     public override void Update () {
         if (Input.GetMouseButtonDown(0) && health.HasStamina && clickLeft())
         {
-            rigidbody.AddForce(new Vector2(velocity *.55F, -velocity * down ));
+            rigidbody.AddForce(new Vector2(velocity, -velocity * down ));
             health.ChangeStamina(-1);
         }
 
