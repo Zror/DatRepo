@@ -3,6 +3,12 @@ using System.Collections;
 
 public class HangGlider : Flight {
 
+    public override void Start()
+    {
+        rigidbody.gravityScale = 1;
+        base.Start();
+        
+    }
 	// Update is called once per frame
 	public override void Update () {
         Input.simulateMouseWithTouches = true;
