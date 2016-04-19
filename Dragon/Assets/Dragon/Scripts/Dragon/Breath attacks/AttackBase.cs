@@ -59,10 +59,7 @@ public class AttackBase : MonoBehaviour
     {
         if (coll.tag.Equals(Globals.TAGS.Enemy)) { Destroy(coll.gameObject); }
         if (coll.tag.Equals(Globals.TAGS.Enemy)|| coll.tag.Equals(Globals.TAGS.World)) { Destroy(this.gameObject); }
-        if( Audi != null && !spec2)
-        {
-            Audi.Play();
-        }
+       
 
     }
     public void play()
